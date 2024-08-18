@@ -33,7 +33,7 @@ else
    set -gx QT_QPA_PLATFORM wayland
    atuin init fish | source
    direnv hook fish | source
-   /usr/bin/starship init fish --print-full-init | source
+   starship init fish --print-full-init | source
    fzf --fish | source
    zoxide init fish | source
    fish_add_path -gaP $HOME/go/bin
