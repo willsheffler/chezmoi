@@ -1,0 +1,97 @@
+{
+    "position": "bottom",
+    "modules-left": [
+        "temperature",
+        "cpu",
+        "memory",
+        "custom/gpu",
+        // "load",
+        "disk"
+        // "hyprland/submap",
+        // "hyprland/language",
+    ],
+    "modules-center": [
+        "hyprland/window",
+
+    ],
+    "modules-right": [
+//        "network",
+        // "cava",
+        // "hyprland/workspaces",
+        "idle_inhibitor",
+        "tray",
+        // "bluetooth",
+        "pulseaudio",
+        "battery",
+        "clock",
+        "custom/power",
+    ],
+    "temperature":{
+        "thermal-zone": 8,
+        "format": "  {temperatureC}°C",
+    },
+    "cpu":{
+        "format": " {usage:2d}%|{max_frequency:4.2f}ghz",
+        "interval": 1,
+    },
+    "memory":{
+        "format": " {}%",
+        "interval": 1,
+    },
+    "custom/gpu": {
+      "exec": "cat /home/sheffler/.local/sys/gpu",
+      "format": "{}",
+      "interval": 1,
+    },
+    "disk":{
+        "format": " 󱥎 {percentage_used}% "
+    },
+    "network": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "{ifname} ",
+        // "max-length": 50
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "on-click": "bash /home/dg/.local/bin/toggleRemote"
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    },
+    "battery": {
+        "format": " {capacity}"
+    },
+    "clock": {
+        "format": "{:%Y 󰃭 %a %b %d  %H:%M}"
+    },
+    "pulseaudio": {
+        "format": "  {volume}% ",
+        // "format-bluetooth": "{volume}% {icon} {format_source}",
+        // "format-bluetooth-muted": " {icon} {format_source}",
+        // "format-muted": "0% {icon} ",
+        // "format-source": "{volume}% ",
+        // "format-source-muted": "",
+        // "format-icons": {
+            // "headphone": "",
+            // "hands-free": "",
+            // "headset": "",
+            // "phone": "",
+            // "portable": "",
+            // "car": "",
+            // "default": [ "", "", "" ]
+        // },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": " ",
+        "on-click": "wlogout"
+    },
+    "hyprland/window": {
+        "format": "  {}  "
+    }
+}

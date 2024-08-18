@@ -1,0 +1,49 @@
+#!/usr/bin/python
+
+import fire
+import subprocess
+import os
+
+def getkw(kw):
+  orig = subprocess.check_output(f'hyprctl getoption {kw.replace('.',':')}'.split())
+  orig = orig.decode().split('\n')[0].split()
+  while orig[0] in ['custom', 'type:', 'int:', 'float:']:
+    orig = orig[1:]
+  return orig
+
+def set(kw, newvalstr):
+  assert newvalstr
+  orig = list(map(float, getkw(kw)))
+  # print('newvalstr', newvalstr, 'orig', orig)
+  newval = str(newvalstr).split()
+  newval = [str(max(0,float(d) + (0 if d.isdigit() else o))) for o,d in zip(orig,newval)]
+  # print('newval', newval, 'orig', orig)
+  if kw == 'general:gaps_out':
+    newval[2] = str(max(0, float(newval[0])-36))
+  if kw == 'decoration:rounding':
+    newval[0] = str(min(40, max(5, int(float(newval[0])))))
+  if kw.endswith('_opacity'):
+    newval[0] = str(min(1, max(0, float(newval[0]))))
+  cmd = f'hyprctl keyword {kw} {",".join(newval)}'.split()
+  # print(cmd)
+  out = subprocess.check_output(cmd)
+  # print(out)
+
+def setmulti(*args):
+  for kw, val in zip(args[::2],args[1::2]):
+    set(kw, val)
+
+def keylight(val):
+  print(val)
+  x = 0
+  if val.strip().startswith(('+','-')):
+    x = int(subprocess.check_output(['razer-cli','read','brightness','ac']).splitlines()[-1].split()[-1])
+  val = int(val) + x
+  print(val, x)
+  os.system(f'razer-cli write brightness ac {val}')
+  os.system(f'razer-cli write brightness bat {val}')
+
+
+
+if __name__ == '__main__':
+  fire.Fire()

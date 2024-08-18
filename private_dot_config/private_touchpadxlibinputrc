@@ -1,0 +1,5 @@
+[1A583003:00 06CB:CD73 Touchpad]
+clickMethodAreas=false
+clickMethodClickfinger=true
+pointerAcceleration=0.2
+tapToClick=true

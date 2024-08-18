@@ -1,0 +1,20 @@
+{
+    "schema_version": 2,
+    "timestamp": 1647630966,
+    "workspace": {
+        "0": [
+            [
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/sheffler"
+                        }
+                    ],
+                    "label": "~ - fish",
+                    "custom_label_set": false
+                }
+            ]
+        ]
+    }
+}

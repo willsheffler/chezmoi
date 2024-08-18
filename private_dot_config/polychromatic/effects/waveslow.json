@@ -1,0 +1,17 @@
+{
+    "name": "wave_slow",
+    "type": 3,
+    "author": "",
+    "icon": "img/effects/sequence.svg",
+    "summary": "",
+    "map_device": "Razer Blade 17 Pro (Early 2021)",
+    "map_device_icon": "laptop",
+    "map_graphic": "blade_advanced_2021_en_US.svg",
+    "map_cols": 16,
+    "map_rows": 6,
+    "save_format": 8,
+    "revision": 1,
+    "fps": 10,
+    "loop": true,
+    "frames": []
+}

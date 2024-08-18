@@ -1,0 +1,6 @@
+{
+    "python_interpreter": "/software/miniconda3/bin/python",
+    // "python_interpreter": "/usr/bin/python3",
+    "anaconda_linter_phantoms": false,
+    "validate_imports": false
+}

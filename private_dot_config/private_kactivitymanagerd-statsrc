@@ -1,0 +1,5 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-1a74bf8f-a1cf-423f-b19f-5c513d8c4689]
+ordering=preferred://browser,org.kde.discover.desktop,org.kde.kontact.desktop,org.kde.kate.desktop,libreoffice-startcenter.desktop,org.kde.dolphin.desktop,org.kde.ksysguard.desktop,systemsettings.desktop,org.kde.konsole.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
+ordering=preferred://browser,org.kde.discover.desktop,org.kde.kontact.desktop,org.kde.kate.desktop,libreoffice-startcenter.desktop,org.kde.dolphin.desktop,org.kde.ksysguard.desktop,systemsettings.desktop,org.kde.konsole.desktop

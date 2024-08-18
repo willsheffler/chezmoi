@@ -1,0 +1,20 @@
+{
+    "paths_to_scan":
+    [
+        "/home/sheffler/.conda/envs/rfd/lib/python3.10/site-packages",
+        "/home/sheffler/willutil",
+        "/home/sheffler/.local/lib/python3.10/site-packages"
+    ],
+    "python_venv_path": "",
+    "python_interpreter_path": "",
+    "log_level": "info",
+    "import_scan_depth": 4,
+    "test_config":
+    {
+        "enabled": false,
+        "test_framework": "",
+        "working_directory": "",
+        "test_runner_command":
+        []
+    }
+}

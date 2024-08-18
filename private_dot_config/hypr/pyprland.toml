@@ -1,0 +1,120 @@
+[pyprland]
+
+plugins = [
+   "scratchpads",
+   "layout_center",
+   "expose",
+   "system_notifier",
+]
+
+# [system_notifier.sources]
+# command = "sudo journalctl -fx"
+# parser = "journal"
+# [system_notifier.parsers.journal]
+# pattern = "([a-z0-9]+): Link UP$"
+# filter = "s/.*\[\d+\]: ([a-z0-9]+): Link.*/\1 is active/"
+# color= "#00aa00"
+# [system_notifier.parsers.journal]
+# pattern = "([a-z0-9]+): Link DOWN$"
+# filter = "s/.*\[\d+\]: ([a-z0-9]+): Link.*/\1 is inactive/"
+# color= "#ff8800"
+# [system_notifier.parsers.journal]
+# pattern = "Process \d+ \(.*\) of .* dumped core."
+# filter = "s/.*Process \d+ \((.*)\) of .* dumped core./\1 dumped core/"
+# color= "#aa0000"
+# [system_notifier.parsers.journal]
+# pattern = "usb \d+-[0-9.]+: Product: "
+# filter = "s/.*usb \d+-[0-9.]+: Product: (.*)/USB plugged: \1/"
+
+[expose]
+include_special = false
+
+[layout_center]
+# margin = 60
+# offset = [30, 30]
+size = "60% 60%"
+position = "20% 20%"
+next = "movefocus r"
+prev = "movefocus l"
+next2 = "movefocus d"
+prev2 = "movefocus u"
+
+[scratchpads.config]
+# command = "alacritty --class scratchpad"
+command = "alacritty --class scratchpad -e nvim /home/sheffler/.local/share/chezmoi"
+lazy = true
+class = "scratchpad"
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.term]
+command = "alacritty --class scratchpad"
+lazy = true
+class = "scratchpad"
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.btop]
+command = "alacritty --class scratchpad -e btop"
+lazy = true
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.htop]
+command = "alacritty --class scratchpad -e htop"
+lazy = true
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.chatgpt]
+command = "qutebrowser -r chatgpt"
+class = "org.qutebrowser.qutebrowser"
+lazy = true
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.mail]
+command = "google-chrome-stable --ozone-platform=wayland"
+class = "google-chrome"
+lazy = true
+# unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.music]
+command = "spotify"
+class = "Spotify"
+lazy = true
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.mattermost]
+command = "mattermost-desktop"
+class = "Mattermost"
+lazy = true
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.waypaper]
+command = "waypaper"
+class = "waypaper"
+lazy = true
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.thunar]
+command = "thunar"
+class = "thunar"
+lazy = true
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+

@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=willsheffler@gmail.com
+Enabled=true
+Parent=b425b738965a913233859bbbccb8f1bea3f89b0d
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=4d3febac3e44565ca6c5ad171c0f9f597038bb7e
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=willsheffler@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none

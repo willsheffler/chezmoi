@@ -1,0 +1,7 @@
+#Host *
+#  NoHostAuthenticationForLocalhost yes
+# ForwardX11 no
+AllowUsers sheffler
+PasswordAuthentication no
+AuthenticationMethods publickey
+

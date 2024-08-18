@@ -1,0 +1,11 @@
+Host *
+  NoHostAuthenticationForLocalhost yes
+#   StrictHostKeyChecking no
+#   GSSAPIAuthentication yes
+#   ForwardAgent yes
+
+Host dig*
+	ForwardX11 no
+
+
+

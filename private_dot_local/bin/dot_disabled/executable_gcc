@@ -1,0 +1,10 @@
+#!/bin/sh
+# distrobox_binary
+# name: arch
+if [ -z "${CONTAINER_ID}" ]; then
+	exec "/usr/bin/distrobox-enter"  -n arch  --  '/usr/bin/gcc'  "$@"
+elif [ -n "${CONTAINER_ID}" ] && [ "${CONTAINER_ID}" != "arch" ]; then
+	exec distrobox-host-exec '/home/sheffler/.local/bin/gcc' "$@"
+else
+	exec '/usr/bin/gcc' "$@"
+fi

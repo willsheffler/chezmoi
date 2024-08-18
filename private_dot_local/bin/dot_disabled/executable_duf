@@ -1,0 +1,10 @@
+#!/bin/sh
+# distrobox_binary
+# name: arch
+if [ -z "${CONTAINER_ID}" ]; then
+	exec "/usr/bin/distrobox-enter"  -n arch  --  '/usr/bin/duf'  "$@"
+elif [ -n "${CONTAINER_ID}" ] && [ "${CONTAINER_ID}" != "arch" ]; then
+	exec distrobox-host-exec '/home/sheffler/.local/bin/duf' "$@"
+else
+	exec '/usr/bin/duf' "$@"
+fi

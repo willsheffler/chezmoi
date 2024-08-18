@@ -1,0 +1,14 @@
+{
+    "format_on_save": false,
+    "binary": "clang-format",
+    "style": "File",
+    "languages":
+    [
+        "C",
+        "C++",
+        "C++11",
+        "JavaScript",
+        "Objective-C",
+        "Objective-C++",
+    ]
+}

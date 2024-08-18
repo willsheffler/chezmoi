@@ -1,0 +1,39 @@
+[1]
+FullScreen=false
+HistoryItemViewT0_0Buffer=\x00\x00\x00\x0ekonq:konqueror\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\xff\xff\xff\xff\xff\xff
+HistoryItemViewT0_0DoPost=false
+HistoryItemViewT0_0LocationBarURL=
+HistoryItemViewT0_0PageReferrer=
+HistoryItemViewT0_0PageSecurity=0
+HistoryItemViewT0_0PostContentType=
+HistoryItemViewT0_0PostData=
+HistoryItemViewT0_0StrServiceName=webenginepart
+HistoryItemViewT0_0StrServiceType=text/html
+HistoryItemViewT0_0Title=
+HistoryItemViewT0_0Url=konq:konqueror
+RootItem=Tabs0
+State=AAAA/wAAAAD9AAAAAAAACYIAAAXOAAAABAAAAAQAAAAIAAAACPwAAAACAAAAAgAAAAMAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABlAHgAdAByAGEAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHgBsAG8AYwBhAHQAaQBvAG4AVABvAG8AbABCAGEAcgEAAAEu/////wAAAAAAAAAAAAAAAgAAAAIAAAAeAGIAbwBvAGsAbQBhAHIAawBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAGgAdABtAGwAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+Tabs0_Children=ViewT0
+Tabs0_activeChildIndex=0
+ViewT0_CurrentHistoryItem=0
+ViewT0_LinkedView=false
+ViewT0_LockedLocation=false
+ViewT0_NumberOfHistoryItems=1
+ViewT0_PassiveMode=false
+ViewT0_ServiceName=webenginepart
+ViewT0_ServiceType=text/html
+ViewT0_ToggleView=false
+eDP-1-1 Window-Maximized 3840x2160=true
+eDP-1-1 XPosition 3840x2160=0
+eDP-1-1 YPosition 3840x2160=0
+
+[Number]
+NumberOfWindows=1
+
+[WindowProperties1]
+ClassName=KonqMainWindow
+ObjectName=MainWindow#1
+State=AAAA/wAAAAD9AAAAAAAACYIAAAXOAAAABAAAAAQAAAAIAAAACPwAAAACAAAAAgAAAAMAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABlAHgAdAByAGEAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHgBsAG8AYwBhAHQAaQBvAG4AVABvAG8AbABCAGEAcgEAAAEu/////wAAAAAAAAAAAAAAAgAAAAIAAAAeAGIAbwBvAGsAbQBhAHIAawBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAGgAdABtAGwAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+eDP-1-1 Window-Maximized 3840x2160=true
+eDP-1-1 XPosition 3840x2160=0
+eDP-1-1 YPosition 3840x2160=0

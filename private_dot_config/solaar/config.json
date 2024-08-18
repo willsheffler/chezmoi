@@ -1,0 +1,59 @@
+{
+  "404B:02AFD988": {
+    "_modelId": "000000000000",
+    "_name": "Wireless Touch Keyboard K400",
+    "_serial": "02AFD988",
+    "_unitId": "00000000",
+    "fn-swap": true,
+    "hi-res-scroll": false
+  },
+  "404B:38C058E6": {
+    "_modelId": "000000000000",
+    "_name": "Wireless Touch Keyboard K400",
+    "_serial": "38C058E6",
+    "_unitId": "00000000",
+    "fn-swap": true,
+    "hi-res-scroll": false
+  },
+  "4051:BA2165D0": {
+    "_modelId": "405100000000",
+    "_name": "Wireless Mouse M510",
+    "_serial": "BA2165D0",
+    "_unitId": "BA2165D0",
+    "divert-keys": {
+      "80": 0,
+      "81": 0,
+      "82": 0,
+      "83": 0,
+      "86": 0,
+      "91": 0,
+      "93": 0
+    },
+    "low-res-scroll": false,
+    "lowres-smooth-scroll": false,
+    "mouse-gestures": 0,
+    "pointer_speed": 256,
+    "reprogrammable-keys": {
+      "80": 80,
+      "81": 81,
+      "82": 82,
+      "83": 83,
+      "86": 86,
+      "91": 91,
+      "93": 93
+    }
+  },
+  "4051:CF9899AC": {
+    "_name": "Wireless Mouse M510",
+    "low-res-scroll": false,
+    "pointer_speed": 309
+  },
+  "4086C0900000:8F0CBE5F": {
+    "_modelId": "4086C0900000",
+    "_name": "G703 Hero Gaming Mouse",
+    "_unitId": "8F0CBE5F",
+    "dpi": 1600,
+    "report_rate": 1
+  },
+  "_version": "1.1.1"
+}

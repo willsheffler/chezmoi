@@ -1,0 +1,6 @@
+*~
+.local/lib
+.local/log
+.local/state
+tmp
+ide

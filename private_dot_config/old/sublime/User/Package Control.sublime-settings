@@ -1,0 +1,45 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"Anaconda",
+		"Auto Semi-Colon",
+		"AutoFileName",
+		"AutoWrap",
+		"BeautifyLatex",
+		"BracketHighlighter",
+		"C++11",
+		"Chain of Command",
+		"Clang Format",
+		"CMake",
+		"DocBlockr_Python",
+		"EasyClangComplete",
+		"Environment Settings",
+		"Generic Config",
+		"GitGutter",
+		"Glue",
+		"Google Spell Check",
+		"Markdown Extended",
+		"Material Theme",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"requirementstxt",
+		"rsub",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-cppcheck",
+		"SublimeLinter-rst",
+		"SublimeLinter-shellcheck",
+		"TodoReview",
+		"TrailingSpaces",
+		"Travis YML Lint",
+		"Travis-CI",
+		"Zeal"
+	]
+}

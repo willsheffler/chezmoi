@@ -1,0 +1,15 @@
+[PlasmaRunnerManager]
+LaunchCounts=1 services_nvidia-settings.desktop,1 services_kcm_touchpad.desktop
+pluginWhiteList=desktopsessions,services,places,PowerDevil,calculator,unitconverter,shell,bookmarks,recentdocuments,locations,baloosearch
+
+[PlasmaViews][Panel 2][Defaults]
+thickness=40
+
+[PlasmaViews][Panel 2][Horizontal3840]
+thickness=40
+
+[ScreenConnectors]
+0=eDP-1
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js

@@ -1,0 +1,17 @@
+[KDE Partition Manager]
+backend=pmsfdiskbackendplugin
+firstRun=false
+treeLogColumnWidths=110,192,800
+treePartitionColumnWidths=140,150,120,110,0,110,0,110,110,0,0,0,0,0
+
+[MainWindow]
+Height 2160=1349
+State=AAAA/wAAAAD9AAAAAgAAAAAAAAEAAAADzPwCAAAAAvsAAAAaAG0AXwBEAG8AYwBrAEQAZQB2AGkAYwBlAHMBAAAAYAAAA8wAAACwAP////sAAAAiAG0AXwBEAG8AYwBrAEkAbgBmAG8AcgBtAGEAdABpAG8AbgAAAAGLAAAALwAAACYA////AAAAAwAAB9kAAADm/AEAAAAC+wAAACAAbQBfAEQAbwBjAGsATwBwAGUAcgBhAHQAaQBvAG4AcwEAAAAAAAAH2QAAAIoA////+wAAABIAbQBfAEQAbwBjAGsATABvAGcAAAAB/gAAAfEAAACKAP///wAABs0AAAPMAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAgAHAAYQByAHQAaQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+Width 3840=2009
+
+[applyProgressDialog]
+Geometry=\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x1c\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x0f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00c\x00\x00\x00\x1d
+
+[resizeDialog]
+Geometry=\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x05x\x00\x00\x02\x9f\x00\x00\x07\xd1\x00\x00\x05\x0b\x00\x00\x05x\x00\x00\x02\xe9\x00\x00\x07\xd1\x00\x00\x05\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x0f\x00\x00\x00\x05x\x00\x00\x02\xe9\x00\x00\x07\xd1\x00\x00\x05\x0b

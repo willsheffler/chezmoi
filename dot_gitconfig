@@ -1,0 +1,22 @@
+[user]
+	email = willsheffler@gmail.com
+	name = Will Sheffler
+[push]
+	default = simple
+[core]
+	editor = subl -n -w
+[rerere]
+	enabled = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[pull]
+	rebase = false
+[credential]
+	helper = store
+[safe]
+	directory = /digs/home/sheffler/src/rfdsym
+[submodules]
+	recurse = true

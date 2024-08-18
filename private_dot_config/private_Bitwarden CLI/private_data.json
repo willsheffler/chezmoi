@@ -1,0 +1,156 @@
+{
+  "stateVersion": 66,
+  "global_applicationId_appId": "80f83915-486f-4c0a-a0da-68bb6fea3012",
+  "global_account_accounts": {
+    "a09a8af2-8827-47bf-b99a-b1b100269c01": {
+      "name": "Will Sheffler",
+      "email": "willsheffler@gmail.com",
+      "emailVerified": true
+    }
+  },
+  "global_account_activity": {
+    "a09a8af2-8827-47bf-b99a-b1b100269c01": "2024-07-18T02:26:13.326Z"
+  },
+  "global_account_activeAccountId": "a09a8af2-8827-47bf-b99a-b1b100269c01",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_environment_environment": {},
+  "a09a8af2-8827-47bf-b99a-b1b100269c01": {
+    "data": {
+      "passwordGenerationHistory": {}
+    },
+    "keys": {
+      "cryptoSymmetricKey": {}
+    },
+    "profile": {
+      "userId": "a09a8af2-8827-47bf-b99a-b1b100269c01",
+      "name": "Will Sheffler",
+      "email": "willsheffler@gmail.com",
+      "lastSync": "2024-07-18T02:27:45.199Z"
+    },
+    "settings": {}
+  },
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_userDecryptionOptions_decryptionOptions": {
+    "hasMasterPassword": true
+  },
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_vaultTimeoutSettings_vaultTimeoutAction": "lock",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_vaultTimeoutSettings_vaultTimeout": "never",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_token_accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkJDMzZDMjE0REI0OEYyMzVCNzdEQTNGMTcyMEMxQTM1QTk2MkVBNDNSUzI1NiIsIng1dCI6InZEYkNGTnRJOGpXM2ZhUHhjZ3dhTmFsaTZrTSIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5LmJpdHdhcmRlbi5jb20iLCJuYmYiOjE3MjEyNjk2NjUsImlhdCI6MTcyMTI2OTY2NSwiZXhwIjoxNzIxMjczMjY1LCJzY29wZSI6WyJhcGkiXSwiYW1yIjpbIkFwcGxpY2F0aW9uIl0sImNsaWVudF9pZCI6InVzZXIuYTA5YThhZjItODgyNy00N2JmLWI5OWEtYjFiMTAwMjY5YzAxIiwic3ViIjoiYTA5YThhZjItODgyNy00N2JmLWI5OWEtYjFiMTAwMjY5YzAxIiwidHlwZSI6IlVzZXIiLCJwcmVtaXVtIjpmYWxzZSwiZW1haWwiOiJ3aWxsc2hlZmZsZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInNzdGFtcCI6Ik80UEZDS1lGM0IzUFdPM05HRlcyMkNXRDU0RUtRUlAzIiwibmFtZSI6IldpbGwgU2hlZmZsZXIiLCJkZXZpY2UiOiI4MGY4MzkxNS00ODZmLTRjMGEtYTBkYS02OGJiNmZlYTMwMTIiLCJqdGkiOiJEQjMzNzM4N0JEQjlBMUFGMUE1MTc1QkUyMUUzRjI4NCJ9.PlcjN0F8qCfqm0WPq7-qCTLkoL1aOtoKnFBoeFGakH1MtyL1JAC9E-2PXRQOoxTmTRRDEZfSBAqaKe745hzoPZtlXhP-YUrKaTTnFmfZxex_EnA0C7-HOjQEN-D31ECsaHTcKomz3cCE40NgEmLvJCLYu6VxlZGofnhXWDwcCPddRGhe4KK-PEKR4TX35ecysU9SKyyoY8jgCEJSIraYKcg2e3zQ_9dNl4IrCDIolQuK5oEhP6_RVsJI4nxxgCVT-y5nR-InlpOVVGkWp7l0UDwBjAklT2T5jXKLx1AsWtsOqi2HJzHCEjJMsTjddRPIV0roV6JFbFbHhLhY37IZSxRd2nhGNXaVsH5RjCgwtcCHEnEnbsxw_uW1B24auyOWGHwfhZqTeYYbdm_lf5IoM6YKk7ENPp17SQeqJlD0UX11qPHiNBrAr-0Ij3mhZAoqiHSxO7ODEgQuDbzgKfHAbft5Wn5z1Omy5ykE-0DA_CIS_daVkZywfTqEbSB6lhu9tXXz5en7OPAosEi9nrvtTflE5ZxINk0XPxVqw8cpGA7f6KbNuKMP_lswOM5UkFBT8nExdWNaNbS7truJ5Gps_FnN-xDJk7l0ZYcJRsrHylzQUk9PD2pfuF7cjnCIIEO9YRCY2s8VgWY0yPoz4leCJFz2PfTwcZhu34ktuKJKM8A",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_kdfConfig_kdfConfig": {
+    "kdfType": 0,
+    "iterations": 600000
+  },
+  "global_clearEvent_logout": [
+    {
+      "state": "kdfConfig",
+      "key": "kdfConfig",
+      "location": "disk"
+    },
+    {
+      "state": "billing",
+      "key": "accountProfile",
+      "location": "disk"
+    },
+    {
+      "state": "masterPassword",
+      "key": "masterKeyEncryptedUserKey",
+      "location": "disk"
+    },
+    {
+      "state": "crypto",
+      "key": "privateKey",
+      "location": "disk"
+    },
+    {
+      "state": "crypto",
+      "key": "providerKeys",
+      "location": "disk"
+    },
+    {
+      "state": "crypto",
+      "key": "organizationKeys",
+      "location": "disk"
+    },
+    {
+      "state": "token",
+      "key": "securityStamp",
+      "location": "memory"
+    },
+    {
+      "state": "keyConnector",
+      "key": "usesKeyConnector",
+      "location": "disk"
+    },
+    {
+      "state": "providers",
+      "key": "providers",
+      "location": "disk"
+    },
+    {
+      "state": "organizations",
+      "key": "organizations",
+      "location": "disk"
+    },
+    {
+      "state": "folder",
+      "key": "folders",
+      "location": "disk"
+    },
+    {
+      "state": "collection",
+      "key": "collections",
+      "location": "disk"
+    },
+    {
+      "state": "ciphersMemory",
+      "key": "decryptedCiphers",
+      "location": "memory"
+    },
+    {
+      "state": "ciphers",
+      "key": "ciphers",
+      "location": "disk"
+    },
+    {
+      "state": "encryptedSend",
+      "key": "sendUserEncrypted",
+      "location": "disk"
+    },
+    {
+      "state": "domainSettings",
+      "key": "equivalentDomains",
+      "location": "disk"
+    },
+    {
+      "state": "policies",
+      "key": "policies",
+      "location": "disk"
+    }
+  ],
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_billing_accountProfile": {
+    "hasPremiumPersonally": false,
+    "hasPremiumFromAnyOrganization": false
+  },
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_token_apiKeyClientId": "user.a09a8af2-8827-47bf-b99a-b1b100269c01",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_token_apiKeyClientSecret": "EdkdQ1hEniOPUwMD7Qs4Pbr3hJsSCw",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_masterPassword_masterKeyEncryptedUserKey": "2.l/pNUGdBtp2yCbv9KD2WjQ==|emGDV9GhLUf9IonLGX5OCRRNWXkwU3DLr/S4sWJdIiQEaXx6urYzYHtyZf6U0LDFvV1IOF8spOTVmAHZEVUo4bYzbc/MbPmgKH5qfaiBLD4=|hUVvC9J0w94sf1Ywzs3rrFrs/Z/4dvM4KLmLMuag2tY=",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_crypto_privateKey": "2.xxzGSvRBHTTUyX6yS5tOsw==|0M8TC/9kgb5Z8wo1vqhkp7PBJZ+CCbAYoJXsWoI2rB8jOyQDDKIH/aw6J4++ZftZpfzXGNpYUkNAMlndXr4keMe9qjJtisvPXzbcdZ+0ofFPfweLG89+oWw6MeijzgeBr6LVoaGWuw8EQ1gwLdB5pLsGuute+bcMrGrFaldnzYXYd3SrKM0DAxqQl/M123JUg5n/Xu/CafJcxg8SvCg/KauTVSIecIE/sBh820dbpw1E6ZMBBTi2LmfqTARsiauAeiSUinpkIaUYi8tiJlnJ6yrnWwR6xhsDODuDL7tzouCNDDEIOdBPW6xK2Xqdo/z++Ryq8vamjc3gLvqxNmHPmTtZi9Sue22a5+chpEVFf46pyPiANdq/PTyH5HYTA/ITgX/3L9zMtQ1vtgyOrxudcFvdkuHnA1Jt8DcEy2GjYnys0hXoMNX3RKGDTcQs6D2ewryqNdENKF919n9Dlu8819LtKv4pA+2xMidTgJVzkP/iUA84OjnY8C6h5mdapfpSqOqg6pnqF9oBosSU/mYTzf2Qfe6A+j6WTlNRjlX0JCATQl9TxhlvkBy/eXtYCUQoUzTqsBNGvjATpysJtZIE3TQx/i+n+N4l0xnTvpUejn2e4T0ozl+HLHhl7MLD+lAfKZRLMJYOkRWC+0Jzj791wQhz0jWPSCSdAp62wNQqRv4N605vx5jhNzLj3GI+iXo7KESUDnNJ4GrUhoX51Xl1wQm8GgytAgrjNsCit/J3Rib5pvbGYFchRU9UZylhxNqwZQZ62n9HJ2mj2NdUGEmhXuFvLSv+gR8pNol46NXue7bP06Cy7aZUhthH5juBOR4xWVs8l0BFswm1zORfCF2zRIQ37pTo0VgEmlVkPSkz9B/podO9uwA4SDSXCX9rlFASo8qevgdbVnp/ZW8hg/a2Rl45pTn40mwu9Q98DT0mmZ4ShpM2ViK9oQAbrZN8QSppp72ljIWmKf2+ceEb6ncjwu0BsfEt2Z/1sGZgwT6u0L1kPyJnL0iKXJb8StRzpu8CGAA7OPm32UvzhgdZONMIWbv5PBHK+1M43NH/PEE1tMdoUEFrjgoVhJhCyh73yZ+VqlvH3MZHhmy/DWrEW2t253RLrNQKO+z+zuE0UnNMjdBitzIBAe9rmYV4gsr4GnrH6hr/y8L8VnLp35QFupdX64n8acPV7FkH+X6XKnFIWQX6HFvA5mdB9EGY4F16ODcDkXCX5ygI4T4FzURE5EtJpVmlwmJ3U4vzWmwbqfRsbQgI0BQkiHn6kDhGJ2GzEylSgPWd8F5yIBxN2VNTspGNEVG9KVGiF86zgqrobEpcTbT1W7uyWNKNyhG5vPM0WXszcBTPs8lKBufIx8bBEayX8szy+d9wB8rz94y8BlFSLYMKOPdjvzpIX+T10HKnh3e/ebhpBZohkQCSwWq6IxFUB4iOhgXIuGv0YtbnTpClYAM3BxU/IlkPeiDb9XFrca6FFXpgxfGdG7bd6RTjBqpqbfAc2aQ72gY4EwiSoxSz4bxR2v6U1Y8/kKWQi2PKOSsWaFZJd9fckbNsdBK9/1jLfHthyiltR/GbFwQRmJIlVpqq6XlMUbrlQ/UYmuaF6QyRz65hP629gvFonD2GhxZG7LvYNbG9079TUTCr3XPWuTc=|3qG36x3AstyUPWb8CEs/g2Aei4tUsXRnhUSd21Kn7WE=",
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_crypto_providerKeys": {},
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_crypto_organizationKeys": {},
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_avatar_avatarColor": null,
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_keyConnector_usesKeyConnector": false,
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_providers_providers": {},
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_organizations_organizations": {},
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_keyConnector_convertAccountToKeyConnector": null,
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_folder_folders": {},
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_collection_collections": {},
+  "global_clearEvent_lock": [
+    {
+      "state": "ciphersMemory",
+      "key": "decryptedCiphers",
+      "location": "memory"
+    }
+  ],
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_ciphers_ciphers": {},
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_encryptedSend_sendUserEncrypted": {},
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_domainSettings_equivalentDomains": [],
+  "user_a09a8af2-8827-47bf-b99a-b1b100269c01_policies_policies": {}
+}

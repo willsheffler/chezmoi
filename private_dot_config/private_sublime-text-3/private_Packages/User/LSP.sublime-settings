@@ -1,0 +1,39 @@
+// Settings in here override those in "LSP/LSP.sublime-settings"
+{
+    "lsp_code_actions_on_save": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+        "source.fixAll.ruff": true,
+        "source.organizeImports.ruff": true
+  },
+  
+
+
+  "clients": {
+    "sourcery": {
+      "command": [
+        "/home/sheffler/miniconda3/envs/rfd/bin/sourcery",  // Update this
+        "lsp"
+      ],
+      "enabled": true,
+      "languageId": "python",
+      "scopes": ["source.python"],
+      "syntaxes": [
+        "Packages/Python/Python.sublime-syntax",
+        "Packages/MagicPython/grammars/MagicPython.tmLanguage",
+        "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+      ],
+      "initializationOptions": {
+        "extension_version": "sublime lsp",
+        "editor_version": "sublime"
+      },
+      "settings": {
+        "sourcery": {
+          "metricsEnabled": true
+        }
+      }
+    }
+  }
+
+
+}

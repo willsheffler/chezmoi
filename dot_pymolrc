@@ -1,0 +1,56 @@
+import sys
+sys.path.append('/home/sheffler/src/willutil')
+LIBDIR = '/home/sheffler/src/wills_pymol_crap/'
+# LIBDIR = '/home/sheffler/for/david/wills_pymol_crap/'
+sys.path.append(LIBDIR)
+cmd.run(LIBDIR+'wills_pymol_crap/pymol_util.py')
+cmd.run(LIBDIR+'wills_pymol_crap/sym_util.py')
+cmd.run(LIBDIR+'wills_pymol_crap/sym_comp.py')
+cmd.run(LIBDIR+'wills_pymol_crap/symgen.py')
+cmd.run(LIBDIR+'wills_pymol_crap/helix_util.py')
+cmd.run(LIBDIR+'wills_pymol_crap/cgo.py')
+# 
+# # set internal_gui_control_size, 40
+# 
+#viewport 1000, 1000
+viewport 3300, 1800
+stereo
+# 
+
+# bg white
+set ray_opaque_background, on
+# set cartoon_cylindrical_helices=1
+# 
+# util.performance(0)
+# 
+# set depth_cue
+set stereo_mode=3
+# set all_states=on
+# set ribbon_sampling=4
+# set stick_radius=0.15
+# 
+
+#stereo
+# 
+# # set cartoon_oval_length=0.8
+# 
+# 
+# unbond name XDIR, name YDIR
+# unbond name XDIR, name ZDIR
+# unbond name YDIR, name ZDIR
+# 
+# # showcube
+# 
+
+
+
+# axes
+set orthoscopic, on
+
+# mysetview(Vec(-1,0,0),Vec(0,0,1))
+
+hide car
+show lin, name n+ca+c
+# util.cbc
+
+

@@ -1,0 +1,20 @@
+[org/gtk/settings/file-chooser]
+window-position=(466, 48)
+window-size=(3374, 2531)
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=241
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+
+[org/gnome/desktop/interface]
+gtk-theme='Adwaita'
+icon-theme='Papirus-Dark'
+cursor-theme='Bibata-Modern-Ice'
+font-name='Cantarell 11'
+color-scheme='prefer-dark'
