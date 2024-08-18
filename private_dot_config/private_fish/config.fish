@@ -29,6 +29,7 @@ if [ $CONTAINER_ID ]
    end
 else if [ -e .singularity.d ]
    echo IN APPTAINER_CONTAINER
+# elseif [ $host == "lappy.root" ]
 else
    set -gx QT_QPA_PLATFORM wayland
    atuin init fish | source
@@ -45,7 +46,11 @@ else
    if set -q DISPLAY; and test $user != 'root';
       set -gx EDITOR 'sublime_text -'
       # fastfetch
+   elseif [ test -e /mnt/home/sheffler ]
+   # DIGS
+      set -gx EDITOR ' emacs'
    else;
+      # Vconsole
       set -gx EDITOR ' emacs'
       setfont /home/sheffler/.local/share/consolefonts/Lat15-Terminus32x16.psf.gz
       # neofetch
