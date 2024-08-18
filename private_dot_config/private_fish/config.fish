@@ -46,11 +46,11 @@ else
    if set -q DISPLAY; and test $user != 'root';
       set -gx EDITOR 'sublime_text -'
       # fastfetch
-   elseif [ test -e /mnt/home/sheffler ]
-   # DIGS
+   else if test -e /mnt/home/sheffler
+      echo "DIGS"
       set -gx EDITOR ' emacs'
    else;
-      # Vconsole
+      echo "Vconsole"
       set -gx EDITOR ' emacs'
       setfont /home/sheffler/.local/share/consolefonts/Lat15-Terminus32x16.psf.gz
       # neofetch
