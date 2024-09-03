@@ -23,7 +23,8 @@ alias dbarch 'distrobox enter arch'
 alias t tree
 alias ff fastfetch
 alias top htop
-alias less bat
+alias less 'bat --color=always'
+# alias cd z
 
 alias ghc 'gh copilot'
 alias ghcs 'gh copilot -t shell'
@@ -39,3 +40,4 @@ alias sk "sk --preview 'bat --color=always {}'"
 alias isub "subl (sk --preview 'bat --color=always {}')"
 alias ipac "pacman -Slq | sk --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias ipacrm "pacman -Qq | sk --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+

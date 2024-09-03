@@ -1,8 +1,10 @@
 Host *
   NoHostAuthenticationForLocalhost yes
-#   StrictHostKeyChecking no
-#   GSSAPIAuthentication yes
-#   ForwardAgent yes
+#  StrictHostKeyChecking no
+#  GSSAPIAuthentication yes
+#  ForwardAgent yes
+#  HostKeyAlgorithms=+ssh-rsa
+#  PubkeyAcceptedKeyTypes +ssh-rsa
 
 Host dig*
 	ForwardX11 no

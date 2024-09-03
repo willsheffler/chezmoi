@@ -7,8 +7,6 @@
     <Name>chrome-apps</Name>
     <Directory>chrome-apps.directory</Directory>
     <Include>
-        <Filename>chrome-fahmaaghhglfmonjliepjlchgpgfmobi-Default.desktop</Filename>
-        <Filename>chrome-hmbjbjdpkobdjplfobhljndfdfdipjhg-Default.desktop</Filename>
         <Filename>chrome-gneipglanmgpdhiohiogfnhdpoaafoob-Default.desktop</Filename>
     </Include>
 </Menu>

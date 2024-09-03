@@ -1,10 +1,19 @@
+import = ['~/config/alacritty/keybinds.yaml']
+
 [font]
 size = 12
 
 [font.normal]
+# family = "MonaspaceArgon"
+# family = "MonaspaceNeon"
+# family = "MonaspaceRadon"
+# family = "MonaspaceXenon"
 family = "Source Code Pro"
 # family = "FiraCode Nerd Font"
-style = "Regular"
+# family = "JetBrainsMono"
+# family = "MonaspaceKrypton"
+# style = "WideRegular"
+style = "SemiBold"
 
 # [window]
 # opacity = 1
@@ -15,3 +24,48 @@ y = 5
 
 [selection]
 save_to_clipboard = true
+
+[keyboard]
+# ScrollPageUp
+# ScrollPageDown
+# ScrollLineUp
+# ScrollLineDown
+# ScrollToTop
+# ScrollToBottom
+  # - { key: PageUp,   mods: Shift,   chars: "\x1b[5;2~"                   }
+  # - { key: PageUp,   mods: Control, chars: "\x1b[5;5~"                   }
+  # - { key: PageUp,                  chars: "\x1b[5~"                     }
+  # - { key: PageDown, mods: Shift,   chars: "\x1b[6;2~"                   }
+bindings = [
+  # { key = "Y", mods = "Control", action = "Paste"               },
+  { key = "N", mods = "ALT", chars = "\u001Bb" },
+  { key = "O", mods = "ALT", chars = "\u001Bf" },
+  # { key = "N", mods = "Control", action = "Left" }, # broken
+  # { key = "N",     mods = "Shift",      chars = "\x1b[1;2D"                   },
+  # { key = "N",     mods = "Control",    chars = "\x1b[1;5D"                   },
+  # { key = "N",     mods = "Alt",        chars = "\x1b[1;3D"                   },
+  # { key = "N",                          chars = "\x1b[D",                    },
+  { key = "N",       mods = "Control",         chars = "\u001b[D"                    },
+  { key = "E",       mods = "Control",         chars = "\u001b[A"                    },
+  { key = "I",       mods = "Control",         chars = "\u001b[B"                    },
+  { key = "O",       mods = "Control",         chars = "\u001b[C"                    },
+  { key = "N",       mods = "Control|Alt",         chars = "\u001b[H"                    },
+  { key = "O",       mods = "Control|Alt",         chars = "\u001b[F"                    },
+  # { key = "E", mods = "Control", action = "Up"    chars = "\u001Bu"},
+  # { key = "I", mods = "Control", action = "Down"  chars = "\u001Bd"},
+  # { key = "O", mods = "Control", action = "Right" chars = "\u001Bf"},
+  # { key = "Insert",   mods = "Shift",         action = "PasteSelection" },
+  # { key = "F",        mods = "Control|Shift", action = "SearchForward",     mode = "~Search" },
+  # { key = "B",        mods = "Control|Shift", action = "SearchBackward",    mode = "~Search" },
+  # { key = "Key0",     mods = "Control",       action = "ResetFontSize" },
+  # { key = "Equals",   mods = "Control",       action = "IncreaseFontSize" },
+  # { key = "Minus",    mods = "Control",       action = "DecreaseFontSize" },
+  # { key = "L",        mods = "Control",       action = "ClearLogNotice" },
+  # { key = "L",        mods = "Control",       chars  = "\f" },
+  # { key = "PageUp",   mods = "Shift",         action = "ScrollPageUp",      mode = "~Alt" },
+  # { key = "PageDown", mods = "Shift",         action = "ScrollPageDown",    mode = "~Alt" },
+  # { key = "Up",       mods = "Shift",         action = "ScrollLineUp",      mode = "~Alt" },
+  # { key = "Down",     mods = "Shift",         action = "ScrollLineDown",    mode = "~Alt" },
+  # { key = "Home",     mods = "Shift",         action = "ScrollToTop",       mode = "~Alt" },
+  # { key = "End",      mods = "Shift",         action = "ScrollToBottom",    mode = "~Alt" },
+]

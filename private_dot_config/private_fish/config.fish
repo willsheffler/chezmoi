@@ -1,4 +1,3 @@
-
 set user (whoami)
 set host ($HOME/bin/host)
 set distro (grep -E '^NAME=' /etc/os-release | cut -b 7-16)
@@ -19,7 +18,6 @@ function setup_conda;
        source "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
    end
 end
-
 if [ $CONTAINER_ID ]
    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
    fish_add_path -gaP /home/linuxbrew/.linuxbrew/bin:$PATH
@@ -28,7 +26,6 @@ if [ $CONTAINER_ID ]
       # set -gx LD_LIBRARY_PATH $HOME/miniconda3/envs/rfd/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib
    end
 else if [ -e .singularity.d ]
-   echo IN APPTAINER_CONTAINER
 # elseif [ $host == "lappy.root" ]
 else
    set -gx QT_QPA_PLATFORM wayland
@@ -40,6 +37,7 @@ else
    fish_add_path -gaP $HOME/go/bin
    fish_add_path -gpP $HOME/.local/bin
    setup_conda ~/sw/MambaForge mamba
+   source $HOME/.config/fish/conf.d/env.fish
    # set -gx APPTAINER_CONTAINER '/software/containers/users/sheffler/rf_diffusion_aa_py310.sif'
    # set -gx OMP_NUM_THREADS 1
    # set -gx MKL_NUM_THREADS 1
@@ -73,4 +71,22 @@ end
 
 
 
+
+
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# if test -f /home/sheffler/sw/MambaForge/bin/conda
+#     eval /home/sheffler/sw/MambaForge/bin/conda "shell.fish" "hook" $argv | source
+# else
+#     if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
+#         . "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
+#     else
+#         set -x PATH "/home/sheffler/sw/MambaForge/bin" $PATH
+#     end
+# end
+
+if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
+    source "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
+end
+# <<< conda initialize <<<
 

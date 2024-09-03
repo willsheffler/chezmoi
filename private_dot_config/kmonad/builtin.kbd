@@ -1,0 +1,265 @@
+(defcfg
+  input  (device-file "/dev/input/by-path/pci-0000:00:14.0-usb-0:8:1.1-event-kbd")
+  output (uinput-sink "My KMonad output"
+;;    "sleep 1 && setxkbmap -option compose:ralt"
+    )
+  cmp-seq ralt    ;; Set the compose key to `RightAlt'
+  cmp-seq-delay 5 ;; 5ms delay between each compose-key sequence press
+  fallthrough true
+  allow-cmd true
+  implicit-around around
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
+  lctl fn   lmet lalt           spc            ralt rmet rctl left down right
+)
+(deflayer base
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @ntb @dq  @dw  @de  @dr  @dt  @dy  @du  @di  @do  @dp     [    ]    \
+  caps @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '    ret
+  lsft @dz  @dx  @dc  @dv  @db  @dn  @dm  @d,  @d.  /    rsft      up
+  lctl fn   lmet lalt           spc            ralt rmet rctl left down right
+)
+(deflayer nohmd
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    a    s    d    f    _    _    j    k    l    ;    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer numbers
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    XX   /    7    8    9    -    _    _    _
+  _    _    _    _    _    XX   *    4    5    6    +    _    _
+  _    _    \(   \)   .    XX   0    1    2    3    _    _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+
+(defalias
+    ntb (tap-hold-next-release 200 tab (layer-toggle numbers))
+    ha  (tap-hold-next-release 500 a lmet)
+    hs  (tap-hold-next-release 500 s lalt)
+    hd  (tap-hold-next-release 500 d lctl)
+    hf  (tap-hold-next-release 500 f lsft)
+    hj  (tap-hold-next-release 500 j rsft)
+    hk  (tap-hold-next-release 500 k rctl)
+    hl  (tap-hold-next-release 500 l lalt)
+    ho  (tap-hold-next-release 500 ; rmet)
+    nohmd (layer-delay 100 nohmd)
+  hda #(@ha @nohmd)
+  hds #(@hs @nohmd)
+  hdd #(@hd @nohmd)
+  hdf #(@hf @nohmd)
+  hdj #(@hj @nohmd)
+  hdk #(@hk @nohmd)
+  hdl #(@hl @nohmd)
+  hdo #(@ho @nohmd)
+  dq  #(q @nohmd)
+  dw  #(w @nohmd)
+  de  #(e @nohmd)
+  dr  #(r @nohmd)
+  dt  #(t @nohmd)
+  dy  #(y @nohmd)
+  du  #(u @nohmd)
+  di  #(i @nohmd)
+  do  #(o @nohmd)
+  dp  #(p @nohmd)
+  dg  #(g @nohmd)
+  dh  #(h @nohmd)
+  dz  #(z @nohmd)
+  dx  #(x @nohmd)
+  dc  #(c @nohmd)
+  dv  #(v @nohmd)
+  db  #(b @nohmd)
+  dn  #(n @nohmd)
+  dm  #(m @nohmd)
+  d,  #(, @nohmd)
+  d.  #(. @nohmd)
+)
+
+#| --------------------------------------------------------------------------
+                  Optional: press-only / release-only buttons
+
+  - `(press-only x)` : Send the *press* of x when this button is tapped
+  - `(release-only x)` : Send the *release* of x when this button is tapped
+
+(defalias
+
+  ;; Something useful
+  cpy C-c
+  pst C-v
+  cut C-x
+
+  ;; Something silly
+  md1 (around a (around b c))    ;; abc
+  md2 (around a (around-only lsft b)) ;; aB
+  md3 C-A-M-S-l
+  md4 (around % b)               ;; BEWARE: %B, not %b, do you see why?
+  md5 (around-when-alone lctl c)
+)
+
+;; Let's make both shift keys sticky
+(defalias
+  sl (sticky-key 300 lsft)
+  sr (sticky-key 300 rsft))
+
+(defalias
+  ctl-lck (stepped (press-only lctl) (release-only lctl)))
+
+(defalias tst (around (layer-toggle macro-test)
+                (around (layer-toggle layer-test)
+                  (around (layer-toggle around-next-test)
+                    (around (layer-toggle command-test)
+                            (layer-toggle modded-test))))))
+
+(deflayer modded-test
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @md4 _    _    _    _    _    _    _    _    _    _    _
+  _    _    @md1 @md2 @md3 _    _    _    _    _    _    _    _
+  _    _    @cut @cpy @pst _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+(defalias
+  mc1 #(K M o n a d)
+  mc2 #(C-c P50 A-tab P50 C-v) ;; Careful, this might do something
+  mc3 #(P200 h P150 4 P100 > < P50 > < P20 0 r z 1 ! 1 ! !)
+  mc4 (tap-macro a (pause 50) @md2 (pause 50) c)
+  mc5 (tap-macro-release esc esc esc)
+  mc6 #(@mc3 spc @mc3 spc @mc3)
+)
+
+(deflayer macro-test
+  _    @mc1 @mc2 @mc3 @mc4 @mc5 @mc6 _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+makes
+(defalias
+
+  yah (layer-toggle asking-for-trouble) ;; Completely safe
+  nah (layer-add asking-for-trouble)    ;; Completely unsafe
+
+  ld1 (layer-delay 500 numbers) ;; One way to get a leader-key
+  ld2 (layer-next numbers)      ;; Another way to get a leader key
+
+  ;; NOTE, this is safe because both `qwerty` and `colemak` contain the `@tst`
+  ;; button which will get us to the `layer-test` layer, which itself contains
+  ;; both `@qwe` and `@col`.
+  qwe (layer-switch qwerty) ;; Set qwerty as the base layer
+  col (layer-switch colemak) ;; Set colemak as the base layer
+)
+(deflayer layer-test
+  @qwe _    _    _    _    _    _    _    _    _    _    @add _    @nah
+  @col _    _    _    _    _    _    _    _    _    _    _    _    @yah
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    @ld1 @ld2 _
+  _    _    _              _              _    _    _    _
+)
+
+;; Exactly like qwerty, but with the letters switched around
+(deflayer colemak
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @xcp a    r    s    t    d    h    n    e    i    o    '    ret
+  @sl  z    x    c    v    b    k    m    ,    .    /    @sr
+  lctl @num lalt           spc            ralt rmet @sym @tst
+)
+
+(defalias lol #(: - D))
+
+;; Contrived example
+(deflayer asking-for-trouble
+  @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol
+  @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol
+  @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol
+  @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol @lol
+  @lol @lol @lol           @lol           @lol @lol @lol @lol
+)
+
+;; One way to safely use layer-add and layer-rem: the button bound to layer-add
+;; is the same button bound to layer-rem in the layer that `add` adds to the
+;; stack. I.e., it becomes impossible to add or remove multiple copies of a
+;; layer.
+(defalias
+  add (layer-add multi-overlay) ;; multi-overlay is defined in the next
+  rem (layer-rem multi-overlay) ;; section below this
+)
+
+(defalias
+  xtn (tap-next x lsft)         ;; Shift that does 'x' on tap
+  xth (tap-hold 400 x lsft)     ;; Long delay for easier testing
+  thn (tap-hold-next 400 x lsft)
+  tnr (tap-next-release x lsft)
+  tnp (tap-next-press x lsft)
+  tnh (tap-hold-next-release 2000 x lsft)
+
+  ;; Used it the colemak layer
+  xcp (tap-hold-next 400 esc ctl)
+)
+
+;; Some of the buttons used here are defined in the next section
+(deflayer multi-overlay
+  @mt  _    _    _    _    _    _    _    _    _    _    _    @rem _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  @thn _    _    _    _    _    _    _    _    _    _    _    _
+  @xtn _    _    _    _    _    _    _    _    _    _    @xth
+  @tnr @tnp _              _              _    _    _    @tnh
+)
+
+(defalias
+  mt  (multi-tap 300 a 300 b 300 c 300 d e))
+
+(defalias
+  ns  (around-next sft)        ;; Shift until the release of the next press
+  ns' (around-next-single sft) ;; Shift the next event
+  nnm (around-next @num)       ;; Perform next press in numbers layer
+  ntm (around-next-timeout 500 sft XX)
+  inn (before-after-next tab S-tab)
+
+
+)
+
+(deflayer around-next-test
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  @ns  _    _    _    _    _    _    _    _    _    _    _    _
+  @nnm _    _    _    _    _    _    _    _    _    _    _
+  @ntm _    _              _              _    _    _    _
+)
+
+(defalias
+  sym (layer-toggle symbols)
+
+)
+(deflayer symbols
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    ä    é    ©    _    _    _    _    _    _    _    _    _    _
+  _    +'   +~   +`   +^   _    _    _    _    _    _    _    _
+  _    +"   +,   _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+
+(defalias
+  dat (cmd-button "date >> /tmp/kmonad_example.txt")   ;; Append date to tmpfile
+  pth (cmd-button "echo $PATH > /tmp/kmonad_path.txt") ;; Write out PATH
+  ;; `dat' on press and `pth' on release
+  bth (cmd-button "date >> /tmp/kmonad_example.txt"
+                  "echo $PATH > /tmp/kmonad_path.txt")
+)
+(deflayer command-test
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    @dat @pth _
+  _    _    _              _              _    _    _    _
+)
+
+|#

@@ -3,8 +3,8 @@
 plugins = [
    "scratchpads",
    "layout_center",
-   "expose",
-   "system_notifier",
+   # "expose",
+   # "system_notifier",
 ]
 
 # [system_notifier.sources]
@@ -26,8 +26,8 @@ plugins = [
 # pattern = "usb \d+-[0-9.]+: Product: "
 # filter = "s/.*usb \d+-[0-9.]+: Product: (.*)/USB plugged: \1/"
 
-[expose]
-include_special = false
+# [expose]
+# include_special = false
 
 [layout_center]
 # margin = 60
@@ -48,7 +48,23 @@ unfocus = "hide"
 size = "80% 80%"
 position = "10% 10%"
 
-[scratchpads.term]
+[scratchpads.term1]
+command = "alacritty --class scratchpad"
+lazy = true
+class = "scratchpad"
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.term2]
+command = "alacritty --class scratchpad"
+lazy = true
+class = "scratchpad"
+unfocus = "hide"
+size = "80% 80%"
+position = "10% 10%"
+
+[scratchpads.term3]
 command = "alacritty --class scratchpad"
 lazy = true
 class = "scratchpad"
