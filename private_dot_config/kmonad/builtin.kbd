@@ -1,3 +1,86 @@
+;; cheat sheet symbols
+;;  ` ~           { } + =
+;; \! @ # $  | \  [ ] _ -
+;;  % ^ & *       ( ) < >
+
+(deflayer base
+ grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc @pra del
+ tab  @dq  @dw  @de  @dr  @dt  @dy  @du  @di  @do  @dp  [    ]    \
+ rctl @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '    ret
+ rsft @ldz @ldx @ldc @ldv @db  @dn  @ldm @ld, @ld. @ld/ rsft      up
+ lctl fn   lmet lalt           spc            @mov rmet rctl left down right
+)
+(deflayer practice
+  XX   XX   XX   XX   XX    XX  XX   XX   XX   XX   XX   XX   XX   XX  @bas del
+  tab  @dq  @dw  @de  @dr  @dt  @dy  @du  @di  @do  @dp  XX   XX   XX
+  XX   @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '    ret
+  XX   @ldz @ldx @ldc @ldv @db  @dn  @ldm @ld, @ld. @ld/ XX        XX
+  XX   fn   XX   XX          spc               @mov XX   XX   XX   XX   XX
+)
+(deflayer navigationL
+  _    _    _    _    _     _   _    _    _    _    _    _    _    _    _    _
+  _    tab  XX   XX   XX    _   _    home pgup pgdn end  _    _    _
+  esc  @bwd bspc del  @dwd  XX  XX   _    _    _    _    ins       _
+  _    undo cut  copy paste XX  XX   @mlw @mu4 @md4 @mrw _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer navigationR
+  _    _    _    _    _     _   _    _    _    _    _    _    _    _    _    _
+  _    tab  XX   XX   XX    _   _    home pgup pgdn end  _    _    _
+  esc  _    bspc del  @dwd  XX  XX   left up   down rght ins       _
+  _    undo cut  copy paste XX  XX   @mlw @mu4 @md4 @mrw _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer navigation
+  _    _    _    _    _     _   _    _    _    _    _    _    _    _    _    _
+  _    tab  XX   XX   XX    _   _    home pgup pgdn end  _    _    _
+  esc  @bwd bspc del  @dwd  XX  XX   left up   down rght ins       _
+  _    undo cut  copy paste XX  XX   @mlw @mu4 @md4 @mrw _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer symbolsL
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    `    ~    @eml XX   XX   XX   {    }    +    =    _    _    _
+  XX   !    @    #    $    |    \    _    _    _    _    XX        _
+  _    %    ^    &    *    XX   XX  \(   \)    <    >    _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer symbolsR
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    `    ~    @eml XX   XX   XX   {    }    +    =    _    _    _
+  XX   _    _    _    _    |    \    [    ]    \_   -    XX        _
+  _    %    ^    &    *    XX   XX  \(   \)    <    >    _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer numbersL
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    \(   \)   XX   /    7    8    9    -    _    _    _
+  _    _    _    _    _    XX   *    _    _    _    _         _    _
+  _    {    }    [    ]    XX   0    1    2    3    .    _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer numbersR
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    \(   \)   XX   /    7    8    9    -    _    _    _
+  _    _    _    _    _    XX   *    4    5    6    +    _    _
+  _    {    }    [    ]    XX   0    1    2    3    .    _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer mediaL
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _ KeyF9 KeyF10 KeyF11 KeyF12 _ _   blup bldn _    _    _    _    _
+  _ KeyF1 KeyF2  KeyF3  KeyF4  XX XX volu vold brup brdn _    _
+  _ KeyF5 KeyF6  KeyF7  KeyF8  XX XX prev pp   next mute _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+(deflayer mediaR
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _ KeyF9 KeyF10 KeyF11 KeyF12 _ _   blup bldn _    _    _    _    _
+  _ KeyF1 KeyF2  KeyF3  KeyF4  XX XX volu vold brup brdn _    _
+  _ KeyF5 KeyF6  KeyF7  KeyF8  XX XX prev pp   next mute _         _
+  _    _    _    _              _              _    _    _    _    _    _
+)
+
 (defcfg
   input  (device-file "/dev/input/by-path/pci-0000:00:14.0-usb-0:8:1.1-event-kbd")
   output (uinput-sink "My KMonad output"
@@ -11,93 +94,44 @@
 )
 
 (defsrc
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc ins  del
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
   lctl fn   lmet lalt           spc            ralt rmet rctl left down right
 )
 ;; (deflayer vanilla
-;;   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc ins  del
 ;;   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
 ;;   caps a    s    d    f    g    h    j    k    l    ;    '    ret
 ;;   lsft z    x    c    v    b    n    m    ,    .    /    rsft      up
 ;;   lctl fn   lmet lalt           spc            @mov rmet rctl left down right
 ;; )
 
-(deflayer base
- grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-;; XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
- tab  @dq  @dw  @de  @dr  @dt  @dy  @du  @di  @do  @dp  [    ]    \
- rctl @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '    ret
- rsft @ldz @ldx @ldc @ldv @db  @dn  @ldm @ld, @ld. @ld/ rsft      up
- lctl fn   lmet lalt           spc            @mov rmet rctl left down right
-)
+
 ;; (deflayer base
-;;   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc ins  del
 ;;   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
 ;;   caps @ha  @hs  @hd  @hf  g    h    @hj  @hk  @hl  @ho  '    ret
 ;;   lsft @lz  @lx  @lc  @lv  b    n    @lm  @l,  @l.  @l/       rsft      up
 ;;   lctl fn   lmet lalt           spc            @mov rmet rctl left down right
 ;; )
 (deflayer nohmd
-  XX   XX   _    _    _    _    _    _    _    _    _    _    _    _
+  XX   XX   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    a    s    d    f    _    _    j    k    l    ;    _    _
   _    z    x    c    v    _    _    m    ,    .    /    _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
-;; (deflayer lnav
-;;   _    _    _    _    _     _   _    _    _    _    _    _    _    _
-;;   _    esc  XX   XX   XX    _   _    _    _    _    _    _    _    _
-;;   XX   bspc tab  ret  del   XX  _    _    _    _    _    _    _
-;;   _    undo cut  copy paste XX  _    _    _    _    _    _         _
-;;   _    _    _    _              _              _    _    _    _    _    _
-;; )
-;; (deflayer rnav
-;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-;;   _    _    _    _    _    _    _    XX   XX   XX   XX   XX   _    _
-;;   _    _    _    _    _    _    XX   left up   down rght XX   _
-;;   _    _    _    _    _    _    XX   home pgup pgdn end  _         _
-;;   _    _    _    _              _              _    _    _    _    _    _
-;; )
-(deflayer navigation
-  _    _    _    _    _     _   _    _    _    _    _    _    _    _
-  _    esc  XX   XX   XX    _   _    home pgup pgdn end  _    _    _
-  XX   @bwd bspc del  @dwd  XX  XX   left up   down rght tab       _
-  _    undo cut  copy paste XX  XX   @mlw @mu4 @md4 @mrw _         _
-  _    _    _    _              _              _    _    _    _    _    _
-)
-(deflayer symbols
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    `    ~    <    >    XX   XX   {    }    XX   XX   _    _    _
-  XX   +    =    \(   \)   |    \    [    ]    \_   -    XX   _
-  _    !    @    #    $    XX   XX   %    ^    &    *    _         _
-  _    _    _    _              _              _    _    _    _    _    _
-)
-(deflayer numbers
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    \(   \)   XX   _    7    8    9    -    _    _    _
-  _    _    _    _    _    XX   *    4    5    6    +    _    _
-  _    {    }    [    ]    XX   0    1    2    3    .    /         _
-  _    _    _    _              _              _    _    _    _    _    _
-)
-(deflayer media
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _ KeyF9 KeyF10 KeyF11 KeyF12 _ _   blup bldn _    _    _    _    _
-  _ KeyF1 KeyF2  KeyF3  KeyF4  XX XX volu vold brup brdn _    _
-  _ KeyF5 KeyF6  KeyF7  KeyF8  XX XX prev pp   next mute _         _
-  _    _    _    _              _              _    _    _    _    _    _
-)
 (defalias
-    lz  (tap-hold-next-release 200 z (layer-toggle navigation))
-    lx  (tap-hold-next-release 200 x (layer-toggle media))
-    lc  (tap-hold-next-release 200 c (layer-toggle numbers))
-    lv  (tap-hold-next-release 200 v (layer-toggle symbols))
-    lm  (tap-hold-next-release 200 m (layer-toggle symbols))
-    l,  (tap-hold-next-release 200 , (layer-toggle numbers))
-    l.  (tap-hold-next-release 200 . (layer-toggle media))
-    l/  (tap-hold-next-release 200 / (layer-toggle navigation))
+    lz  (tap-hold-next-release 200 z (layer-toggle navigationR))
+    lx  (tap-hold-next-release 200 x (layer-toggle mediaR))
+    lc  (tap-hold-next-release 200 c (layer-toggle numbersR))
+    lv  (tap-hold-next-release 200 v (layer-toggle symbolsR))
+    lm  (tap-hold-next-release 200 m (layer-toggle symbolsL))
+    l,  (tap-hold-next-release 200 , (layer-toggle numbersL))
+    l.  (tap-hold-next-release 200 . (layer-toggle mediaL))
+    l/  (tap-hold-next-release 200 / (layer-toggle navigationL))
     mov (layer-toggle navigation)
     ha  (tap-hold-next-release 200 a lmet)
     hs  (tap-hold-next-release 200 s lalt)
@@ -113,6 +147,9 @@
     mrw A-rght
     bwd C-bspc
     dwd C-del
+    eml #(w l u u d h k e e u k s @ t m a l u . c ; m)
+    pra (layer-switch practice)
+    bas (layer-switch base)
 
   nohmd (layer-delay 100 nohmd)
   dq  #(q @nohmd)
@@ -150,7 +187,7 @@
 
 #| --------------------------------------------------------------------------
 
-ars
+arsnnniat
 for is the bar walrus
 
 
