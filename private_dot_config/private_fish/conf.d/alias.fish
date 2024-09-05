@@ -24,7 +24,7 @@ alias t tree
 alias ff fastfetch
 alias top htop
 alias less 'bat --color=always'
-# alias cd z
+
 
 alias ghc 'gh copilot'
 alias ghcs 'gh copilot -t shell'

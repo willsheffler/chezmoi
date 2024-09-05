@@ -1,4 +1,5 @@
 [
+    { "keys": ["super+alt+e"], "command": "open_file", "args": {"file": "/home/sheffler/CAM_MED_PASSWD"}}, //"${project}"} },
     { "keys": ["ctrl+y"], "command": "paste_and_indent" },
     { "keys": ["ctrl+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "context":
         [{ "key": "overlay_has_focus", "operator": "equal", "operand": false }]
