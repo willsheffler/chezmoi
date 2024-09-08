@@ -3,6 +3,7 @@ set host ($HOME/bin/host)
 set distro (grep -E '^NAME=' /etc/os-release | cut -b 7-16)
 
 bind \b backward-kill-word 
+bind \e\[3\;5~ kill-word
 
 function setup_conda;
    set ROOT $argv[1]

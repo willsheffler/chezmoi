@@ -1,75 +1,70 @@
-;; cheat sheet symbols
-;;  ` ~           { } + =
-;; \! @ # $  | \  [ ] _ -
-;;  % ^ & *       ( ) < >
-
 (deflayer base
  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc @pra del
  tab  @dq  @dw  @de  @dr  @dt  @dy  @du  @di  @do  @dp  [    ]    \
- rctl @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '    ret
+ @cex @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '         ret
  rsft @ldz @ldx @ldc @ldv @db  @dn  @ldm @ld, @ld. @ld/ rsft      up
  lctl fn   lmet lalt           spc            @mov rmet rctl left down right
 )
 (deflayer practice
   XX   XX   XX   XX   XX    XX  XX   XX   XX   XX   XX   XX   XX   XX  @bas del
   tab  @dq  @dw  @de  @dr  @dt  @dy  @du  @di  @do  @dp  XX   XX   XX
-  XX   @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '    ret
+  @cex @hda @hds @hdd @hdf @dg  @dh  @hdj @hdk @hdl @hdo '         ret
   XX   @ldz @ldx @ldc @ldv @db  @dn  @ldm @ld, @ld. @ld/ XX        XX
   XX   fn   XX   XX          spc               @mov XX   XX   XX   XX   XX
 )
 (deflayer navigationL
   _    _    _    _    _     _   _    _    _    _    _    _    _    _    _    _
   _    tab  XX   XX   XX    _   _    home pgup pgdn end  _    _    _
-  esc  @bwd bspc del  @dwd  XX  XX   _    _    _    _    ins       _
+  _    @bwd bspc del  @dwd  XX  XX   @nv7 @nv8 @nv9 @nv0 _         _
   _    undo cut  copy paste XX  XX   @mlw @mu4 @md4 @mrw _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
 (deflayer navigationR
   _    _    _    _    _     _   _    _    _    _    _    _    _    _    _    _
   _    tab  XX   XX   XX    _   _    home pgup pgdn end  _    _    _
-  esc  _    bspc del  @dwd  XX  XX   left up   down rght ins       _
+  _    @nv1 @nv2 @nv3 @nv4  XX  XX   left up   down rght ins       _
   _    undo cut  copy paste XX  XX   @mlw @mu4 @md4 @mrw _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
 (deflayer navigation
   _    _    _    _    _     _   _    _    _    _    _    _    _    _    _    _
   _    tab  XX   XX   XX    _   _    home pgup pgdn end  _    _    _
-  esc  @bwd bspc del  @dwd  XX  XX   left up   down rght ins       _
+  _    @bwd bspc del  @dwd  XX  XX   left up   down rght ins       _
   _    undo cut  copy paste XX  XX   @mlw @mu4 @md4 @mrw _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
 (deflayer symbolsL
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    `    ~    @eml XX   XX   XX   {    }    +    =    _    _    _
-  XX   !    @    #    $    |    \    _    _    _    _    XX        _
+  XX   !    @    #    $    |    \    lmet lalt lctl lsft XX        _
   _    %    ^    &    *    XX   XX  \(   \)    <    >    _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
 (deflayer symbolsR
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    `    ~    @eml XX   XX   XX   {    }    +    =    _    _    _
-  XX   _    _    _    _    |    \    [    ]    \_   -    XX        _
+  XX   lmet lalt lctl lsft |    \    [    ]    \_   -    XX        _
   _    %    ^    &    *    XX   XX  \(   \)    <    >    _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
 (deflayer numbersL
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    \(   \)   XX   /    7    8    9    -    _    _    _
-  _    _    _    _    _    XX   *    _    _    _    _         _    _
+  _    _    _    _    _    XX   *    lmet lalt lctl lsft _         _
   _    {    }    [    ]    XX   0    1    2    3    .    _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
 (deflayer numbersR
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    \(   \)   XX   /    7    8    9    -    _    _    _
-  _    _    _    _    _    XX   *    4    5    6    +    _    _
+  _    lmet lalt lctl lsft XX   *    4    5    6    +    _         _
   _    {    }    [    ]    XX   0    1    2    3    .    _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
 (deflayer mediaL
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _ KeyF9 KeyF10 KeyF11 KeyF12 _ _   blup bldn _    _    _    _    _
-  _ KeyF1 KeyF2  KeyF3  KeyF4  XX XX volu vold brup brdn _    _
+  _ KeyF1 KeyF2  KeyF3  KeyF4  XX XX lmet lalt lctl lsft _    _
   _ KeyF5 KeyF6  KeyF7  KeyF8  XX XX prev pp   next mute _         _
   _    _    _    _              _              _    _    _    _    _    _
 )
@@ -141,6 +136,7 @@
     hk  (tap-hold-next-release 200 k rctl)
     hl  (tap-hold-next-release 200 l lalt)
     ho  (tap-hold-next-release 200 ; rmet)
+    cex (tap-hold-next-release 200 esc lctl)
     mlw A-left
     mu4 #(up up up up)
     md4 #(down down down down)
@@ -150,7 +146,22 @@
     eml #(w l u u d h k e e u k s @ t m a l u . c ; m)
     pra (layer-switch practice)
     bas (layer-switch base)
+    C-a b
+)
 
+;;      _    @bwd bspc del  @dwd  XX  XX   left up   down rght ins       _
+(defalias
+  nv1  (tap-hold-next-release 200 @bwd lmet)
+  nv2  (tap-hold-next-release 200 bspc lalt)
+  nv3  (tap-hold-next-release 200 del  lctl)
+  nv4  (tap-hold-next-release 200 @dwd lsft)
+  nv7  (tap-hold-next-release 200 left rsft)
+  nv8  (tap-hold-next-release 200 up rctl)
+  nv9  (tap-hold-next-release 200 down ralt)
+  nv0  (tap-hold-next-release 200 right rmet)
+)
+
+(defalias
   nohmd (layer-delay 100 nohmd)
   dq  #(q @nohmd)
   dw  #(w @nohmd)

@@ -9,7 +9,7 @@
         "subpixel_antialias"
         // "gray_antialias"
     ],
-    "font_size": 9,
+    "font_size": 10,
     "ClangFormat":
     {        "format_on_save": true,    },
     "added_words":

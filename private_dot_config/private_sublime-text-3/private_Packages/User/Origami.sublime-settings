@@ -1,41 +1,5 @@
 {
-	"saved_layouts":
-	[
-		{
-			"cells":
-			[
-				[
-					0,
-					0,
-					1,
-					2
-				],
-				[
-					1,
-					0,
-					2,
-					1
-				],
-				[
-					1,
-					1,
-					2,
-					2
-				]
-			],
-			"cols":
-			[
-				0.0,
-				0.5,
-				1.0
-			],
-			"nickname": "sna?",
-			"rows":
-			[
-				0.0,
-				0.5,
-				1.0
-			]
-		}
-	]
+
+	"auto_close_empty_panes": true,
+	"auto_zoom_on_focus": 0.55,
 }

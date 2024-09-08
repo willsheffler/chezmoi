@@ -1,5 +1,10 @@
 [
-    { "keys": ["super+alt+e"], "command": "open_file", "args": {"file": "/home/sheffler/CAM_MED_PASSWD"}}, //"${project}"} },
+
+    // { "keys": ["shift+up"], "command": "select_lines", "args": {"forward": false} },
+    // { "keys": ["shift+down"], "command": "select_lines", "args": {"forward": true} },
+
+    { "keys": ["alt+ctrl+k"], "command": "new_file" },
+    { "keys": ["super+alt+f"],"command": "open_file", "args": {"file": "${project}"} },
     { "keys": ["ctrl+y"], "command": "paste_and_indent" },
     { "keys": ["ctrl+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "context":
         [{ "key": "overlay_has_focus", "operator": "equal", "operand": false }]
@@ -112,15 +117,16 @@
     // },
 
     // ORIGAMI
-    { "keys": ["ctrl+space", "ctrl+e"], "command": "travel_to_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+space", "ctrl+o"], "command": "travel_to_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+space", "ctrl+i"], "command": "travel_to_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+space", "ctrl+n"], "command": "travel_to_pane", "args": {"direction": "left"} },
+    { "keys": ["alt+backspace"], "command": "destroy_pane", "args": {"direction": "self"} },
+    { "keys": ["ctrl+up"], "command": "travel_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+right"], "command": "travel_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+down"], "command": "travel_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+left"], "command": "travel_to_pane", "args": {"direction": "left"} },
 
-    { "keys": ["ctrl+space", "e"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+space", "o"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+space", "i"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+space", "n"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+    { "keys": ["shift+pgup"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+    { "keys": ["shift+home"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+    { "keys": ["shift+pgdn"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+    { "keys": ["shift+end"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
 
     // { "keys": ["ctrl+space", "leftalt+ctrl+e"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
     // { "keys": ["ctrl+space", "leftalt+ctrl+o"], "command": "clone_file_to_pane", "args": {"direction": "right"} },
@@ -128,18 +134,17 @@
     // { "keys": ["ctrl+space", "leftalt+ctrl+n"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
     // You can also create the pane automatically with the following command (insert empty parameters):
     // { "keys": [], "command": "create_pane_with_cloned_file", "args": {"direction": ""} }
-    { "keys": ["ctrl+space", "ctrl+shift+e"], "command": "create_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+space", "ctrl+shift+o"], "command": "create_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+space", "ctrl+shift+i"], "command": "create_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+space", "ctrl+shift+n"], "command": "create_pane", "args": {"direction": "left"} },
+    // { "keys": ["alt+ctrl+up"], "command": "create_pane", "args": {"direction": "up"} },
+    // { "keys": ["alt+ctrl+right"], "command": "create_pane", "args": {"direction": "right"} },
+    // { "keys": ["alt+ctrl+down"], "command": "create_pane", "args": {"direction": "down"} },
+    // { "keys": ["alt+ctrl+left"], "command": "create_pane", "args": {"direction": "left"} },
     // You can also add  "give_focus": true to automatically focus on the new pane as follows:
     // { "keys": [], "command": "create_pane", "args": {"direction": "", "give_focus": true} }
-    { "keys": ["ctrl+space", "ctrl+shift+leftalt+e"], "command": "destroy_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+space", "ctrl+shift+leftalt+o"], "command": "destroy_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+space", "ctrl+shift+leftalt+i"], "command": "destroy_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+space", "ctrl+shift+leftalt+n"], "command": "destroy_pane", "args": {"direction": "left"} },
+    // { "keys": ["shift+alt+up"], "command": "destroy_pane", "args": {"direction": "up"} },
+    // { "keys": ["shift+alt+right"], "command": "destroy_pane", "args": {"direction": "right"} },
+    // { "keys": ["shift+alt+down"], "command": "destroy_pane", "args": {"direction": "down"} },
+    // { "keys": ["shift+alt+left"], "command": "destroy_pane", "args": {"direction": "left"} },
     // You can also destroy the current pane by binding the following command:
-    { "keys": ["ctrl+space", "d"], "command": "destroy_pane", "args": {"direction": "self"} },
 
     // { "keys": ["ctrl+space", "ctrl+leftalt+ctrl+e"], "command": "create_pane_with_file", "args": {"direction": "up"} },
     // { "keys": ["ctrl+space", "ctrl+leftalt+ctrl+o"], "command": "create_pane_with_file", "args": {"direction": "right"} },

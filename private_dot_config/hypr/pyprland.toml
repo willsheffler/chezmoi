@@ -72,10 +72,8 @@ unfocus = "hide"
 size = "80% 80%"
 position = "10% 10%"
 
-[scratchpads.kmonad]
-# command = "subl /home/sheffler/.config/kmonad/builtin.kbd --new-window"
-# class = "sublime_text"
-command = "alacritty --class scratchpad -e emacs /home/sheffler/.local/share/chezmoi/private_dot_config/kmonad/builtin.kbd"
+[scratchpads.sublkeys]
+command = "subl /home/sheffler/.config/sublime-text-3/Packages/User/ide/sublkeys.sublime-project"
 class = "scratchpad"
 lazy = true
 unfocus = "hide"
