@@ -23,8 +23,8 @@ alias dbarch 'distrobox enter arch'
 alias t tree
 alias ff fastfetch
 alias top htop
-alias less 'bat --color=always'
-
+alias bat 'bat --color=always --paging=always'
+alias unalias 'functions --erase'
 
 alias ghc 'gh copilot'
 alias ghcs 'gh copilot -t shell'

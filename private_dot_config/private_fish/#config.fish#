@@ -1,42 +1,95 @@
+set user (whoami)
+set host ($HOME/bin/host)
 set distro (grep -E '^NAME=' /etc/os-release | cut -b 7-16)
 
-direnv hook fish | source
-atuin init fish | source
-   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+bind \b backward-kill-word 
+bind \e\[3\;5~ kill-word
+
+function setup_conda;
+   set ROOT $argv[1]
+   set CONDA $argv[2]
+   eval $ROOT/bin/conda "shell.fish" "hook" | source
+   source $ROOT/etc/fish/conf.d/$CONDA.fish
+   fish_add_path -gP $ROOT/bin
+   # eval /home/sheffler/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+   # eval $HOME/sw/MambaForge/bin/mamba "shell.fish" "hook" $argv | source
+   # eval /home/sheffler/sw/MambaForge/bin/conda "shell.fish" "hook" $argv | source
+   # source /home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish
+   conda config --set channel_priority flexible
+   conda config --set auto_activate_base false
+   if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
+       source "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
+   end
+end
+if [ $CONTAINER_ID ]
+   eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+   fish_add_path -gaP /home/linuxbrew/.linuxbrew/bin:$PATH
+   if [ "$CONTAINER_ID" = "rfubuntu" ]
+      setup_conda /opt/MambaForge mamba
+      # set -gx LD_LIBRARY_PATH $HOME/miniconda3/envs/rfd/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib
+   end
+else if [ -e .singularity.d ]
+# elseif [ $host == "lappy.root" ]
+else
+   set -gx QT_QPA_PLATFORM wayland
+   atuin init fish | source
+   direnv hook fish | source
+   starship init fish --print-full-init | source
+   fzf --fish | source
+   zoxide init fish | source
+   fish_add_path -gaP $HOME/go/bin
+   fish_add_path -gpP $HOME/.local/bin
+   setup_conda ~/sw/MambaForge mamba
+   source $HOME/.config/fish/conf.d/env.fish
+   # set -gx APPTAINER_CONTAINER '/software/containers/users/sheffler/rf_diffusion_aa_py310.sif'
+   # set -gx OMP_NUM_THREADS 1
+   # set -gx MKL_NUM_THREADS 1
+   if set -q DISPLAY; and test $user != 'root';
+      set -gx EDITOR 'sublime_text -'
+      # fastfetch
+   else if test -e /mnt/home/sheffler
+      echo "DIGS"
+      set -gx EDITOR ' emacs'
+   else;
+      echo "Vconsole"
+      set -gx EDITOR ' emacs'
+#      setfont /home/sheffler/.local/share/consolefonts/Lat15-Terminus32x16.psf.gz
+      # neofetch
+   end
 end
 
-# eval /home/sheffler/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-if [ "Arch Linux" != $distro ]
+
 # conda activate rfd
 # source $HOME/venv/sci/bin/activate.fish
 
-fish_add_path /home/linuxbrew/.linuxbrew/bin
-fish_add_path $HOME/go/bin
 
 # # set -gx __NV_PRIME_RENDER_OFFLOAD 1
 # # set -gx __GLX_VENDOR_LIBRARY_NAME nvidia
 
-set -gx OMP_NUM_THREADS 1
-set -gx MKL_NUM_THREADS 1
-
 # #set -gx LD_PRELOAD '/home/sheffler/tools/graphbolt/lib/mimalloc/out/release/libmimalloc.so'
-set -gx APPTAINER_CONTAINER '/software/containers/users/sheffler/rf_diffusion_aa_py310.sif'
+
 # # set -gx PY /home/sheffler/venv/sci/bin/python
 # # function fish_prompt; echo "-> "; end
 # # function fish_prompt_right; echo ""; end
 
+
+
+
+
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
-# # if test -f /home/sheffler/miniconda3/bin/conda
-#     # eval /home/sheffler/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-# # end
-# # <<< conda initialize <<<
+# if test -f /home/sheffler/sw/MambaForge/bin/conda
+#     eval /home/sheffler/sw/MambaForge/bin/conda "shell.fish" "hook" $argv | source
+# else
+#     if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
+#         . "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
+#     else
+#         set -x PATH "/home/sheffler/sw/MambaForge/bin" $PATH
+#     end
+# end
 
-if set -q DISPLAY; and $USER != 'root';
-   set -gx EDITOR 'sublime_text'
-else;
-   set -gx EDITOR ' emacs'
-   setfont /home/sheffler/.local/share/consolefonts/Lat15-Terminus32x16.psf.gz
+if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
+    source "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
 end
+# <<< conda initialize <<<
 
-neofetch

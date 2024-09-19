@@ -32,14 +32,14 @@ else if [ -e .singularity.d ]
 # elseif [ $host == "lappy.root" ]
 else
    set -gx QT_QPA_PLATFORM wayland
-   atuin init fish | source
+#   atuin init fish | source
    direnv hook fish | source
    starship init fish --print-full-init | source
    fzf --fish | source
    zoxide init fish | source
    fish_add_path -gaP $HOME/go/bin
    fish_add_path -gpP $HOME/.local/bin
-   setup_conda ~/sw/MambaForge mamba
+   #setup_conda ~/sw/MambaForge mamba
    source $HOME/.config/fish/conf.d/env.fish
    # set -gx APPTAINER_CONTAINER '/software/containers/users/sheffler/rf_diffusion_aa_py310.sif'
    # set -gx OMP_NUM_THREADS 1
@@ -53,7 +53,7 @@ else
    else;
       echo "Vconsole"
       set -gx EDITOR ' emacs'
-      setfont /home/sheffler/.local/share/consolefonts/Lat15-Terminus32x16.psf.gz
+#      setfont /home/sheffler/.local/share/consolefonts/Lat15-Terminus32x16.psf.gz
       # neofetch
    end
 end
