@@ -3,41 +3,8 @@ update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_valu
 
 [LegacySession: saved at previous logout]
 clientMachine1=localhost
-command1=nvidia-settings
+command1=yad
 count=1
 
 [Session: saved at previous logout]
-clientId1=10e5617070000161601737200000045200003
-clientId2=10e5617070000161601737300000045200005
-clientId3=10e5617070000161601737300000045200008
-clientId4=10e5617070000161601741700000045200012
-clientId5=10e5617070000161601750100000045200014
-count=5
-discardCommand1[$e]=rm,$HOME/.config/session/kwin_10e5617070000161601737200000045200003_1616017735_544233
-discardCommand4[$e]=rm,$HOME/.config/session/dolphin_10e5617070000161601741700000045200012_1616017735_486677
-discardCommand5[$e]=rm,$HOME/.config/session/systemsettings_10e5617070000161601750100000045200014_1616017735_486687
-program1=/usr/bin/kwin_x11
-program2=/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier
-program3=pulseaudio
-program4=/usr/bin/dolphin
-program5=/usr/bin/systemsettings5
-restartCommand1=/usr/bin/kwin_x11,-session,10e5617070000161601737200000045200003_1616017735_544233
-restartCommand2=/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier,-session,10e5617070000161601737300000045200005_1616017735_486671
-restartCommand3=
-restartCommand4=/usr/bin/dolphin,-session,10e5617070000161601741700000045200012_1616017735_486677
-restartCommand5=/usr/bin/systemsettings5,-session,10e5617070000161601750100000045200014_1616017735_486687
-restartStyleHint1=0
-restartStyleHint2=0
-restartStyleHint3=0
-restartStyleHint4=0
-restartStyleHint5=0
-userId1=sheffler
-userId2=sheffler
-userId3=sheffler
-userId4=sheffler
-userId5=sheffler
-wasWm1=true
-wasWm2=false
-wasWm3=false
-wasWm4=false
-wasWm5=false
+count=0

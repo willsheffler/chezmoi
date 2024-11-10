@@ -60,7 +60,20 @@
         "rotatable",
         "kinematically",
         "nanoparticles",
-        "rotameric"
+        "rotameric",
+        "fastapi",
+        "pydantic",
+        "sqlmodel",
+        "sqlalchemy",
+        "pyyaml",
+        "yaml",
+        "schrodinger",
+        "dev",
+        "dir",
+        "dbfile",
+        "dbpoll",
+        "dbkey",
+        "pymolcmd",
     ],
     "afn_use_keybinding": true,
     "auto_complete_triggers":
@@ -132,12 +145,9 @@
     "ignored_packages":
     [
         "Lisp",
-        "LSP-copilot",
         "LSP-pyright",
-        "LSP-ruff",
         "NeoVintageous",
         "SublimeLinter",
-        "SublimeLinter-mypy",
         "TabsExtra",
         "Vintage",
     ],
@@ -150,7 +160,7 @@
     "index_exclude_gitignore": false,
     "line_numbers": true,
     "material_theme_accent_lime": true,
-    "material_theme_tabs_separator": true,
+    "material_them_tabs_separator": true,
     "material_theme_tree_headings": true,
     "no_bold": false,
     "overlay_scroll_bars": "enabled",
@@ -171,5 +181,9 @@
         "dlig",
         "subpixel_antialias"
         // "gray_antialias"
+    ],
+    "ignored_words":
+    [
+		"ipd"
     ],
 }

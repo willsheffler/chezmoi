@@ -1,5 +1,5 @@
 [ActionPlugins][0]
-MidButton;NoModifier=org.kde.paste
+MiddleButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 wheel:Vertical;NoModifier=org.kde.switchdesktop
 
@@ -7,6 +7,7 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][1]
+ItemGeometries-800x600=
 ItemGeometriesHorizontal=
 activityId=1a74bf8f-a1cf-423f-b19f-5c513d8c4689
 formfactor=0
@@ -36,7 +37,9 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][2][Applets][3][Configuration]
-PreloadWeight=92
+PreloadWeight=100
+popupHeight=304
+popupWidth=459
 
 [Containments][2][Applets][3][Configuration][Configuration/General]
 showAppsByName=true
@@ -70,7 +73,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][6][Configuration]
-PreloadWeight=42
+PreloadWeight=47
 SystrayContainmentId=7
 
 [Containments][2][Applets][8]
@@ -79,6 +82,9 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][8][Configuration]
 PreloadWeight=47
+
+[Containments][2][Applets][8][Configuration][Appearance]
+fontWeight=400
 
 [Containments][2][Applets][9]
 immutability=1
@@ -100,6 +106,8 @@ immutability=1
 lastScreen=0
 location=4
 plugin=org.kde.plasma.private.systemtray
+popupHeight=432
+popupWidth=432
 wallpaperplugin=org.kde.image
 
 [Containments][7][Applets][10]
@@ -108,6 +116,9 @@ plugin=org.kde.plasma.volume
 
 [Containments][7][Applets][10][Configuration]
 PreloadWeight=42
+
+[Containments][7][Applets][10][Configuration][General]
+migrated=true
 
 [Containments][7][Applets][11]
 immutability=1
@@ -121,7 +132,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][7][Applets][12][Configuration]
-PreloadWeight=42
+PreloadWeight=52
 
 [Containments][7][Applets][13]
 immutability=1
@@ -153,14 +164,14 @@ PreloadWeight=42
 
 [Containments][7][Applets][17]
 immutability=1
-plugin=org.kde.plasma.printmanager
+plugin=org.kde.plasma.keyboardlayout
 
 [Containments][7][Applets][17][Configuration]
 PreloadWeight=42
 
 [Containments][7][Applets][18]
 immutability=1
-plugin=org.kde.plasma.vault
+plugin=org.kde.plasma.cameraindicator
 
 [Containments][7][Applets][18][Configuration]
 PreloadWeight=42
@@ -170,7 +181,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][7][Applets][19][Configuration]
-PreloadWeight=42
+PreloadWeight=10
 
 [Containments][7][Applets][20]
 immutability=1
@@ -181,18 +192,18 @@ PreloadWeight=42
 
 [Containments][7][Applets][21]
 immutability=1
-plugin=org.kde.plasma.bluetooth
+plugin=org.kde.plasma.brightness
 
 [Containments][7][Applets][21][Configuration]
-PreloadWeight=42
+PreloadWeight=10
 
 [Containments][7][Configuration]
 PreloadWeight=42
 
 [Containments][7][General]
-extraItems=org.kde.plasma.nightcolorcontrol,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.devicenotifier
-knownItems=org.kde.plasma.nightcolorcontrol,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.devicenotifier
+extraItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.cameraindicator,org.kde.kscreen,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod
+knownItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.cameraindicator,org.kde.kscreen,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Factorio.desktop,0,desktop:/steam.desktop,0
+screenMapping=desktop:/rpxdock,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/notes,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/willutil_cpp,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Factorio.desktop,0,desktop:/steam.desktop,desktop:/rfd,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/data,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/digs,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/mnt,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfd_tip,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/go,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/pymol3,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/bin,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Downloads,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/tmpbuild,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfdsym,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/ipd,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/yay-git,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Documents,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/CAM_MED_PASSWD,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rf,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/test,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/FTBA,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/tmp,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/willutil,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/venv,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/minecraft,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rpx,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/miniconda3,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/project,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/sw,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/kids,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rf2ci,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/for,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/src,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/archlinux-2024.09.01-x86_64.iso,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Pictures,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689

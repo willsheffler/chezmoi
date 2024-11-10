@@ -1,6 +1,8 @@
 set user (whoami)
 set host ($HOME/bin/host)
 set distro (grep -E '^NAME=' /etc/os-release | cut -b 7-16)
+set -gx CONDA_EXE '/home/sheffler/sw/MambaForge/bin/conda'
+set -gx MAMBA_EXE '/home/sheffler/sw/MambaForge/bin/mamba'
 
 bind \b backward-kill-word 
 bind \e\[3\;5~ kill-word
@@ -31,21 +33,22 @@ if [ $CONTAINER_ID ]
 else if [ -e .singularity.d ]
 # elseif [ $host == "lappy.root" ]
 else
-   set -gx QT_QPA_PLATFORM wayland
-#   atuin init fish | source
+   # set -gx QT_QPA_PLATFORM wayland
+   set -gx QT_QPA_PLATFORM xcb
+   # atuin init fish | source
    direnv hook fish | source
-   starship init fish --print-full-init | source
    fzf --fish | source
    zoxide init fish | source
    fish_add_path -gaP $HOME/go/bin
    fish_add_path -gpP $HOME/.local/bin
-   #setup_conda ~/sw/MambaForge mamba
+   setup_conda ~/sw/MambaForge mamba
    source $HOME/.config/fish/conf.d/env.fish
+   starship init fish --print-full-init | source
    # set -gx APPTAINER_CONTAINER '/software/containers/users/sheffler/rf_diffusion_aa_py310.sif'
    # set -gx OMP_NUM_THREADS 1
    # set -gx MKL_NUM_THREADS 1
    if set -q DISPLAY; and test $user != 'root';
-      set -gx EDITOR 'sublime_text -'
+      set -gx EDITOR 'subl -w'
       # fastfetch
    else if test -e /mnt/home/sheffler
       echo "DIGS"
@@ -57,7 +60,6 @@ else
       # neofetch
    end
 end
-
 
 # conda activate rfd
 # source $HOME/venv/sci/bin/activate.fish
@@ -88,8 +90,4 @@ end
 #     end
 # end
 
-if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
-    source "/home/sheffler/sw/MambaForge/etc/fish/conf.d/mamba.fish"
-end
-# <<< conda initialize <<<
 

@@ -2,7 +2,7 @@
 {
     "lsp_code_actions_on_save": {
         "source.fixAll": true,
-        "source.organizeImports": true,
+        "source.organizeImports": false,
         "source.fixAll.ruff": true,
         "source.organizeImports.ruff": true
   },
@@ -12,7 +12,7 @@
   "clients": {
     "sourcery": {
       "command": [
-        "/home/sheffler/miniconda3/envs/rfd/bin/sourcery",  // Update this
+        "/home/sheffler/sw/MambaForge/envs/pyright/bin/sourcery",  // Update this
         "lsp"
       ],
       "enabled": true,

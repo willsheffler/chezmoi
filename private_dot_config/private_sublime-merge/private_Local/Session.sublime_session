@@ -1,14 +1,32 @@
 {
-	"last_version": 2096,
+	"last_version": 2102,
 	"new_window_session":
 	{
-		"window_height": 650.0,
-		"window_width": 1200.0
+		"window_height": 675.0,
+		"window_width": 640.0
 	},
-	"next_update_check": 1717653298,
+	"next_update_check": 1730917410,
 	"project_dir": "/home/sheffler",
 	"recent":
 	[
+		{
+			"locations_tab_selected": false,
+			"path": "/home/sheffler/rfdsym",
+			"previous_commit_messages":
+			[
+				"Merge remote-tracking branch 'origin/aa' into aa_sym_whs\n"
+			],
+			"search":
+			{
+				"history":
+				[
+				]
+			},
+			"show_untracked_files": false,
+			"side_bar_visible": true,
+			"table_of_contents_tab_selected": false,
+			"table_of_contents_tree_mode": false
+		},
 		{
 			"locations_tab_selected": false,
 			"path": "/home/sheffler/rfdsym/lib/rf2aa",
@@ -28,7 +46,59 @@
 		},
 		{
 			"locations_tab_selected": false,
-			"path": "/home/sheffler/rfdsym",
+			"path": "/home/sheffler/rfdsym/lib/rf2aa/lib/ipd",
+			"previous_commit_messages":
+			[
+			],
+			"search":
+			{
+				"history":
+				[
+				]
+			},
+			"show_untracked_files": false,
+			"side_bar_visible": true,
+			"table_of_contents_tab_selected": false,
+			"table_of_contents_tree_mode": false
+		},
+		{
+			"locations_tab_selected": false,
+			"path": "/home/sheffler/mlb/lib/ipd",
+			"previous_commit_messages":
+			[
+			],
+			"search":
+			{
+				"history":
+				[
+				]
+			},
+			"show_untracked_files": false,
+			"side_bar_visible": true,
+			"table_of_contents_tab_selected": false,
+			"table_of_contents_tree_mode": false
+		},
+		{
+			"locations_tab_selected": false,
+			"path": "/home/sheffler/src/ppp",
+			"previous_commit_messages":
+			[
+				"Merge remote-tracking branch 'origin/main' into ppp\n"
+			],
+			"search":
+			{
+				"history":
+				[
+				]
+			},
+			"show_untracked_files": false,
+			"side_bar_visible": true,
+			"table_of_contents_tab_selected": false,
+			"table_of_contents_tree_mode": false
+		},
+		{
+			"locations_tab_selected": false,
+			"path": "/home/sheffler/aa_nucleic_dev",
 			"previous_commit_messages":
 			[
 			],
@@ -55,7 +125,7 @@
 	},
 	"window_positions":
 	{
-		"/home/sheffler/rfdsym/lib/rf2aa": "0,0,0,0,0,26,23,1226,673,1920,1080,0"
+		"/home/sheffler/rfdsym": "0,1,0,0,0,0,0,2556,1346,1920,1080,0"
 	},
 	"windows":
 	[
@@ -63,7 +133,7 @@
 			"tabs":
 			[
 				{
-					"path": "/home/sheffler/rfdsym/lib/rf2aa",
+					"path": "/home/sheffler/rfdsym",
 					"selected": true
 				}
 			]

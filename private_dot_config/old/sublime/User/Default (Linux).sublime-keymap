@@ -96,7 +96,7 @@
     { "keys": ["ctrl+space", "p"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
     { "keys": ["ctrl+space", "f"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
     { "keys": ["ctrl+space", "n"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+space", "b"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+    { "keys": ["ctrl+space", "b"], "command": " _file_to_pane", "args": {"direction": "left"} },
 
     // { "keys": ["ctrl+space", "alt+ctrl+p"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
     // { "keys": ["ctrl+space", "alt+ctrl+f"], "command": "clone_file_to_pane", "args": {"direction": "right"} },

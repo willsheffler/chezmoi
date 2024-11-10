@@ -27,9 +27,7 @@ alias bat 'bat --color=always --paging=always'
 alias unalias 'functions --erase'
 
 alias ghc 'gh copilot'
-alias ghcs 'gh copilot -t shell'
-alias ghcg 'gh copilot -t git'
-alias ghcgh 'gh copilot -t gh'
+alias ghcs 'gh copilot suggest'
 
 alias auri 'pikaur -S'
 alias auru 'pikaur -Syu'
@@ -41,3 +39,4 @@ alias isub "subl (sk --preview 'bat --color=always {}')"
 alias ipac "pacman -Slq | sk --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias ipacrm "pacman -Qq | sk --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 
+alias ruff_issue_count "ruff check --output-format=json| jq 'group_by(.code) | map({code: .[0].code, count: length})'"

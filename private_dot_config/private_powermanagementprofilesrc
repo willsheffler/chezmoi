@@ -48,5 +48,8 @@ powerButtonAction=16
 idleTime=300000
 suspendType=1
 
+[Migration]
+MigratedProfilesToPlasma6=powerdevilrc
+
 [migration]
 kdedShortcutMigration=true

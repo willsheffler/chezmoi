@@ -1,7 +1,7 @@
 [pyprland]
 
 plugins = [
-   "scratchpads",
+   # "scratchpads",
    "layout_center",
    # "expose",
    # "system_notifier",
@@ -39,130 +39,115 @@ prev = "movefocus l"
 next2 = "movefocus d"
 prev2 = "movefocus u"
 
-[scratchpads.config]
-# command = "alacritty --class scratchpad"
-command = "alacritty --class scratchpad -e nvim /home/sheffler/.local/share/chezmoi"
-lazy = true
-class = "scratchpad"
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
-
-
-[scratchpads.termbig]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "90% 90%"
-position = "5% 5%"
-[scratchpads.term1]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "1% 4%"
-[scratchpads.term3]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "51% 4%"
-[scratchpads.term2]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "1% 50%"
-[scratchpads.term4]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "51% 50%"
-
-[scratchpads.term5]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "1% 4%"
-[scratchpads.term7]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "51% 4%"
-[scratchpads.term6]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "1% 50%"
-[scratchpads.term8]
-command = "alacritty --class scratchpad"
-class = "scratchpad"
-size = "48% 46%"
-position = "51% 50%"
-
-[scratchpads.sublkeys]
-command = "subl /home/sheffler/.config/sublime-text-3/Packages/User/ide/sublkeys.sublime-project"
-class = "scratchpad"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
-
-[scratchpads.btop]
-command = "alacritty --class scratchpad -e btop"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
-
-[scratchpads.htop]
-command = "alacritty --class scratchpad -e htop"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
-
-[scratchpads.chatgpt]
-command = "qutebrowser -r chatgpt"
-class = "org.qutebrowser.qutebrowser"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
-
-[scratchpads.mail]
-command = "google-chrome-stable --ozone-platform=wayland"
-class = "google-chrome"
-lazy = true
+# [scratchpads.config]
+# # command = "alacritty --class scratchpad"
+# command = "alacritty --class scratchpad -e nvim /home/sheffler/.local/share/chezmoi"
+# lazy = true
+# class = "scratchpad"
 # unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
+# size = "90% 90%"
+# position = "5% 5%"
 
-[scratchpads.music]
-command = "spotify"
-class = "Spotify"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
+# [scratchpads.term1]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "3% 5%"
+# [scratchpads.term2]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "3% 15%"
+# [scratchpads.term3]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "7% 5%"
+# [scratchpads.term4]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "7% 15%"
+# [scratchpads.term5]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "3% 5%"
+# [scratchpads.term6]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "3% 15%"
+# [scratchpads.term7]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "7% 5%"
+# [scratchpads.term8]
+# command = "alacritty --class scratchpad"
+# size = "90% 70%"
+# position = "7% 15%"
 
-[scratchpads.mattermost]
-command = "mattermost-desktop"
-class = "Mattermost"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
-
-[scratchpads.waypaper]
-command = "waypaper"
-class = "waypaper"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
-
-[scratchpads.thunar]
-command = "thunar"
-class = "thunar"
-lazy = true
-unfocus = "hide"
-size = "90% 90%"
-position = "5% 5%"
+# [scratchpads.sublkeys]
+# command = "subl /home/sheffler/.config/sublime-text-3/Packages/User/ide/sublkeys.sublime-project"
+# class = "scratchpad"
+# lazy = true
+# unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
+#
+# [scratchpads.btop]
+# command = "alacritty --class scratchpad -e btop"
+# lazy = true
+# unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
+#
+# [scratchpads.htop]
+# command = "alacritty --class scratchpad -e htop"
+# lazy = true
+# unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
+#
+# [scratchpads.chatgpt]
+# command = "qutebrowser -r chatgpt"
+# class = "org.qutebrowser.qutebrowser"
+# lazy = true
+# unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
+#
+# [scratchpads.mail]
+# command = "google-chrome-stable --ozone-platform=wayland"
+# class = "google-chrome"
+# lazy = true
+# # unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
+#
+# [scratchpads.music]
+# command = "spotify"
+# class = "Spotify"
+# lazy = true
+# unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
+#
+# [scratchpads.mattermost]
+# command = "mattermost-desktop"
+# class = "Mattermost"
+# lazy = true
+# unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
+#
+# # [scratchpads.waypaper]
+# # command = "waypaper"
+# # class = "waypaper"
+# # lazy = true
+# # unfocus = "hide"
+# # size = "90% 90%"
+# # position = "5% 5%"
+#
+# [scratchpads.thunar]
+# command = "thunar"
+# class = "thunar"
+# lazy = true
+# unfocus = "hide"
+# size = "90% 90%"
+# position = "5% 5%"
 
