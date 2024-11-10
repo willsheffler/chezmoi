@@ -1,0 +1,38 @@
+ls
+exit
+ps |sk
+pkill pypr
+ps|grep pypr
+ps aux|grep pypr
+ps -aux |grep pypr
+ps
+ps| pipr
+ps| where name==pipr
+ps| where name == pipr
+ps| where name == Hyprland
+which pypr
+pypr --debug /tmp/pypr.log
+rm /run/user/1000/hypr/918d8340afd652b011b937d29d5eea0be08467f5_1731091736_1792896244/.pyprland.sock
+git status
+sudo apt install atuin
+atuin
+atuin init nu
+atuin init nu | source
+atuin init nu | save ~/.local/share/atuin/init.nu
+chezmoi
+sudo apt install chezmoi
+cargo install chezmoi
+which pip
+pip install chezmoi
+nix-env -i chezmoi
+chezmoi
+nix-env -i chezmoi
+sh -c "$(curl -fsLS get.chezmoi.io)"
+exit
+ls .config/nushell/
+cz status
+chezmoi status
+exit
+cz status
+chezmoi status
+exit

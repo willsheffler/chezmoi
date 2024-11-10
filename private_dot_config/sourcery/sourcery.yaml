@@ -1,0 +1,9 @@
+rule_settings:
+  disable:
+  - no-loop-in-tests
+  - assign-if-exp
+  - remove-unnecessary-cast
+  - or-if-exp-identity
+  - no-conditionals-in-tests
+  - flip-comparison
+  - inline-immediately-returned-variable
