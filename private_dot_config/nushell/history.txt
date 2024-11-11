@@ -9,3 +9,15 @@ cz git status
 cz git add -- --all
 cz git commit -am 'add nushell and atuin'
 cz git commit -am -- 'add nushell and atuin'
+cz git commit -- -am 'add nushell and atuin'
+cz git push
+git status
+top
+rsync .local/bin/chezmoi digs:.local/bin/
+ssh jojo
+rsync .local/bin/host digs:.local/bin/
+pwd
+clear
+rsync .local/bin/host digs:.local/bin/
+cz add .config/fish/conf.d/env.fish
+cz status
