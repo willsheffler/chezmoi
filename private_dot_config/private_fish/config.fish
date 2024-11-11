@@ -1,5 +1,5 @@
 set user (whoami)
-set host ($HOME/bin/host)
+set host ($HOME/.local/bin/host)
 set distro (grep -E '^NAME=' /etc/os-release | cut -b 7-16)
 set -gx CONDA_EXE '/home/sheffler/sw/MambaForge/bin/conda'
 set -gx MAMBA_EXE '/home/sheffler/sw/MambaForge/bin/mamba'
@@ -35,7 +35,7 @@ else if [ -e .singularity.d ]
 else
    # set -gx QT_QPA_PLATFORM wayland
    set -gx QT_QPA_PLATFORM xcb
-   # atuin init fish | source
+   atuin init fish | source
    direnv hook fish | source
    fzf --fish | source
    zoxide init fish | source

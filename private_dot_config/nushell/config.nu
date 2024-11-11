@@ -574,13 +574,6 @@ $env.config = {
             event: { edit: movetolinestart }
         }
         {
-            name: move_to_line_start
-            modifier: control
-            keycode: char_a
-            mode: [emacs, vi_normal, vi_insert]
-            event: { edit: movetolinestart }
-        }
-        {
             name: move_to_line_end_or_take_history_hint
             modifier: none
             keycode: end
@@ -592,104 +585,71 @@ $env.config = {
                 ]
             }
         }
-        {
-            name: move_to_line_end_or_take_history_hint
-            modifier: control
-            keycode: char_e
-            mode: [emacs, vi_normal, vi_insert]
-            event: {
-                until: [
-                    { send: historyhintcomplete }
-                    { edit: movetolineend }
-                ]
-            }
-        }
-        {
-            name: move_to_line_start
-            modifier: control
-            keycode: home
-            mode: [emacs, vi_normal, vi_insert]
-            event: { edit: movetolinestart }
-        }
-        {
-            name: move_to_line_end
-            modifier: control
-            keycode: end
-            mode: [emacs, vi_normal, vi_insert]
-            event: { edit: movetolineend }
-        }
-        {
-            name: move_down
-            modifier: control
-            keycode: char_n
-            mode: [emacs, vi_normal, vi_insert]
-            event: {
-                until: [
-                    { send: menudown }
-                    { send: down }
-                ]
-            }
-        }
-        {
-            name: move_up
-            modifier: control
-            keycode: char_p
-            mode: [emacs, vi_normal, vi_insert]
-            event: {
-                until: [
-                    { send: menuup }
-                    { send: up }
-                ]
-            }
-        }
+        # {
+        #     name: move_to_line_start
+        #     modifier: control
+        #     keycode: home
+        #     mode: [emacs, vi_normal, vi_insert]
+        #     event: { edit: movetolinestart }
+        # }
+        # {
+        #     name: move_to_line_end
+        #     modifier: control
+        #     keycode: end
+        #     mode: [emacs, vi_normal, vi_insert]
+        #     event: { edit: movetolineend }
+        # }
+        # {
+        #     name: move_down
+        #     modifier: control
+        #     keycode: char_n
+        #     mode: [emacs, vi_normal, vi_insert]
+        #     event: {
+        #         until: [
+        #             { send: menudown }
+        #             { send: down }
+        #         ]
+        #     }
+        # }
+        # {
+        #     name: move_up
+        #     modifier: control
+        #     keycode: char_p
+        #     mode: [emacs, vi_normal, vi_insert]
+        #     event: {
+        #         until: [
+        #             { send: menuup }
+        #             { send: up }
+        #         ]
+        #     }
+        # }
         {
             name: delete_one_character_backward
             modifier: none
             keycode: backspace
-            mode: [emacs, vi_insert]
+            mode: emacs
             event: { edit: backspace }
         }
         {
             name: delete_one_word_backward
             modifier: control
             keycode: backspace
-            mode: [emacs, vi_insert]
+            mode: emacs
             event: { edit: backspaceword }
         }
         {
             name: delete_one_character_forward
             modifier: none
             keycode: delete
-            mode: [emacs, vi_insert]
+            mode: emacs
             event: { edit: delete }
         }
         {
-            name: delete_one_character_forward
+            name: delete_one_word_forward
             modifier: control
             keycode: delete
-            mode: [emacs, vi_insert]
-            event: { edit: delete }
-        }
-        {
-            name: delete_one_character_backward
-            modifier: control
-            keycode: char_h
-            mode: [emacs, vi_insert]
-            event: { edit: backspace }
-        }
-        {
-            name: delete_one_word_backward
-            modifier: control
-            keycode: char_w
-            mode: [emacs, vi_insert]
-            event: { edit: backspaceword }
-        }
-        {
-            name: move_left
-            modifier: none
-            keycode: backspace
-            mode: vi_normal
-            event: { edit: moveleft }
+            mode: emacs
+            event: { edit: deleteword }
         }
         {
             name: newline_or_run_command
@@ -697,31 +657,6 @@ $env.config = {
             keycode: enter
             mode: emacs
             event: { send: enter }
-        }
-        {
-            name: move_left
-            modifier: control
-            keycode: char_b
-            mode: emacs
-            event: {
-                until: [
-                    { send: menuleft }
-                    { send: left }
-                ]
-            }
-        }
-        {
-            name: move_right_or_take_history_hint
-            modifier: control
-            keycode: char_f
-            mode: emacs
-            event: {
-                until: [
-                    { send: historyhintcomplete }
-                    { send: menuright }
-                    { send: right }
-                ]
-            }
         }
         {
             name: redo_change
@@ -792,46 +727,6 @@ $env.config = {
             }
         }
         {
-            name: move_one_word_left
-            modifier: alt
-            keycode: char_b
-            mode: emacs
-            event: { edit: movewordleft }
-        }
-        {
-            name: move_one_word_right_or_take_history_hint
-            modifier: alt
-            keycode: char_f
-            mode: emacs
-            event: {
-                until: [
-                    { send: historyhintwordcomplete }
-                    { edit: movewordright }
-                ]
-            }
-        }
-        {
-            name: delete_one_word_forward
-            modifier: alt
-            keycode: delete
-            mode: emacs
-            event: { edit: deleteword }
-        }
-        {
-            name: delete_one_word_backward
-            modifier: alt
-            keycode: backspace
-            mode: emacs
-            event: { edit: backspaceword }
-        }
-        {
-            name: delete_one_word_backward
-            modifier: alt
-            keycode: char_m
-            mode: emacs
-            event: { edit: backspaceword }
-        }
-        {
             name: cut_word_to_right
             modifier: alt
             keycode: char_d
@@ -894,5 +789,141 @@ $env.config = {
             mode: emacs
             event: { edit: selectall }
         }
+
     ]
 }
+
+
+$env.PATH = (
+  $env.PATH
+  | split row (char esep)
+  | prepend ($env.HOME | path join go bin)
+  | prepend ($env.HOME | path join .cargo bin)
+  | prepend ($env.HOME | path join sw MambaForge bin)
+  | prepend ($env.HOME | path join .local bin)
+  | uniq # filter so the paths are unique
+)
+
+source ~/.config/nushell/atuin.nu
+source ~/.config/nushell/zoxide.nu
+use ~/.config/nushell/starship.nu
+
+use ~/.config/nushell/nu_scripts/modules/virtual_environments/nu_conda_2/conda.nu
+$env.CONDA_NO_PROMPT = true
+alias "mamba activate" = conda activate
+alias "mamba deactivate" = conda deactivate
+alias "rfdsym" = mamba activate rfdsym312
+
+# bind \b backward-kill-word
+# bind \e\[3\;5~ kill-word
+
+
+# alias du dust
+# alias top 'btop'
+# alias top = "top -d 1"
+# alias cat = a
+alias btrfs = sudo btrfs
+alias mount = sudo mount
+alias umount = sudo umount
+alias fdisk = sudo fdisk
+alias gparted = sudo gparted
+alias fdisk = sudo gparted
+
+# alias find =
+# alias df = u
+alias ls = eza
+alias ll = eza -l
+alias lla = eza -la
+alias lld = eza -ld
+alias llad = eza -lad
+alias cz = chezmoi
+alias emacs = emacs -nw
+alias db = istrobo
+alias dbe = distrobox enter
+alias dbarch = distrobox enter arch
+alias t = re
+alias ff = astfetc
+alias bat = bat --color=always --paging=always
+alias unalias = functions --erase
+
+alias ghc = gh copilot
+alias ghcs = gh copilot suggest
+
+alias auri = pikaur -S
+alias auru = pikaur -Syu
+alias aurr = pikaur -R
+
+alias sk = sk --preview 'bat --color=always {}'
+alias isub = subl (sk --preview 'bat --color=always {}')
+alias ipac = pacman -Slq | sk --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
+alias ipacrm = pacman -Qq | sk --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+
+alias ruff_issue_count = ruff check --output-format=json| jq 'group_by(.code) | map({code: .[0].code, count: length})'
+
+use ~/.config/nushell/nu_scripts/custom-completions/bat/bat-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/cargo/cargo-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/eza/eza-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/gh/gh-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/git/git-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/pre-commit/pre-commit-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/pytest/pytest-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/rg/rg-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/ssh/ssh-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/tealdeer/tldr-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/toipe/toipe-completions.nu
+use ~/.config/nushell/nu_scripts/custom-completions/zellij/zellij-completions.nu
+
+# use ~/.config/nushell/nu_scripts/custom-completions/ack/ack-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/adb/adb-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/ani-cli/ani-cli-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/as/as-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/bend/bend-completion.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/bitwarden-cli/bitwarden-cli-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/bmc/bmc-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/btm/btm-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/cargo-make/cargo-make-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/composer/composer-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/croc/croc-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/curl/curl-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/docker/docker-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/dotnet/dotnet-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/fastboot/fastboot-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/flutter/flutter-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/fsharpc/fsharpc-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/fsharpi/fsharpi-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/glow/glow-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/godoc/godoc-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/gradlew/gradlew-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/just/just-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/kw/kw-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/less/less-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/make/make-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/man/man-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/mask/mask-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-ce/ompletions/mix/mix-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/mvn/mvn-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/mysql/mysql-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/nano/nano-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/nix/nix-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/npm/npm-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/op/op-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/auto-generate/parse-fish.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/auto-generate/parse-help.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/pass/pass-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/pdm/pdm-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/pnpm/pnpm-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/poetry/poetry-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/reflector/reflector-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/rustup/rustup-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/rye/rye-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/scoop/scoop-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/tar/tar-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/tcpdump/tcpdump-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/ttyper/ttyper-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/typst/typst-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/virsh/virsh-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/vscode/vscode-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/winget/winget-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/xgettext/xgettext-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/yarn/yarn-v4-completions.nu
+# use ~/.config/nushell/nu_scripts/custom-completions/zef/zef-completions.nu
