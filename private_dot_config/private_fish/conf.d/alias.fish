@@ -15,6 +15,7 @@ alias fdisk 'sudo gparted'
 alias ls 'eza'
 alias ll 'eza -l'
 alias lla 'eza -la'
+# alias cd 'z'
 alias cz chezmoi
 alias emacs 'emacs -nw'
 alias db distrobox
@@ -40,3 +41,7 @@ alias ipac "pacman -Slq | sk --multi --preview 'pacman -Si {1}' | xargs -ro sudo
 alias ipacrm "pacman -Qq | sk --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 
 alias ruff_issue_count "ruff check --output-format=json| jq 'group_by(.code) | map({code: .[0].code, count: length})'"
+
+alias rfdsym 'mamba activate rfdsym312 && cd ~/rfdsym'
+alias rfdsymrf 'mamba activate rfdsym312 && cd ~/rfdsym/lib/rf2aa'
+alias rfdsymipd 'mamba activate rfdsym312 && cd ~/rfdsym/lib/rf2aa/lib/ipd'

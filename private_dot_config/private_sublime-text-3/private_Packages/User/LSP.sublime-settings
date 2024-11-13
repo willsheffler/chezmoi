@@ -10,9 +10,10 @@
 
 
   "clients": {
+
     "sourcery": {
       "command": [
-        "/home/sheffler/sw/MambaForge/envs/pyright/bin/sourcery",  // Update this
+        "/home/sheffler/sw/MambaForge/envs/pyright/bin/sourcery",
         "lsp"
       ],
       "enabled": true,
@@ -33,6 +34,7 @@
         }
       }
     }
+
   }
 
 

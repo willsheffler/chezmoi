@@ -11,7 +11,7 @@
     {
         "based_on_style": "pep8",
         "INDENT_WIDTH": 4,
-        "COLUMN_LIMIT": 111,
+        "COLUMN_LIMIT": 123,
         "BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF": false,
         "BLANK_LINES_AROUND_TOP_LEVEL_DEFINITION": 1
     },

@@ -1,4 +1,8 @@
 [
+    { "keys": ["ctrl+alt+shift+enter"], "command": "replace_all", "args": {"close_panel": true}, "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}] },
+    { "keys": ["ctrl+alt+shift+enter"], "command": "replace_all",
+        "context": [{"key": "panel", "operand": "find_in_files"}, {"key": "panel_has_focus"}]
+    },
 
     { "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
     // { "keys": ["super+alt+p"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
@@ -111,7 +115,7 @@
     // { "keys": ["alt+shift+i"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true} },
     { "keys": ["alt+shift+left"],  "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
     { "keys": ["alt+shift+right"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
-    { "keys": ["alt+shift+up"]   , "command": "move", "args": {"by": "lines", "forward": false, "extend": true} },
+    { "keys": ["alt+shift+up"],    "command": "move", "args": {"by": "lines", "forward": false, "extend": true} },
     { "keys": ["alt+shift+down"],  "command": "move", "args": {"by": "lines", "forward": true, "extend": true} },
     // { "keys": ["ctrl+alt+e"], "command": "move", "args": {"by": "pages", "forward": false} },
     // { "keys": ["ctrl+alt+i"], "command": "move", "args": {"by": "pages", "forward": true} },
@@ -311,10 +315,16 @@
     { "keys": ["super+alt+s"], "command": "fold_by_level", "args": {"level": 3} },
     { "keys": ["super+alt+t"], "command": "fold_by_level", "args": {"level": 4} },
 
-    { "keys": ["ctrl+shift+alt+k"], "command": "set_build_system {\"index\": 0}" },
-    { "keys": ["ctrl+shift+alt+m"], "command": "set_build_system {\"index\": 1}" },
-    { "keys": ["ctrl+shift+alt+,"], "command": "set_build_system {\"index\": 2}" },
-    { "keys": ["ctrl+shift+alt+."], "command": "set_build_system {\"index\": 3}" },
+    { "keys": ["ctrl+shift+alt+a"], "command": "set_build_system {\"index\": 0}" },
+    { "keys": ["ctrl+shift+alt+r"], "command": "set_build_system {\"index\": 1}" },
+    { "keys": ["ctrl+shift+alt+s"], "command": "set_build_system {\"index\": 2}" },
+    { "keys": ["ctrl+shift+alt+t"], "command": "set_build_system {\"index\": 3}" },
+    { "keys": ["ctrl+shift+alt+d"], "command": "set_build_system {\"index\": 4}" },
+    { "keys": ["ctrl+shift+alt+h"], "command": "set_build_system {\"index\": 5}" },
+    { "keys": ["ctrl+shift+alt+n"], "command": "set_build_system {\"index\": 6}" },
+    { "keys": ["ctrl+shift+alt+e"], "command": "set_build_system {\"index\": 7}" },
+    { "keys": ["ctrl+shift+alt+i"], "command": "set_build_system {\"index\": 8}" },
+    { "keys": ["ctrl+shift+alt+o"], "command": "set_build_system {\"index\": 9}" },
 
     // { "keys": ["ctrl+shift+1"], "command": "move_to_group", "args": { "group": 0 } },
 // { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${1}:${2:7.3f}}"}, "context":
@@ -328,5 +338,5 @@
 
     { "keys": ["f7"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
     { "keys": ["ctrl+up"], "command": "scroll_lines", "args": {"amount": 10.0 } },
-    { "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -10.0 } },
+    { "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -10.0 } }
 ]

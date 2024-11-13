@@ -21,3 +21,202 @@ clear
 rsync .local/bin/host digs:.local/bin/
 cz add .config/fish/conf.d/env.fish
 cz status
+cz apply; cz git add -- --all; cz git commit -- -am 'add env.sh'; cz git push
+ssh jojo
+rsync .config/gh/hosts.yml digs:.config/gh/
+python -c 'import typer; print(typer.__version__)'
+cat pyproject.toml
+z lib/rf2aa/lib/ipd/
+cat pyproject.toml
+subl ~/digs/src/rfdsym/rf_diffusion/exec/rf_diffusion_aa.spec
+subl ~/digs/src/rfdsym/rf_diffusion/
+ls
+git status
+pytest
+ssh jojo
+killall sublime_text; subl
+exit
+sqlite3 ~/.local/share/atuin/history.db<\n>CREATE INDEX idx_history_cwd on history(cwd);<\n>CREATE INDEX idx_history_session on history(session);
+sqlite3 ~/.local/share/atuin/history.db
+ls .config/nushell/nu_scripts/**/*atuin*
+source .config/nushell/atuin.nu
+subl .local/share/chezmoi/ide/chezmoi.sublime-project
+ll .config/atuin/config.toml
+atuin -h
+atuin gen-completions
+atuin gen-completions --shell nushell
+atuin gen-completions --shell nushell  > ~/.config/nushell/atuin.completions.nu
+atuin gen-completions --shell nushell | save ~/.config/nushell/atuin.completions.nu
+use ~/.config/nushell/atuin.completions.nu
+atuin -h
+source ~/.config/nushell/atuin.completions.nu
+git gen_completions
+git-completions
+source ~/.config/nushell/atuin.completions.nu
+atuin daemon 
+cz status
+ca git pull
+cz git pull
+ca status
+cz status
+cz update
+cz apply
+cz status
+pwd
+less ~/rfdsym/.github/workflows/run_tests_digs.yml
+diff ~/rfdsym/.github/workflows/run_tests_digs.yml ~/rfd/.github/workflows/run_tests_digs.yml
+cd rfdsym
+git status
+cd lib/rf2aa/
+git status
+cd lib/ipd
+git status
+git diff
+sh git_pre_commit.sh
+chmod +x git_pre_commit.sh
+./git_pre_commit.sh
+git status
+git commit -am 'disable tools tests if typer too old' ; git push
+pytest
+rfdsym
+pytest
+git status
+git commit -am 'disable tools tests if typer too old, fix' ; git push
+cd ../..
+ls
+cp ../../rf_diffusion/exec/rf_diffusion_aa.spec SE3nv_datahub.spec
+git status
+a
+ssh jojo
+git status
+git commit -am 'update ipd' ; git push
+cd ../..
+ls
+git status
+git commit -am 'update ipd' ; git push
+git status
+git pull
+pytest
+git submodule update --init  --recursive
+git status
+git pull
+less .github/workflows/run_tests_digs.yml 
+git status
+cd lib/rf2aa/lib/ipd/
+git stastus
+git status
+git commit -am 'disable tools tests if typer too old, fix' ; git push
+git status
+git status
+cd rfdsym/lib/rf2aa/
+git status
+git commit -am 'update ipd again' ; git push
+cd ../..
+git status
+rm .ruff.toml
+ruff check rf_diffusion/
+git status
+cd rf_diffusion/
+pytest
+rfdsym
+./git_pre_commit.sh
+ls **/.yapf_hash
+pwd
+cd ..
+ls **/.yapf_hash
+rm (ls **/.yapf_hash)
+ls **/.yapf_hash
+ls **/.yapf_hash | rm
+ls **/.yapf_hash | xargs rm
+ls **/.yapf_hash
+sh git_pre_commit.sh
+pwd
+./git_pre_commit.sh
+git status
+pwd
+ls **/.yapf.style
+rm .yapf.style
+cd lib/rf2aa/rf2aa/model/
+ls
+yapf RoseTTAFoldModel.py
+yapf -i RoseTTAFoldModel.py
+ls **/*yapf*
+ls **/.yapf*
+ps
+ps|gref nu
+ps|grep nu
+which yapf
+yapf -vv
+yapf -vv RoseTTAFoldModel.py
+yapf -vv --diff RoseTTAFoldModel.py
+yapf -h
+chsh -s /usr/bin/fish
+git status
+yapf  --diff ipd/sym/sym_manager.py
+./git_pre_commit.sh
+git status
+rm .yapf_hash
+./git_pre_commit.sh
+git status
+ls /home/sheffler/sw/MambaForge/envs/pyright/bin/python
+pytest
+cd rfdsym
+git status
+pytest
+rfdsym
+pytest
+git status
+git commit -am 'update yapf formatting' ; git push
+pytest -n7
+cd rf2aa
+cd ..
+cd rf_diffusion/
+pytest -n7
+ls ../**/pytest.ini
+pytest -n7
+pytest
+pip install docformatter
+docformatter
+docformatter-h
+docformatter -h
+git status
+docformatter -ri ipd
+git status
+docformatter -s pyproject.toml -ri ipd
+git diff
+docformatter -s sphinx -ri ipd
+git diff ipd/homog/
+git status
+git log
+git status
+cd ..
+pytest
+sh lib/rf2aa/lib/ipd/git_pre_commit.sh
+.=lib/rf2aa/lib/ipd/git_pre_commit.sh
+./lib/rf2aa/lib/ipd/git_pre_commit.sh
+git status
+git status
+git commit -am 'update docstring formatting' ; git push
+git diff
+git status
+git commit -am 'update docstring formatting' ; git push
+git fetch
+git merge origin/main
+git status
+mamba activate mlb
+pytest
+pytest 2> /dev/null
+pytest err> /dev/null
+pytest | less
+pytest 
+git commit -am 'fix sym_manager requires torch for typing' ; git push
+git status
+git commit -am 'fix sym_manager requires torch for typing' ; git push
+diff -h
+diff --help
+git status
+git commit -am 'fix test_gentest to ignore blank lines' ; git push
+sudo emacs /etc/apt/sources.list.d/fury.list
+apt update
+sudo apt update
+sudo apt install carapace-bin

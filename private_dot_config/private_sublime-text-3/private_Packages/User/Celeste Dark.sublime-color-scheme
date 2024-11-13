@@ -60,12 +60,12 @@
         },
         {
             "scope": "entity.name - entity.name.tag - entity.name.section",
-            "foreground": "var(orange)",
+            "foreground": "var(orange)"
             // "background": "#1e1e1e"
         },
         {
             "scope": "entity.other.inherited-class",
-            "foreground": "var(dark_orange)",
+            "foreground": "var(dark_orange)"
             // "background": "#1e1e1e"
         },
         {
@@ -112,11 +112,11 @@
             "foreground": "var(light_brown)"
         },
         {
-            "scope": "invalid.illegal",
+            "scope": "invalid.illegal"
             // "background": "var(red)"
         },
         {
-            "scope": "invalid.deprecated",
+            "scope": "invalid.deprecated"
             // "background": "var(red)"
         },
         // HTML
@@ -175,7 +175,7 @@
             "foreground": "var(dark_orange)"
         },
         {
-            "scope": "markup.raw",
+            "scope": "markup.raw"
             // "background": "#202020"
         },
         {

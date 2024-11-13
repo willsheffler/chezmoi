@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[please write a docstring in google format for all parameters with types and return value]]></content>
+    <tabTrigger>docarg</tabTrigger>
+    <scope>source.python</scope>
+    <description>docstring</description>
+</snippet>

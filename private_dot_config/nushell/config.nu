@@ -860,18 +860,18 @@ alias ipacrm = pacman -Qq | sk --multi --preview 'pacman -Qi {1}' | xargs -ro su
 
 alias ruff_issue_count = ruff check --output-format=json| jq 'group_by(.code) | map({code: .[0].code, count: length})'
 
-use ~/.config/nushell/nu_scripts/custom-completions/bat/bat-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/cargo/cargo-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/eza/eza-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/gh/gh-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/git/git-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/pre-commit/pre-commit-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/pytest/pytest-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/rg/rg-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/ssh/ssh-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/tealdeer/tldr-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/toipe/toipe-completions.nu
-use ~/.config/nushell/nu_scripts/custom-completions/zellij/zellij-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/bat/bat-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/cargo/cargo-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/eza/eza-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/gh/gh-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/git/git-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/pre-commit/pre-commit-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/pytest/pytest-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/rg/rg-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/ssh/ssh-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/tealdeer/tldr-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/toipe/toipe-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/zellij/zellij-completions.nu
 
 # use ~/.config/nushell/nu_scripts/custom-completions/ack/ack-completions.nu
 # use ~/.config/nushell/nu_scripts/custom-completions/adb/adb-completions.nu

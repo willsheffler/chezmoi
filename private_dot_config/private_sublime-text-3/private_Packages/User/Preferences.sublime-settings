@@ -73,7 +73,7 @@
         "dbfile",
         "dbpoll",
         "dbkey",
-        "pymolcmd",
+        "pymolcmd"
     ],
     "afn_use_keybinding": true,
     "auto_complete_triggers":
@@ -176,14 +176,19 @@
     "neovintageous_build_version": 13200,
     "vintageous_source": "Packages/NeoVintageousColemak/colemak.neovintageous",
     "scroll_speed": 0.0,
+    // "font_options":
+    // [
+    //     "dlig",
+    //     "subpixel_antialias"
+    //     // "gray_antialias"
+    // ],
+    "ignored_words":
+    [
+        "ipd"
+    ],
     "font_options":
     [
         "dlig",
         "subpixel_antialias"
-        // "gray_antialias"
-    ],
-    "ignored_words":
-    [
-		"ipd"
     ],
 }

@@ -407,5 +407,7 @@
 	directory = /home/sheffler/src/ppp/ipd
 	directory = /home/sheffler/src/ppp/ipd
 	directory = /home/sheffler/src/ppp/ipd
+	directory = /home/sheffler/src/ppp/lib/ipd/ipd
+	directory = /home/sheffler/src/ppp/lib/ipd/ipd
 [submodules]
 	recurse = true

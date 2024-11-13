@@ -1,0 +1,10 @@
+{
+    "scope": "source.python - variable.other.python",
+
+    "completions":
+    [
+        "python",
+
+        { "trigger": "noty", "contents": " # type: ignore" }
+    ]
+}

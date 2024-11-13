@@ -1,6 +1,7 @@
 set user (whoami)
 set host ($HOME/.local/bin/host)
-set distro (grep -E '^NAME=' /etc/os-release | cut -b 7-16)
+set distro (grep -E '^Na
+   AME=' /etc/os-release | cut -b 7-16)
 set -gx CONDA_EXE '/home/sheffler/sw/MambaForge/bin/conda'
 set -gx MAMBA_EXE '/home/sheffler/sw/MambaForge/bin/mamba'
 
@@ -31,13 +32,14 @@ else if [ -e .singularity.d ]
 else
    # set -gx QT_QPA_PLATFORM wayland
    set -gx QT_QPA_PLATFORM xcb
+   setup_conda ~/sw/MambaForge mamba
    atuin init fish | source
+   atuin gen-completions --shell fish | source
    direnv hook fish | source
    fzf --fish | source
    zoxide init fish | source
    fish_add_path -gaP $HOME/go/bin
    fish_add_path -gpP $HOME/.local/bin
-   setup_conda ~/sw/MambaForge mamba
    source $HOME/.config/fish/conf.d/env.fish
    starship init fish --print-full-init | source
    # set -gx APPTAINER_CONTAINER '/software/containers/users/sheffler/rf_diffusion_aa_py310.sif'
