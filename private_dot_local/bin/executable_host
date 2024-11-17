@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -z $CONTAINER_ID ]; then
+   echo $HOSTNAME:root
+else
+   echo $HOSTNAME:$CONTAINER_ID
+fi

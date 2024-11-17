@@ -45,3 +45,13 @@ alias ruff_issue_count "ruff check --output-format=json| jq 'group_by(.code) | m
 alias rfdsym 'mamba activate rfdsym312 && cd ~/rfdsym'
 alias rfdsymrf 'mamba activate rfdsym312 && cd ~/rfdsym/lib/rf2aa'
 alias rfdsymipd 'mamba activate rfdsym312 && cd ~/rfdsym/lib/rf2aa/lib/ipd'
+
+alias gs 'git status'
+alias gc 'git commit -am'
+alias gk 'git branch -a'
+alias gp 'git remote prune origin'
+alias grb 'git branch -d'
+alias gl 'git log'
+alias glo 'git log --oneline'
+alias gd 'git diff'
+alias gdo 'git diff --nameonly'

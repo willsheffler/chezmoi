@@ -144,8 +144,9 @@
     "highlight_line": false,
     "ignored_packages":
     [
+        "Formatter",
         "Lisp",
-        "LSP-pyright",
+        "LSP-basedpyright",
         "NeoVintageous",
         "SublimeLinter",
         "TabsExtra",
