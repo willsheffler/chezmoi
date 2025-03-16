@@ -1,2 +1,109 @@
 [
+    {
+        "caption": "LSP: Go to Definition",
+        "command": "lsp_symbol",
+        "args": { "method": "textDocument/definition" }
+    },
+    {
+        "caption": "LSP: Go to Type Definition",
+        "command": "lsp_symbol",
+        "args": { "method": "textDocument/typeDefinition" }
+    },
+    {
+        "caption": "LSP: Go to Declaration",
+        "command": "lsp_symbol",
+        "args": { "method": "textDocument/declaration" }
+    },
+    {
+        "caption": "LSP: Go to Implementation",
+        "command": "lsp_symbol",
+        "args": { "method": "textDocument/implementation" }
+    },
+    {
+        "caption": "LSP: Find References",
+        "command": "lsp_symbol",
+        "args": { "method": "textDocument/references" }
+    },
+    {
+        "caption": "LSP: Rename Symbol",
+        "command": "lsp_rename"
+    },
+    {
+        "caption": "LSP: Signature Help",
+        "command": "lsp_signature_help"
+    },
+    {
+        "caption": "LSP: Show Hover",
+        "command": "lsp_hover"
+    },
+    {
+        "caption": "LSP: Code Action",
+        "command": "lsp_code_action"
+    },
+    {
+        "caption": "LSP: Format Document",
+        "command": "lsp_format_document"
+    },
+    {
+        "caption": "LSP: Format Selection",
+        "command": "lsp_format_selection"
+    },
+    {
+        "caption": "LSP: Go to File",
+        "command": "lsp_workspace_symbol",
+        "args": { "method": "workspace/symbol" }
+    },
+    {
+        "caption": "LSP: Show Document Symbols",
+        "command": "lsp_document_symbol"
+    },
+    {
+        "caption": "LSP: Show Workspace Symbols",
+        "command": "lsp_workspace_symbol"
+    },
+    {
+        "caption": "LSP: Show Diagnostics",
+        "command": "lsp_show_diagnostics"
+    },
+    {
+        "caption": "LSP: Show References",
+        "command": "lsp_symbol",
+        "args": { "method": "textDocument/references" }
+    },
+    {
+        "caption": "LSP: Open LSP Log",
+        "command": "lsp_open_log"
+    },
+    {
+        "caption": "LSP: Reload Language Server",
+        "command": "lsp_reload_server"
+    },
+    {
+        "caption": "LSP: Stop Language Server",
+        "command": "lsp_stop_server"
+    },
+    {
+        "caption": "LSP: Show LSP Status",
+        "command": "lsp_show_status"
+    },
+    {
+        "caption": "LSP: Show LSP Servers",
+        "command": "lsp_show_servers"
+    },
+    {
+        "caption": "LSP: Enable Language Server",
+        "command": "lsp_enable_server"
+    },
+    {
+        "caption": "LSP: Disable Language Server",
+        "command": "lsp_disable_server"
+    },
+    {
+        "caption": "LSP: Show LSP Quick Panel",
+        "command": "lsp_show_quick_panel"
+    },
+    {
+        "caption": "LSP: Show Code Lens",
+        "command": "lsp_show_code_lens"
+    }
 ]
