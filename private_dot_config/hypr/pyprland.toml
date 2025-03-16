@@ -6,118 +6,207 @@ plugins = [
    # "system_notifier",
 ]
 
-[scratchpads.term]
-animation = "fromTop"
-command = "kitty --class kitty-dropterm"
-class = "kitty-dropterm"
-size = "75% 60%"
-max_size = "1920px 100%"
-margin = 50
+# [scratchpads.term]
+# animation = "fromTop"
+# command = "kitty --class kitty-dropterm"
+# class = "kitty-dropterm"
+# animation = ""
+# size = "75% 60%"
+# max_size = "1920px 100%"
+# margin = 50
 
 
-# [scratchpads.term1]
-# command = "alacritty --class scratchpad"
-# class = "scratchpad"
-# size = "90% 70%"
-# position = "3% 5%"
-# [scratchpads.term2]
-# command = "alacritty --class scratchpad"
-# class = "scratchpad"
-# size = "90% 70%"
-# position = "3% 15%"
-# [scratchpads.term3]
-# command = "alacritty --class scratchpad"
-# class = "scratchpad"
-# size = "90% 70%"
-# position = "7% 5%"
-# [scratchpads.term4]
-# command = "alacritty --class scratchpad"
-# class = "scratchpad"
-# size = "90% 70%"
-# position = "7% 15%"
+
+[scratchpads.term1]
+command = "alacritty --class term1"
+class = "term1"
+animation = ""
+size = "80% 80%"
+position = "5% 5%"
+[scratchpads.term2]
+command = "alacritty --class term2"
+class = "term2"
+animation = ""
+size = "80% 80%"
+position = "15% 5%"
+[scratchpads.term3]
+command = "alacritty --class term3"
+class = "term3"
+animation = ""
+size = "80% 80%"
+position = "5% 15%"
+[scratchpads.term4]
+command = "alacritty --class term4"
+class = "term4"
+animation = ""
+size = "80% 80%"
+position = "15% 15%"
+[scratchpads.term5]
+command = "alacritty --class term5"
+class = "term5"
+animation = ""
+size = "50% 50%"
+position = "0% 0%"
+[scratchpads.term6]
+command = "alacritty --class term6"
+class = "term6"
+animation = ""
+size = "50% 50%"
+position = "50% 0%"
+[scratchpads.term7]
+command = "alacritty --class term7"
+class = "term7"
+animation = ""
+size = "50% 50%"
+position = "0% 50%"
+[scratchpads.term8]
+command = "alacritty --class term8"
+class = "term8"
+animation = ""
+size = "50% 50%"
+position = "50% 50%"
+
 # [scratchpads.term5]
 # command = "alacritty --class scratchpad"
 # class = "scratchpad"
-# size = "90% 70%"
-# position = "3% 5%"
+# animation = ""
+# size = "75% 60%"
+# position = "5% 10%"
 # [scratchpads.term6]
 # command = "alacritty --class scratchpad"
 # class = "scratchpad"
-# size = "90% 70%"
-# position = "3% 15%"
+# animation = ""
+# size = "75% 60%"
+# position = "20% 10%"
 # [scratchpads.term7]
 # command = "alacritty --class scratchpad"
 # class = "scratchpad"
-# size = "90% 70%"
-# position = "7% 5%"
+# animation = ""
+# size = "75% 60%"
+# position = "5% 30%"
 # [scratchpads.term8]
 # command = "alacritty --class scratchpad"
 # class = "scratchpad"
-# size = "90% 70%"
-# position = "7% 15%"
+# animation = ""
+# size = "75% 60%"
+# position = "20% 30%"
+
+
 # [scratchpads.sublkeys]
 # command = "subl /home/sheffler/.config/sublime-text-3/Packages/User/ide/sublkeys.sublime-project"
 # class = "scratchpad"
+# animation = ""
 # lazy = true
 # unfocus = "hide"
-# size = "90% 90%"
+# size = "94% 94%"
 # position = "5% 5%"
-# [scratchpads.btop]
-# command = "alacritty --class scratchpad -e btop"
-# class = "scratchpad"
-# size = "90% 90%"
-# position = "5% 5%"
+[scratchpads.clipse]
+command = "alacritty --class clipse -e clipse"
+class = "clipse"
+animation = ""
+size = "94% 90%"
+position = "3% 5%"
+[scratchpads.btop]
+command = "alacritty --class btop -e btop"
+class = "btop"
+animation = ""
+size = "94% 90%"
+position = "3% 5%"
 # [scratchpads.htop]
 # command = "alacritty --class scratchpad -e htop"
 # class = "scratchpad"
-# size = "90% 90%"
-# position = "5% 5%"
+# animation = ""
+# size = "94% 90%"
+# position = "3% 5%"
 # [scratchpads.chatgpt]
 # command = "qutebrowser -r chatgpt"
 # class = "org.qutebrowser.qutebrowser"
+# animation = ""
 # lazy = true
 # unfocus = "hide"
-# size = "90% 90%"
-# position = "5% 5%"
+# size = "94% 90%"
+# position = "3% 5%"
 #
-# [scratchpads.mail]
-# command = "google-chrome-stable --ozone-platform=wayland"
-# class = "google-chrome"
-# lazy = true
-# # unfocus = "hide"
-# size = "90% 90%"
-# position = "5% 5%"
-#
-# [scratchpads.music]
-# command = "spotify"
-# class = "Spotify"
-# lazy = true
-# unfocus = "hide"
-# size = "90% 90%"
-# position = "5% 5%"
 
-# [scratchpads.mattermost]
-# command = "mattermost-desktop"
-# class = "Mattermost"
-# lazy = true
-# unfocus = "hide"
-# size = "90% 90%"
-# position = "5% 5%"
+#[scratchpads.config]
+#command = "subl --project /home/sheffler/.local/share/chezmoi/ide/chezmoi.sublime-project"
+#class = "sublime_text"
+#animation = ""
+#size = "94% 90%"
+#position = "3% 5%"
+#lazy = true
 
-# # [scratchpads.waypaper]
-# # command = "waypaper"
-# # class = "waypaper"
+# [scratchpads.zed]
+# command = "zeditor --class=zed"
+# class = "dev.zed.Zed"
+# animation = ""
+# size = "94% 90%"
+# position = "3% 5%"
 # # lazy = true
-# # unfocus = "hide"
-# # size = "90% 90%"
-# # position = "5% 5%"
-#
+
+[scratchpads.chatgpt]
+command = "chat-gpt"
+class = "chat-gpt"
+animation = ""
+size = "94% 90%"
+position = "3% 5%"
+lazy = true
+
+[scratchpads.chrome]
+command = "google-chrome-stable --ozone-platform=wayland --class=chrome"
+class = "chrome"
+animation = ""
+size = "94% 90%"
+position = "3% 5%"
+lazy = true
+[scratchpads.chromium]
+command = "chromium --ozone-platform=wayland"
+class = "chromium"
+animation = ""
+size = "94% 90%"
+position = "3% 5%"
+lazy = true
+
+[scratchpads.music]
+command = "spotify"
+class = "Spotify"
+animation = ""
+# unfocus = "hide"
+size = "94% 90%"
+position = "3% 5%"
+# lazy = true
+
+[scratchpads.mattermost]
+command = "mattermost-desktop"
+class = "Mattermost"
+animation = ""
+# unfocus = "hide"
+size = "94% 90%"
+position = "3% 5%"
+lazy = true
+
+# [scratchpads.smerge]
+# command = "smerge --new-window"
+# class = "smerge"
+# animation = ""
+# size = "94% 90%"
+# position = "3% 5%"
+# lazy = true
+
+# [scratchpads.waypaper]
+# command = "waypaper"
+# class = "waypaper"
+# animation = ""
+# size = "94% 94%"
+# position = "5% 5%"
+
 # [scratchpads.thunar]
 # command = "thunar"
 # class = "thunar"
+# animation = ""
 # lazy = true
 # unfocus = "hide"
-# size = "90% 90%"
+# size = "94% 94%"
 # position = "5% 5%"
 
 # [system_notifier.sources]

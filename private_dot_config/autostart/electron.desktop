@@ -3,6 +3,6 @@ Type=Application
 Version=1.0
 Name=electron
 Comment=electronstartup script
-Exec=/usr/lib/electron31/electron
+Exec=/usr/lib/electron34/electron
 StartupNotify=false
 Terminal=false

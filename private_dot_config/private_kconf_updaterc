@@ -41,9 +41,9 @@ done=Plasma_Fonts_Kate
 mtime=1630410470
 
 [gtkconfig.upd]
-ctime=1726600455
+ctime=1738618813
 done=gtk_theme,dont_use_gtk_css_for_window_decorations,remove_deprecated_gtk4_option
-mtime=1726043042
+mtime=1735809875
 
 [gwenview.upd]
 ctime=1637350756
@@ -56,9 +56,9 @@ done=IconsRemoveEffects
 mtime=1630410738
 
 [kcalcrc.upd]
-ctime=1726600455
+ctime=1738618813
 done=remove_deprecated_gtk4_option
-mtime=1726050826
+mtime=1736456817
 
 [kcminputrc_fix_botched_5_21_0.upd]
 ctime=1637350633
@@ -119,9 +119,9 @@ done=ksmserver_update_loginMode_value_default_enum
 mtime=1630410327
 
 [kwin.upd]
-ctime=1726600456
+ctime=1738618808
 done=replace-scalein-with-scale,port-minimizeanimation-effect-to-js,port-scale-effect-to-js,port-dimscreen-effect-to-js,auto-bordersize,animation-speed,desktop-grid-click-behavior,no-swap-encourage,remove_deprecated_gtk4_option,kwin-6.0-reset-active-mouse-screen,kwin-6.0-delete-desktop-switching-shortcuts,kwin-6.0-remove-breeze-tabbox-default,kwin-6.1-remove-gridview-expose-shortcuts
-mtime=1725990171
+mtime=1738318608
 
 [kwinrules.upd]
 ctime=1637350624
@@ -134,9 +134,9 @@ done=split-variants
 mtime=1630410327
 
 [migrate-calendar-to-plugin-id.upd]
-ctime=1726600456
+ctime=1738618809
 done=kwin-6.1-remove-gridview-expose-shortcuts,migrate-calendar-plugins
-mtime=1726042232
+mtime=1735809071
 
 [okular.upd]
 ctime=1637350824
@@ -144,29 +144,29 @@ done=annotation-toolbar,builtin-annotations
 mtime=1630274055
 
 [plasma6.0-remove-dpi-settings.upd]
-ctime=1726600456
+ctime=1738618809
 done=migrate-calendar-plugins,plasma6.0-remove-dpi-settings
-mtime=1726042232
+mtime=1735809071
 
 [plasma6.0-remove-old-shortcuts.upd]
-ctime=1726600456
+ctime=1738618809
 done=plasma6.0-remove-dpi-settings,plasma6.0-remove-old-shortcuts
-mtime=1726042232
+mtime=1735809071
 
 [plasmashell-6.0-keep-custom-position-of-panels.upd]
-ctime=1726600456
+ctime=1738618809
 done=plasma6.0-remove-old-shortcuts,plasmashell-6.0-keep-custom-position-of-panels
-mtime=1726042232
+mtime=1735809071
 
 [plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.upd]
-ctime=1726600456
+ctime=1738618809
 done=plasmashell-6.0-keep-custom-position-of-panels,plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels
-mtime=1726042232
+mtime=1735809071
 
 [spectacle.upd]
-ctime=1726600457
+ctime=1738618820
 done=plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels,24.02.0-video_format,24.02.0-keep_old_save_location,24.02.0-rename_settings,24.02.0-keep_old_filename_templates,24.05.2-change_placeholder_format
-mtime=1726046092
+mtime=1736451415
 
 [spectacle_clipboard.upd]
 ctime=1637350763

@@ -10,10 +10,11 @@
     "config":
     {
         "based_on_style": "pep8",
-        "INDENT_WIDTH": 4,
-        "COLUMN_LIMIT": 123,
-        "BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF": false,
-        "BLANK_LINES_AROUND_TOP_LEVEL_DEFINITION": 1
+        "indent_width": 4,
+        "column_limit": 111,
+        "blank_line_before_nested_class_or_def": true,
+        "blank_lines_around_top_level_definition": 1,
+        "arithmetic_precedence_indication": true
     },
     "use_stdin": true,
     "debug": true

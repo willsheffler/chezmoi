@@ -60,3 +60,19 @@ else
 end
 
 bass source ~/.secrets
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/sheffler/sw/MambaForge/bin/conda
+    eval /home/sheffler/sw/MambaForge/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
+        . "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/sheffler/sw/MambaForge/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+
+fish_add_path /home/sheffler/.modular/bin

@@ -4,9 +4,14 @@ DefaultProfile=
 [Favorite Profiles]
 Favorites=
 
+[General]
+ConfigVersion=1
+
 [MainWindow]
 Height 1080=1029
-State=AAAA/wAAAAD9AAAAAAAAB04AAAPvAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1920=960
 Window-Maximized 1080x1920=true
+
+[UiSettings]
+ColorScheme=

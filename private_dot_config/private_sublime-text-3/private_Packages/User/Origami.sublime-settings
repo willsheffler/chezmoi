@@ -1,5 +1,5 @@
 {
 
-	"auto_close_empty_panes": true,
-	// "auto_zoom_on_focus": 0.55,
+	"auto_close_empty_panes": true
+	// "auto_zoom_on_focus": 0.6
 }

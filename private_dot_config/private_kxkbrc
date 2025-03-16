@@ -3,7 +3,7 @@ update_info=kxkb_variants.upd:split-variants
 
 [Layout]
 DisplayNames=
-LayoutList=us(colemak)
+LayoutList=us
 LayoutLoopCount=-1
 Model=pc101
 Options=ctrl:nocaps

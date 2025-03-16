@@ -7,6 +7,7 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][1]
+ItemGeometries-1920x1080=
 ItemGeometries-800x600=
 ItemGeometriesHorizontal=
 activityId=1a74bf8f-a1cf-423f-b19f-5c513d8c4689
@@ -38,8 +39,8 @@ plugin=org.kde.plasma.kickoff
 
 [Containments][2][Applets][3][Configuration]
 PreloadWeight=100
-popupHeight=304
-popupWidth=459
+popupHeight=510
+popupWidth=647
 
 [Containments][2][Applets][3][Configuration][Configuration/General]
 showAppsByName=true
@@ -73,7 +74,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][6][Configuration]
-PreloadWeight=47
+PreloadWeight=57
 SystrayContainmentId=7
 
 [Containments][2][Applets][8]
@@ -132,7 +133,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][7][Applets][12][Configuration]
-PreloadWeight=52
+PreloadWeight=57
 
 [Containments][7][Applets][13]
 immutability=1
@@ -181,21 +182,21 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][7][Applets][19][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][7][Applets][20]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][7][Applets][20][Configuration]
-PreloadWeight=42
+PreloadWeight=82
 
 [Containments][7][Applets][21]
 immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][7][Applets][21][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][7][Configuration]
 PreloadWeight=42
@@ -206,4 +207,4 @@ knownItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,or
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/rpxdock,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/notes,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/willutil_cpp,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Factorio.desktop,0,desktop:/steam.desktop,desktop:/rfd,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/data,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/digs,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/mnt,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfd_tip,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/go,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/pymol3,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/bin,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Downloads,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/tmpbuild,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfdsym,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/ipd,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/yay-git,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Documents,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/CAM_MED_PASSWD,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rf,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/test,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/FTBA,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/tmp,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/willutil,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/venv,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/minecraft,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rpx,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/miniconda3,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/project,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/sw,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/kids,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rf2ci,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/for,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/src,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/archlinux-2024.09.01-x86_64.iso,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Pictures,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689
+screenMapping=desktop:/rpx,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/dotfiles,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rf2aa,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/NIXOS,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/prof,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/pymol3,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/bin,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/miniconda3,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/ide,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/helen_env.sh,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/venv,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Factorio.desktop,0,desktop:/steam.desktop,desktop:/archlinux-2024.09.01-x86_64.iso,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rf2ci,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/minecraft,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/server,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/bench,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/for,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/FTBA,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/CAM_MED_PASSWD,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/crappy_extended_helex_icos.png,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/ppp_server_data,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/EndeavourOS_Endeavour_neo-2024.09.22.iso,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/config,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Pictures,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/kids,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/slurmnode,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/sw,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/airflow,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/bare_repos,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Downloads,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/mnt,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/outputs,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/1pgx.cif,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/new_dataloader,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/icos_t3_1js9.pdb,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfdsym,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rf,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/pikaur,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/VirtualBox VMs,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/recovered.sql,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfd,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/bin_disabled,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/digs,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/tmpbuild,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/notes,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/databases,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rpxdock,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/tmp,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/test_fileset,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/test,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/sublime_build.log,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/project,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfd_helen,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfd_tip,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/pypr.log,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/rfd_clean,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/cztest.sh,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/ppp_plugin,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/Documents,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/mlb,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/data,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/explicit_filter.restore,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/archlinux-2025.02.01-x86_64.iso,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/ipd,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/yay-git,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/RF2-allatom,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/src,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/ppp,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/willutil,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/go,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/snap,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689,desktop:/willutil_cpp,0,1a74bf8f-a1cf-423f-b19f-5c513d8c4689

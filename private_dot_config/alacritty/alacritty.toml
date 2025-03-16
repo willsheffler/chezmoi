@@ -1,4 +1,12 @@
-import = ['~/config/alacritty/keybinds.yaml']
+[general]
+import = [
+  '~/config/alacritty/keybinds.yaml',
+  '~/.config/alacritty/themes/themes/blood_moon.toml',
+]
+
+[colors.primary]
+background = '#000000'
+foreground = '#ffffff'
 
 [font]
 size = 12

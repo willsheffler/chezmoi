@@ -55,3 +55,5 @@ alias gl 'git log'
 alias glo 'git log --oneline'
 alias gd 'git diff'
 alias gdo 'git diff --nameonly'
+
+alias code 'code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto'

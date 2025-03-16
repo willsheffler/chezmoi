@@ -1,6 +1,12 @@
 <snippet>
-    <content><![CDATA[please write a docstring in google format for all parameters with types and return value]]></content>
-    <tabTrigger>docarg</tabTrigger>
+    <content><![CDATA[from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    import $1 as $2
+else:
+    from ipd import lazyimport
+    $2 = lazyimport("$1")
+    ]]></content>
+    <tabTrigger>imp</tabTrigger>
     <scope>source.python</scope>
     <description>docstring</description>
 </snippet>

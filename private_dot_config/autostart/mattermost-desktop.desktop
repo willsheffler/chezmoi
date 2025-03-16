@@ -3,6 +3,6 @@ Type=Application
 Version=1.0
 Name=mattermost-desktop
 Comment=mattermost-desktopstartup script
-Exec=/app/main/mattermost-desktop
+Exec=/tmp/.mount_matter7WfmJH/mattermost-desktop
 StartupNotify=false
 Terminal=false

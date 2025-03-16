@@ -17,6 +17,9 @@ LayoutName=org.kde.breeze.desktop
 [Tiling]
 padding=4
 
+[Tiling][15cf3b17-6925-56eb-bf25-b03c7467830f]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][66c2683b-fae6-519f-8a11-7ff30387d07f]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -24,7 +27,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Xwayland]
-Scale=1
+Scale=2
 
 [org.kde.kdecoration2]
 library=org.kde.breeze

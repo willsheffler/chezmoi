@@ -4,7 +4,7 @@
     font-family: Source Code Pro;
     font-size: 15px;
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
 /*    text-decoration-line: underline;*/
 /*    text-decoration-style: double;*/
 }
@@ -69,7 +69,7 @@ window#waybar
 }
 #custom-power {
 /*    background-color: rgba(0,119,179,0);*/
-    border-radius: 100px;
+    border-radius: 10px;
     margin: 5px 5px;
     padding: 1px 1px 1px 6px;
 }
