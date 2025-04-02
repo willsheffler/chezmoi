@@ -1,17 +1,51 @@
 [
 
-    { "keys": ["super+ctrl+left"], "command": "prev_view" },
-    { "keys": ["super+ctrl+right"], "command": "next_view" },
+    { "keys": ["ctrl+super+up"  ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": -10.0 } },
+    { "keys": ["ctrl+super+down"], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": 10.0 } },
+    { "keys": ["ctrl+super+pageup"  ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": -30.0 } },
+    { "keys": ["ctrl+super+pagedown"], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": 30.0 } },
+    { "keys": ["ctrl+shift+y"], "command": "lsp_symbol_definition"},
+    { "keys": ["ctrl+shift+u"], "command": "lsp_symbol_references" },
+    { "keys": ["ctrl+shift+l"], "command": "goto_symbol_in_project" },
+    // { "keys": [""], "command": "lsp_rename"},
+    // { "keys": [""], "command": "lsp_signature_help"},
+    // { "keys": [""], "command": "lsp_hover"},
+    // { "keys": [""], "command": "lsp_code_action"},
+    // { "keys": [""], "command": "lsp_format_document"},
+    // { "keys": [""], "command": "lsp_format_selection"},
+    // { "keys": [""], "command": "lsp_workspace_symbol","args": { "method": "workspace/symbol" }},
+    // { "keys": [""], "command": "lsp_document_symbol"},
+    // { "keys": [""], "command": "lsp_workspace_symbol"},
+    // { "keys": [""], "command": "lsp_show_diagnostics"},
+    // { "keys": [""], "command": "lsp_symbol", "args": { "method": "textDocument/references" }},
+    // { "keys": [""], "command": "lsp_open_log"},
+    // { "keys": [""], "command": "lsp_reload_server"},
+    // { "keys": [""], "command": "lsp_stop_server"},
+    // { "keys": [""], "command": "lsp_show_status"},
+    // { "keys": [""], "command": "lsp_show_servers"},
+    // { "keys": [""], "command": "lsp_enable_server"},
+    // { "keys": [""], "command": "lsp_disable_server"},
+    // { "keys": [""], "command": "lsp_show_quick_panel"},
+    // { "keys": [""], "command": "lsp_show_code_lens"},
+    // { "keys": ["ctrl+shift+."], "command": "lsp_next_diagnostic" },
+    // { "keys": ["ctrl+shift+"], "command": "lsp_prev_diagnostic" },
+    // { "keys": ["keypad_period"], "command": "jump_back" },
+    // { "keys": ["shift+keypad_period"], "command": "jump_forward" },
+    // { "keys": ["alt+keypad_period"], "command": "goto_definition" },
+    // { "keys": ["ctrl+keypad_period"], "command": "goto_reference" },
 
-    { "keys": ["ctrl+shift+i"], "command": "lsp_next_diagnostic" },
-    { "keys": ["ctrl+shift+e"], "command": "lsp_prev_diagnostic" },
-    { "keys": ["ctrl+shift+."], "command": "next_result" },
-    { "keys": ["ctrl+shift+,"], "command": "prev_result" },
-    // { "keys": ["ctrl+shift+o"], "command": "whs_select_lines", "args": {"lines": -4}},
+    // { "keys": ["super+ctrl+left"], "command": "prev_view" },
+    // { "keys": ["super+ctrl+right"], "command": "next_view" },
+
+    { "keys": ["ctrl+shift+."], "command": "lsp_next_diagnostic" },
+    { "keys": ["ctrl+shift+,"], "command": "lsp_prev_diagnostic" },
+    { "keys": ["ctrl+shift+i"], "command": "next_result" },
+    { "keys": ["ctrl+shift+e"], "command": "prev_result" },
     { "keys": ["ctrl+shift+o"], "command": "whs_last_result", "args": {"forward": true} },
     { "keys": ["ctrl+shift+n"], "command": "whs_last_result", "args": {"forward": false} },
-
-
+    { "keys": ["alt+n"], "command": "whs_swap_source_test" },
+    { "keys": ["super+alt+p"], "command": "whs_open_pyproject" },
+    { "keys": ["alt+h"], "command": "whs_format_python" },
 
 
 
@@ -22,6 +56,7 @@
     // { "keys": ["super+alt+p"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
     // { "keys": ["super+alt+p"], "command": "pytest_toggle_panel" },
 
+    { "keys": ["alt+space"], "command": "lsp_hover"},
     { "keys": ["ctrl+alt+space"], "command": "show_hover_text"},
 
 
@@ -45,8 +80,6 @@
     { "keys": ["ctrl+keypad_enter"],  "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
     { "keys": ["shift+keypad_enter"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
     { "keys": ["alt+keypad_enter"],   "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
-    { "keys": ["alt+keypad_period"], "command": "goto_definition" },
-    { "keys": ["ctrl+keypad_period"], "command": "goto_reference" },
     { "keys": ["keypad_period"], "command": "jump_back" },
     { "keys": ["shift+keypad_period"], "command": "jump_forward" },
     // {- "keys": ["keypad_period"], "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
@@ -95,10 +128,8 @@
 //  { "keys": ["alt+q"], "command": "exit" },
     { "keys": ["alt+s"], "command": "save" },
     { "keys": ["alt+shift+s"], "command": "save_as" },
-    { "keys": ["ctrl+tab"], "command": "noop" },
-    { "keys": ["ctrl+shift+tab"], "command": "noop" },
-    { "keys": ["ctrl+alt+tab"], "command": "next_view_in_stack" },
-    { "keys": ["ctrl+alt+shift+tab"], "command": "prev_view_in_stack" },
+    { "keys": ["alt+tab"], "command": "next_view_in_stack" },
+    { "keys": ["alt+backspace"], "command": "prev_view_in_stack" },
     // { "keys": ["alt+enter"], "command": "toggle_full_screen" },
     { "keys": ["alt+shift+enter"], "command": "toggle_distraction_free" },
     { "keys": ["ctrl+d"], "command": "right_delete"},
@@ -315,10 +346,20 @@
 //     ]
 // },
     { "keys": ["ctrl+shift+c"],  "command": "toggle_fold_comments" },
-    { "keys": ["super+alt+e"], "command": "chain", "args": { "commands": [["fold_all"],["unfold"]] } },
-    { "keys": ["super+alt+n"], "command": "fold" },
+    // { "keys": ["super+alt+e"], "command": "chain", "args": { "commands": [["fold_python_docstrings"],["unfold_all"]] } },
+    // { "keys": ["super+alt+e"], "command": "chain", "args": { "commands": [["unfold_all"],["fold_python_docstrings"]] } },
+    { "keys": ["super+alt+e"], "command": "fold_by_level", "args": {"level": 2} },
+    { "keys": ["super+alt+n"], "command": "fold_python_docstrings" },
+
+    // { "keys": ["super+alt+n"], "command": "fold" },
     { "keys": ["super+alt+o"], "command": "unfold" },
     { "keys": ["super+alt+i"], "command": "unfold_all" },
+// fold_python_docstrings and unfold_python_docstrings
+    { "keys": ["super+alt+a"], "command": "fold_by_level", "args": {"level": 1} },
+    { "keys": ["super+alt+r"], "command": "fold_by_level", "args": {"level": 2} },
+    { "keys": ["super+alt+s"], "command": "fold_by_level", "args": {"level": 3} },
+    { "keys": ["super+alt+t"], "command": "fold_by_level", "args": {"level": 4} },
+
     // { "keys": ["ctrl+'", "ctrl+t"], "command": "fold_tag_attributes" }
     // { "keys": ["alt+ctrl+n"], "command": "chain", "args": { "commands": [["save"],["build",{"select":true}]] } },
     { "keys": ["ctrl+alt+h"], "command": "multicommand", "args": { "commands": [      {
@@ -330,21 +371,16 @@
   ]} },
 
 
-    { "keys": ["super+alt+a"], "command": "fold_by_level", "args": {"level": 1} },
-    { "keys": ["super+alt+r"], "command": "fold_by_level", "args": {"level": 2} },
-    { "keys": ["super+alt+s"], "command": "fold_by_level", "args": {"level": 3} },
-    { "keys": ["super+alt+t"], "command": "fold_by_level", "args": {"level": 4} },
-
-    { "keys": ["ctrl+shift+alt+super+a"], "command": "set_build_system {\"index\": 0}" },
-    { "keys": ["ctrl+shift+alt+super+r"], "command": "set_build_system {\"index\": 1}" },
-    { "keys": ["ctrl+shift+alt+super+s"], "command": "set_build_system {\"index\": 2}" },
-    { "keys": ["ctrl+shift+alt+super+t"], "command": "set_build_system {\"index\": 3}" },
-    { "keys": ["ctrl+shift+alt+super+d"], "command": "set_build_system {\"index\": 4}" },
-    { "keys": ["ctrl+shift+alt+super+h"], "command": "set_build_system {\"index\": 5}" },
-    { "keys": ["ctrl+shift+alt+super+n"], "command": "set_build_system {\"index\": 6}" },
-    { "keys": ["ctrl+shift+alt+super+e"], "command": "set_build_system {\"index\": 7}" },
-    { "keys": ["ctrl+shift+alt+super+i"], "command": "set_build_system {\"index\": 8}" },
-    { "keys": ["ctrl+shift+alt+super+o"], "command": "set_build_system {\"index\": 9}" },
+    { "keys": ["ctrl+1"], "command": "set_build_system {\"index\": 0}" },
+    { "keys": ["ctrl+2"], "command": "set_build_system {\"index\": 1}" },
+    { "keys": ["ctrl+3"], "command": "set_build_system {\"index\": 2}" },
+    { "keys": ["ctrl+4"], "command": "set_build_system {\"index\": 3}" },
+    { "keys": ["ctrl+5"], "command": "set_build_system {\"index\": 4}" },
+    { "keys": ["ctrl+6"], "command": "set_build_system {\"index\": 5}" },
+    { "keys": ["ctrl+7"], "command": "set_build_system {\"index\": 6}" },
+    { "keys": ["ctrl+8"], "command": "set_build_system {\"index\": 7}" },
+    { "keys": ["ctrl+9"], "command": "set_build_system {\"index\": 8}" },
+    { "keys": ["ctrl+0"], "command": "set_build_system {\"index\": 9}" },
 
     // { "keys": ["ctrl+shift+1"], "command": "move_to_group", "args": { "group": 0 } },
 // { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${1}:${2:7.3f}}"}, "context":

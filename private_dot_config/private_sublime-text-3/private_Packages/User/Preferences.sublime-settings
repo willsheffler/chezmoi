@@ -1,104 +1,43 @@
 {
-    "font_face": "source code pro",
-    // "font_face": "source code pro light",
-    // "font_face": "FiraCode Nerd Font",
-    // "font_face": "JetBrainsMono",
-    // "font_face": "MonaspaceKrypton",
-    // "font_face": "Ariel",
-    "line_padding_bottom": 0.1,
-    "line_padding_top": -0.1,
-    "font_size": 10,
-    "ui_scale": 1.2,
-    "ClangFormat":
-    {        "format_on_save": true,    },
-    "afn_use_keybinding": true,
-    "auto_complete_triggers":
-    [
-        {
-            "characters": ".",
-            "selector": "source.python",
-        }
-    ],
+    "word_wrap": false,
     "auto_match_enabled": true,
-    "binary_file_patterns":
-    [
-        "*.jpg",
-        "*.jpeg",
-        "*.png",
-        "*.gif",
-        "*.ttf",
-        "*.tga",
-        "*.dds",
-        "*.ico",
-        "*.eot",
-        "*.pdf",
-        "*.swf",
-        "*.jar",
-        "*.zip",
-        ".so",
-        ".o",
-        "*.pt"
-    ],
-    "bold_folder_labels": true,
     "caret_style": "phase",
-    "color_scheme": "Celeste Dark.sublime-color-scheme",
-    "dlig": true,
-    "ensure_newline_at_eof_on_save": true,
-    "fade_fold_buttons": false,
-    // "font_face": "cantarell",
-    // "font_face": "firacode",
-    // "highlight_line": true,
-    "ignored_packages":
-    [
-        // "Formatter",
-        "NeoVintageous",
-        "SublimeLinter",
-        // "TabsExtra",
-        "Vintage"
-    ],
-    "indent_guide_options":
-    [
-        "draw_normal",
-        "draw_active"
-    ],
-    "index_files": false,
+    "overlay_scroll_bars": "enabled",
+    "animation_enabled": true,
+    "update_check": true,
+    "tab_size": 4,
     "index_exclude_gitignore": false,
+    "file_exclude_patterns": [
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.sublime-workspace",
+        ".whl"
+    ],
+    "line_padding_top": 0,
     "line_numbers": true,
     "material_theme_accent_lime": true,
-    "material_them_tabs_separator": true,
-    "material_theme_tree_headings": true,
-    "no_bold": false,
-    "overlay_scroll_bars": "enabled",
-    "tab_size": 4,
-    "theme": "Adaptive.sublime-theme",
     "translate_tabs_to_spaces": true,
-    "trim_automatic_white_space": true,
-    "trim_trailing_white_space_on_save": "not_on_caret",
-    "update_check": true,
-    "use_pylint": false,
-    "validate_imports": true,
-    "word_wrap": true,
-    "scroll_speed": 0.0,
-    // "font_options":
-    // [
-    //     "dlig",
-    //     "subpixel_antialias"
-    //     // "gray_antialias"
-    // ],
-    "ignored_words":
-    [
-        "ipd"
-    ],
-    "font_options":
-    [
-        "dlig",
-        "subpixel_antialias"
-    ],
-    "hardware_acceleration": "opengl",
+    "index_files": false,
+    "highlight_line": true,
+    "ensure_newline_at_eof_on_save": true,
     "vintageous_default_mode": "insert",
-    "neovintageous_build_version": 13200,
-    "added_words":
-    [
+    "added_words": [
         "pymol",
         "xform",
         "pyrosetta",
@@ -161,35 +100,84 @@
         "dbkey",
         "pymolcmd"
     ],
-    "file_exclude_patterns":
-    [
-        "*.pyc",
-        "*.pyo",
-        "*.exe",
-        "*.dll",
-        "*.obj",
-        "*.o",
-        "*.a",
-        "*.lib",
-        "*.so",
-        "*.dylib",
-        "*.ncb",
-        "*.sdf",
-        "*.suo",
-        "*.idb",
-        ".DS_Store",
-        "*.class",
-        "*.psd",
-        "*.db",
-        "*.sublime-workspace"
+    "trim_trailing_white_space_on_save": "not_on_caret",
+    "font_size": 10,
+    "use_pylint": false,
+    "material_theme_tree_headings": true,
+    "hardware_acceleration": "opengl",
+    "scroll_speed": 0.0,
+    "ClangFormat": {
+        "format_on_save": true
+    },
+    "indent_guide_options": [
+        "draw_normal",
+        "draw_active"
     ],
-    "folder_exclude_patterns":
-    [
+    "no_bold": false,
+    "folder_exclude_patterns": [
         ".svn",
         ".git",
         ".hg",
         "CVS",
         ".Trash",
-        ".Trash-*"
+        ".Trash-*",
+        ".nox",
+        ".venv",
+        ".pytest_cache",
+        "wheelhouse",
+        "dist",
+        "CMakeFiles"
     ],
+    "line_padding_bottom": 0,
+    "neovintageous_build_version": 13200,
+    "validate_imports": true,
+    "ignored_words": [
+        "ipd"
+    ],
+    "dlig": true,
+    "color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+    "trim_automatic_white_space": true,
+    "auto_complete_triggers": [
+        {
+            "selector": "source.python",
+            "characters": "."
+        }
+    ],
+    "font_face": "source code pro",
+    "afn_use_keybinding": true,
+    "font_options": [
+        "dlig",
+        "subpixel_antialias"
+    ],
+    "material_them_tabs_separator": true,
+    "theme": "Adaptive.sublime-theme",
+    "bold_folder_labels": true,
+    "fade_fold_buttons": false,
+    "ignored_packages": [
+        "NeoVintageous",
+        "SublimeLinter",
+        "Vintage",
+        "RestructuredText"
+    ],
+    "ui_scale": 1.2,
+    "binary_file_patterns": [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.ttf",
+        "*.tga",
+        "*.dds",
+        "*.ico",
+        "*.eot",
+        "*.pdf",
+        "*.swf",
+        "*.jar",
+        "*.zip",
+        ".so",
+        ".o",
+        "*.pt",
+        ".whl",
+        ".ninja.deps"
+    ]
 }

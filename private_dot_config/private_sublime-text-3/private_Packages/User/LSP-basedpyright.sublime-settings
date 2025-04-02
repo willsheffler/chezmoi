@@ -1,0 +1,13 @@
+// Settings in here override those in "LSP-basedpyright/LSP-basedpyright.sublime-settings"
+
+{
+    "settings": {
+       "LSP": {
+          "LSP-pyright": {
+             "settings": {
+
+             }
+          }
+       }
+    }
+}

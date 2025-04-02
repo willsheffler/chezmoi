@@ -21,11 +21,13 @@ alias emacs 'emacs -nw'
 alias db distrobox
 alias dbe 'distrobox enter'
 alias dbarch 'distrobox enter arch'
-alias t tree
+alias t tre
 alias ff fastfetch
 alias top htop
 alias bat 'bat --color=always --paging=always'
 alias unalias 'functions --erase'
+alias rg 'rg --no-ignore'
+alias doit 'doit --seek-file'
 
 alias ghc 'gh copilot'
 alias ghcs 'gh copilot suggest'

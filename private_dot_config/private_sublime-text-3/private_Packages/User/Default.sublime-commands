@@ -1,6 +1,6 @@
 [
     {
-        "caption": "LSP: Go to Definition",
+        "caption": "MY LSP: Go to Definition",
         "command": "lsp_symbol",
         "args": { "method": "textDocument/definition" }
     },
