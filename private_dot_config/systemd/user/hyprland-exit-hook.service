@@ -1,0 +1,14 @@
+# ~/.config/systemd/user/hyprland-exit-hook.service
+[Unit]
+Description=Run a script when Hyprland exits
+DefaultDependencies=no
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/true
+ExecStop=%h/.config/hypr/hyprland_shutdown.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

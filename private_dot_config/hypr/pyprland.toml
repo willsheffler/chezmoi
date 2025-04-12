@@ -6,6 +6,16 @@ plugins = [
    # "system_notifier",
 ]
 
+
+# [scratchpads.mattermost]
+# command = "mattermost-desktop"
+# class = "Mattermost"
+# # unfocus = "hide"
+# size = "96% 94%"
+# position = "2% 2%"
+# lazy = true
+
+
 # [scratchpads.term]
 # animation = "fromTop"
 # command = "kitty --class kitty-dropterm"
@@ -30,25 +40,25 @@ plugins = [
 # position = "5% 5%"
 
 # [scratchpads.term5]
-command = "alacritty --class term5"
-class = "term5"
-size = "50% 50%"
-position = "0% 0%"
-[scratchpads.term6]
-command = "alacritty --class term6"
-class = "term6"
-size = "50% 50%"
-position = "50% 0%"
-[scratchpads.term7]
-command = "alacritty --class term7"
-class = "term7"
-size = "50% 50%"
-position = "0% 50%"
-[scratchpads.term8]
-command = "alacritty --class term8"
-class = "term8"
-size = "50% 50%"
-position = "50% 50%"
+# command = "alacritty --class term5"
+# class = "term5"
+# size = "50% 50%"
+# position = "0% 0%"
+# [scratchpads.term6]
+# command = "alacritty --class term6"
+# class = "term6"
+# size = "50% 50%"
+# position = "50% 0%"
+# [scratchpads.term7]
+# command = "alacritty --class term7"
+# class = "term7"
+# size = "50% 50%"
+# position = "0% 50%"
+# [scratchpads.term8]
+# command = "alacritty --class term8"
+# class = "term8"
+# size = "50% 50%"
+# position = "50% 50%"
 
 # [scratchpads.term5]
 # command = "alacritty --class scratchpad"
@@ -79,16 +89,16 @@ position = "50% 50%"
 # unfocus = "hide"
 # size = "94% 94%"
 # position = "5% 5%"
-[scratchpads.clipse]
-command = "alacritty --class clipse -e clipse"
-class = "clipse"
-size = "96% 94%"
-position = "2% 2%"
-[scratchpads.btop]
-command = "alacritty --class btop -e btop"
-class = "btop"
-size = "96% 94%"
-position = "2% 2%"
+# [scratchpads.clipse]
+# command = "alacritty --class clipse -e clipse"
+# class = "clipse"
+# size = "96% 94%"
+# position = "2% 2%"
+# [scratchpads.btop]
+# command = "alacritty --class btop -e btop"
+# class = "btop"
+# size = "96% 94%"
+# position = "2% 2%"
 # [scratchpads.htop]
 # command = "alacritty --class scratchpad -e htop"
 # class = "scratchpad"
@@ -117,48 +127,40 @@ position = "2% 2%"
 # position = "2% 2%"
 # # lazy = true
 
-[scratchpads.chatgpt]
-command = "chat-gpt"
-class = "chat-gpt"
-size = "96% 94%"
-position = "2% 2%"
-lazy = true
-
-[scratchpads.cursor]
-command = "cursor"
-class = "Cursor"
-size = "96% 94%"
-position = "2% 2%"
-lazy = true
-
-[scratchpads.chrome]
-command = "google-chrome-stable --ozone-platform=wayland --class=chrome"
-class = "chrome"
-size = "96% 94%"
-position = "2% 2%"
-lazy = true
-[scratchpads.chromium]
-command = "chromium --ozone-platform=wayland"
-class = "chromium"
-size = "96% 94%"
-position = "2% 2%"
-lazy = true
-
-[scratchpads.music]
-command = "spotify"
-class = "Spotify"
-# unfocus = "hide"
-size = "96% 94%"
-position = "2% 2%"
+# [scratchpads.chatgpt]
+# command = "chat-gpt"
+# class = "chat-gpt"
+# size = "96% 94%"
+# position = "2% 2%"
 # lazy = true
 
-[scratchpads.mattermost]
-command = "mattermost-desktop"
-class = "Mattermost"
-# unfocus = "hide"
-size = "96% 94%"
-position = "2% 2%"
-lazy = true
+# [scratchpads.cursor]
+# command = "cursor"
+# class = "Cursor"
+# size = "96% 94%"
+# position = "2% 2%"
+# lazy = true
+
+# [scratchpads.chrome]
+# command = "google-chrome-stable --ozone-platform=wayland --class=chrome"
+# class = "chrome"
+# size = "96% 94%"
+# position = "2% 2%"
+# lazy = true
+# [scratchpads.chromium]
+# command = "chromium --ozone-platform=wayland"
+# class = "chromium"
+# size = "96% 94%"
+# position = "2% 2%"
+# lazy = true
+
+# [scratchpads.music]
+# command = "spotify"
+# class = "Spotify"
+# # unfocus = "hide"
+# size = "96% 94%"
+# position = "2% 2%"
+# # lazy = true
 
 # [scratchpads.smerge]
 # command = "smerge --new-window"
