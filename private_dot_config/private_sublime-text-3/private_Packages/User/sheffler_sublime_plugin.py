@@ -47,7 +47,7 @@ class AutoFoldOnLoad(sublime_plugin.EventListener):
         if view.match_selector(0, "source.python"):
             # view.run_command("toggle_fold_comments")
             view.run_command("unfold_all")
-            view.run_command("fold_by_level", {"level": 3})
+            # view.run_command("fold_by_level", {"level": 3})
             view.run_command("fold_python_docstrings")
             # view.run_command("fold_comments")
 
@@ -159,25 +159,49 @@ class WhsScrollAdjacentPaneCommand(sublime_plugin.WindowCommand):
         return None
 
 def safe_scroll(view, amount):
-    # Viewport metrics
-    viewport_height = view.viewport_extent()[1]
+    """
+    Scroll the view by a given number of visual lines, but not past the bottom
+    of the buffer. Visual lines (wrapped lines) are respected.
+
+    Parameters:
+        view (sublime.View): The view to scroll.
+        amount (int): The number of visual lines to scroll. Positive scrolls down.
+    """
+    layout_x, layout_y = view.viewport_position()
     line_height = view.line_height()
-    visible_lines = int(viewport_height // line_height)
+    viewport_height = view.viewport_extent()[1]
 
-    # Current top line
-    top_pixel = view.viewport_position()[1]
-    top_row = int(top_pixel // line_height)
+    # Total scrollable height is content height minus viewport
+    content_height = view.layout_extent()[1]
+    max_scroll_y = max(0, content_height - viewport_height)
 
-    # Total line count
-    total_lines = view.rowcol(view.size())[0]# + 1
+    # Compute new y position and clamp it to max_scroll_y
+    new_y = layout_y + amount * line_height
+    new_y = max(0, min(new_y, max_scroll_y))
 
-    # Max top row such that the last line is at the bottom of the viewport
-    max_top_row = max(0, total_lines - visible_lines)
+    view.set_viewport_position((layout_x, new_y), animate=False)
 
-    # Compute new top row after scroll
-    delta_rows = int(amount)
-    new_top_row = min(max(0, top_row + delta_rows), max_top_row)
 
-    # Apply clamped scroll
-    new_top_pixel = new_top_row * line_height
-    view.set_viewport_position((view.viewport_position()[0], new_top_pixel), animate=False)
+# WATCHED_FILE = "/home/sheffler/evn/ide/sublime_build.log"
+#
+# class FilePoller(sublime_plugin.EventListener):
+    # last_mtime = None
+    # timeout
+    # def on_activated_async(self, view):
+        # def poll():
+            # try:
+                # mtime = os.path.getmtime(WATCHED_FILE)
+                # if self.last_mtime is None:
+                    # self.last_mtime = mtime
+                # elif mtime - self.last_mtime > 250:
+                    # self.last_mtime = mtime
+                    # for window in sublime.windows():
+                        # for v in window.views():
+                            # if v.file_name() == WATCHED_FILE:
+                                # window.focus_view(v)
+                                # v.run_command("revert")
+            # finally:
+                # sublime.set_timeout_async(poll, 50)
+#
+        # poll()
+#

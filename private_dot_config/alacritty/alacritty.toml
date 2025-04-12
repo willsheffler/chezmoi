@@ -16,12 +16,14 @@ size = 12
 # family = "MonaspaceNeon"
 # family = "MonaspaceRadon"
 # family = "MonaspaceXenon"
-family = "Source Code Pro"
+# family = "Source Code Pro"
 # family = "FiraCode Nerd Font"
-# family = "JetBrainsMono"
+family = "JetBrainsMono"
 # family = "MonaspaceKrypton"
 # style = "WideRegular"
 style = "SemiBold"
+# style = "Regular"
+# style = "Light"
 
 # [window]
 # opacity = 1

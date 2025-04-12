@@ -7,20 +7,40 @@
         // "crust": "#01010b"
     },
     "globals": {
-        "line_highlight": "var(crust)",
+        "background": "#112",
+        "line_highlight": "#000",
         "find_highlight": "var(red)"
     },
     "rules": [
         {
-            "scope": "source - comment | storage | entity | variable | variable.function | entity.name.function",
+            "scope": "source - comment | storage | entity | variable | variable.function | entity.name.function | variable.parameter | meta.generic-name",
             // "scope": "source - comment | string | keyword | punctuation | storage | entity",
-            "foreground": ["hsl(200, 60%, 70%)", "hsl(330, 60%, 70%)"]
+            "foreground": ["hsl(200, 70%, 70%)", "hsl(330, 70%, 70%)"]
+        },
+        {
+          "scope": "entity.name.function|support.function.magic|variable.function",
+          // "foreground": "#fff",  //  or whatever color you want
+          "foreground": ["hsl(200, 80%, 70%)", "hsl(330, 80%, 70%)"],
+          "font_style": "italic"
+        },
+        {
+          "scope": "entity.name.function|support.function.magic|entity.name.class",
+          // "foreground": "#fff",  //  or whatever color you want
+          "foreground": ["hsl(200, 80%, 70%)", "hsl(330, 80%, 70%)"],
+          "font_style": "underline"
+        },
+        {
+          "scope": "keyword.declaration.class|keyword.declaration.function",
+          // "foreground": "#fff",  //  or whatever color you want
+          "foreground": "#fff",
+          "font_style": "italic"
         },
         {
             "name": "Invalid",
             "scope": "invalid",
-            "foreground": "var(crust)",
-            "background": "var(red)",
+            // "foreground": "var(crust)",
+            // "background": "#000",
+            "background": "#313",
             "font_style": ""
         },
         {

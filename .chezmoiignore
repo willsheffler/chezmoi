@@ -5,3 +5,5 @@
 tmp
 ide
 #*
+/home/sheffler/.config/sublime-text-3/Packages/User/openAI.sublime-settings
+pyrightconfig.json

@@ -2,37 +2,17 @@ set user (whoami)
 set host ($HOME/.local/bin/host)
 set distro (grep -E '^Na
    AME=' /etc/os-release | cut -b 7-16)
-set -gx CONDA_EXE '/home/sheffler/sw/MambaForge/bin/conda'
-set -gx MAMBA_EXE '/home/sheffler/sw/MambaForge/bin/mamba'
 
 bind \b backward-kill-word 
 bind \e\[3\;5~ kill-word
 
-function setup_conda;
-   set ROOT $argv[1]
-   set CONDA $argv[2]
-   eval $ROOT/bin/conda "shell.fish" "hook" | source
-   source $ROOT/etc/fish/conf.d/$CONDA.fish
-   fish_add_path -gP $ROOT/bin
-   # conda config --set channel_priority flexible # these 2 are slow
-   # conda config --set auto_activate_base false
-   source "$ROOT/etc/fish/conf.d/mamba.fish"
-end
-if [ $CONTAINER_ID ]
-   # echo IN CONTAINER
-   eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-   fish_add_path -gaP /home/linuxbrew/.linuxbrew/bin:$PATH
-   if [ "$CONTAINER_ID" = "rfubuntu" ]
-      setup_conda /opt/MambaForge mamba
-      # set -gx LD_LIBRARY_PATH $HOME/miniconda3/envs/rfd/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib
-   end
-else if [ -e .singularity.d ]
+if [ -e .singularity.d ]
    echo IN APPTAINER
 # elseif [ $host == "lappy.root" ]
 else
    # set -gx QT_QPA_PLATFORM wayland
    set -gx QT_QPA_PLATFORM xcb
-   setup_conda ~/sw/MambaForge mamba
+   # setup_conda ~/miniforge3 conda
    atuin init fish | source
    atuin gen-completions --shell fish | source
    direnv hook fish | source
@@ -61,18 +41,19 @@ end
 
 bass source ~/.secrets
 
+
+fish_add_path /home/sheffler/.modular/bin
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/sheffler/sw/MambaForge/bin/conda
-    eval /home/sheffler/sw/MambaForge/bin/conda "shell.fish" "hook" $argv | source
+if test -f /home/sheffler/miniforge3/bin/conda
+    eval /home/sheffler/miniforge3/bin/conda "shell.fish" "hook" $argv | source
 else
-    if test -f "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
-        . "/home/sheffler/sw/MambaForge/etc/fish/conf.d/conda.fish"
+    if test -f "/home/sheffler/miniforge3/etc/fish/conf.d/conda.fish"
+        . "/home/sheffler/miniforge3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/sheffler/sw/MambaForge/bin" $PATH
+        set -x PATH "/home/sheffler/miniforge3/bin" $PATH
     end
 end
 # <<< conda initialize <<<
 
-
-fish_add_path /home/sheffler/.modular/bin

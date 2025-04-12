@@ -1,42 +1,4 @@
 {
-    "word_wrap": false,
-    "auto_match_enabled": true,
-    "caret_style": "phase",
-    "overlay_scroll_bars": "enabled",
-    "animation_enabled": true,
-    "update_check": true,
-    "tab_size": 4,
-    "index_exclude_gitignore": false,
-    "file_exclude_patterns": [
-        "*.pyc",
-        "*.pyo",
-        "*.exe",
-        "*.dll",
-        "*.obj",
-        "*.o",
-        "*.a",
-        "*.lib",
-        "*.so",
-        "*.dylib",
-        "*.ncb",
-        "*.sdf",
-        "*.suo",
-        "*.idb",
-        ".DS_Store",
-        "*.class",
-        "*.psd",
-        "*.db",
-        "*.sublime-workspace",
-        ".whl"
-    ],
-    "line_padding_top": 0,
-    "line_numbers": true,
-    "material_theme_accent_lime": true,
-    "translate_tabs_to_spaces": true,
-    "index_files": false,
-    "highlight_line": true,
-    "ensure_newline_at_eof_on_save": true,
-    "vintageous_default_mode": "insert",
     "added_words": [
         "pymol",
         "xform",
@@ -100,66 +62,9 @@
         "dbkey",
         "pymolcmd"
     ],
-    "trim_trailing_white_space_on_save": "not_on_caret",
-    "font_size": 10,
-    "use_pylint": false,
-    "material_theme_tree_headings": true,
-    "hardware_acceleration": "opengl",
-    "scroll_speed": 0.0,
-    "ClangFormat": {
-        "format_on_save": true
-    },
-    "indent_guide_options": [
-        "draw_normal",
-        "draw_active"
-    ],
-    "no_bold": false,
-    "folder_exclude_patterns": [
-        ".svn",
-        ".git",
-        ".hg",
-        "CVS",
-        ".Trash",
-        ".Trash-*",
-        ".nox",
-        ".venv",
-        ".pytest_cache",
-        "wheelhouse",
-        "dist",
-        "CMakeFiles"
-    ],
-    "line_padding_bottom": 0,
-    "neovintageous_build_version": 13200,
-    "validate_imports": true,
-    "ignored_words": [
-        "ipd"
-    ],
-    "dlig": true,
-    "color_scheme": "Catppuccin Mocha.sublime-color-scheme",
-    "trim_automatic_white_space": true,
-    "auto_complete_triggers": [
-        {
-            "selector": "source.python",
-            "characters": "."
-        }
-    ],
-    "font_face": "source code pro",
     "afn_use_keybinding": true,
-    "font_options": [
-        "dlig",
-        "subpixel_antialias"
-    ],
-    "material_them_tabs_separator": true,
-    "theme": "Adaptive.sublime-theme",
-    "bold_folder_labels": true,
-    "fade_fold_buttons": false,
-    "ignored_packages": [
-        "NeoVintageous",
-        "SublimeLinter",
-        "Vintage",
-        "RestructuredText"
-    ],
-    "ui_scale": 1.2,
+    "animation_enabled": false,
+    "auto_match_enabled": true,
     "binary_file_patterns": [
         "*.jpg",
         "*.jpeg",
@@ -178,6 +83,113 @@
         ".o",
         "*.pt",
         ".whl",
-        ".ninja.deps"
-    ]
+        ".ninja.deps",
+        ".pkl",
+        ".pickle",
+        ".gz",
+        ".bz2",
+        ".xv"
+    ],
+    "bold_folder_labels": true,
+    "caret_blink_interval": 0.5,
+    "caret_extra_bottom": 2,
+    "caret_extra_top": 2,
+    "caret_extra_width": 1,
+    "caret_style": "phase",
+    "ClangFormat": {
+        "format_on_save": true
+    },
+    "color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+    "dlig": true,
+    "ensure_newline_at_eof_on_save": true,
+    "fade_fold_buttons": false,
+    "file_exclude_patterns": [
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.sublime-workspace",
+        ".whl"
+    ],
+    "folder_exclude_patterns": [
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS",
+        ".Trash",
+        ".Trash-*",
+        ".nox",
+        ".venv",
+        ".pytest_cache",
+        "wheelhouse",
+        "dist",
+        "CMakeFiles"
+    ],
+    // "auto_complete_triggers": [
+    //     {
+    //         "selector": "source.python",
+    //         "characters": "."
+    //     }
+    // ],
+    "font_face": "source code pro",
+    // "font_face": "jetbrains mono light",
+    "font_options": [
+        // "dlig",
+        "subpixel_antialias"
+    ],
+    "font_size": 10,
+    "hardware_acceleration": "opengl",
+    "highlight_line": true,
+    "ignored_packages": [
+        "NeoVintageous",
+        "RestructuredText",
+        "SublimeLinter",
+        "Vintage"
+    ],
+    "ignored_words": [
+        "ipd"
+    ],
+    "indent_guide_options": [
+        "draw_normal",
+        "draw_active"
+    ],
+    "index_exclude_gitignore": false,
+    "index_files": true,
+    "line_numbers": true,
+    "line_padding_bottom": 1,
+    "line_padding_top": 1,
+    "material_them_tabs_separator": true,
+    "material_theme_accent_lime": true,
+    "material_theme_tree_headings": true,
+    "neovintageous_build_version": 13200,
+    "no_bold": false,
+    "overlay_scroll_bars": "enabled",
+    "save_on_build": true,
+    "scroll_speed": 0.0,
+    "show_developer_menu": true,
+    "tab_size": 4,
+    "theme": "Adaptive.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "trim_automatic_white_space": true,
+    "trim_trailing_white_space_on_save": "not_on_caret",
+    "ui_scale": 1.15,
+    "update_check": true,
+    "use_pylint": false,
+    "validate_imports": true,
+    "vintageous_default_mode": "insert",
+    "word_wrap": true
 }

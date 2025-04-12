@@ -1,12 +1,18 @@
 [
-
-    { "keys": ["ctrl+super+up"  ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": -10.0 } },
-    { "keys": ["ctrl+super+down"], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": 10.0 } },
+    { "keys": ["ctrl+alt+space"], "command": "lsp_hover"},
+    // { "keys": ["ctrl+alt+space"], "command": "show_hover_text"},
+    { "keys": ["alt+space"], "command": "toggle_zoom_pane", "args": {"fraction": 0.63} },
+    { "keys": ["alt+shift+space"], "command": "toggle_zoom_pane", "args": {"fraction": 0.75} },
+    { "keys": ["alt+backspace"], "command": "prev_view_in_stack" },
+    { "keys": ["alt+tab"], "command": "next_view_in_stack" },
+    { "keys": ["ctrl+super+up"      ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount":  -1.0 } },
+    { "keys": ["ctrl+super+down"    ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount":   1.0 } },
     { "keys": ["ctrl+super+pageup"  ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": -30.0 } },
-    { "keys": ["ctrl+super+pagedown"], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": 30.0 } },
+    { "keys": ["ctrl+super+pagedown"], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount":  30.0 } },
     { "keys": ["ctrl+shift+y"], "command": "lsp_symbol_definition"},
     { "keys": ["ctrl+shift+u"], "command": "lsp_symbol_references" },
-    { "keys": ["ctrl+shift+l"], "command": "goto_symbol_in_project" },
+    { "keys": ["ctrl+shift+l"], "command": "jump_back" },
+    { "keys": ["ctrl+shift+;"], "command": "jump_forward" },
     // { "keys": [""], "command": "lsp_rename"},
     // { "keys": [""], "command": "lsp_signature_help"},
     // { "keys": [""], "command": "lsp_hover"},
@@ -29,8 +35,6 @@
     // { "keys": [""], "command": "lsp_show_code_lens"},
     // { "keys": ["ctrl+shift+."], "command": "lsp_next_diagnostic" },
     // { "keys": ["ctrl+shift+"], "command": "lsp_prev_diagnostic" },
-    // { "keys": ["keypad_period"], "command": "jump_back" },
-    // { "keys": ["shift+keypad_period"], "command": "jump_forward" },
     // { "keys": ["alt+keypad_period"], "command": "goto_definition" },
     // { "keys": ["ctrl+keypad_period"], "command": "goto_reference" },
 
@@ -56,8 +60,6 @@
     // { "keys": ["super+alt+p"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
     // { "keys": ["super+alt+p"], "command": "pytest_toggle_panel" },
 
-    { "keys": ["alt+space"], "command": "lsp_hover"},
-    { "keys": ["ctrl+alt+space"], "command": "show_hover_text"},
 
 
     { "keys": ["alt+e"],      "command": "chain", "args": { "commands": [["save"],["build"]] } },
@@ -128,8 +130,6 @@
 //  { "keys": ["alt+q"], "command": "exit" },
     { "keys": ["alt+s"], "command": "save" },
     { "keys": ["alt+shift+s"], "command": "save_as" },
-    { "keys": ["alt+tab"], "command": "next_view_in_stack" },
-    { "keys": ["alt+backspace"], "command": "prev_view_in_stack" },
     // { "keys": ["alt+enter"], "command": "toggle_full_screen" },
     { "keys": ["alt+shift+enter"], "command": "toggle_distraction_free" },
     { "keys": ["ctrl+d"], "command": "right_delete"},
