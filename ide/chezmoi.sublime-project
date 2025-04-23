@@ -2,7 +2,9 @@
 	"folders":
 	[
 		{
-			"path": "/home/sheffler/.local/share/chezmoi"
+			"path": "/home/sheffler/.local/share/chezmoi",
+			"folder_exclude_patterns": ["old/sublime"]
+
 		}
 	]
 }

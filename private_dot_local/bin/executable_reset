@@ -1,3 +1,0 @@
-#!/bin/bash
-/home/sheffler/.local/bin/teardown
-sudo systemctl restart lightdm

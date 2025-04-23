@@ -96,9 +96,9 @@
     "caret_extra_top": 2,
     "caret_extra_width": 1,
     "caret_style": "phase",
-    "ClangFormat": {
-        "format_on_save": true
-    },
+    // "ClangFormat": {
+        // "format_on_save": true,
+    // },
     "color_scheme": "Catppuccin Mocha.sublime-color-scheme",
     "dlig": true,
     "ensure_newline_at_eof_on_save": true,
@@ -137,7 +137,9 @@
         ".pytest_cache",
         "wheelhouse",
         "dist",
-        "CMakeFiles"
+        "CMakeFiles",
+        ".mypy_cache",
+        ".test_*"
     ],
     // "auto_complete_triggers": [
     //     {
@@ -145,16 +147,17 @@
     //         "characters": "."
     //     }
     // ],
-    "font_face": "source code pro",
-    // "font_face": "jetbrains mono light",
+    // "font_face": "source code pro",
+    "font_face": "JetBrainsMono Nerd Font Light",
     "font_options": [
         // "dlig",
         "subpixel_antialias"
     ],
-    "font_size": 10,
-    "hardware_acceleration": "opengl",
+    "font_size": 9,
+    // "hardware_acceleration": "opengl",
     "highlight_line": true,
     "ignored_packages": [
+        "LSP-basedpyright",
         "NeoVintageous",
         "RestructuredText",
         "SublimeLinter",
@@ -182,6 +185,7 @@
     "scroll_speed": 0.0,
     "show_developer_menu": true,
     "tab_size": 4,
+    // "detect_indentation": false,
     "theme": "Adaptive.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_automatic_white_space": true,
@@ -191,5 +195,6 @@
     "use_pylint": false,
     "validate_imports": true,
     "vintageous_default_mode": "insert",
-    "word_wrap": true
+    "word_wrap": true,
+    "hardware_acceleration": "opengl",
 }

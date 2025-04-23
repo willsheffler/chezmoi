@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# If the focused monitor has a special workspace open, toggles it off.
+
+active=$(hyprctl -j monitors \
+  | jq --raw-output '
+      .[]
+      | select(.focused == true)
+      | .specialWorkspace.name
+      | capture("^[^:]+:(?<name>.+)$")
+      | .name
+    ')
+
+if [[ -n "$active" ]]; then
+  hyprctl dispatch togglespecialworkspace "$active"
+fi

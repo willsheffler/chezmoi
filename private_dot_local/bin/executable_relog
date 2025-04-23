@@ -1,0 +1,6 @@
+#!/bin/bash
+
+/home/sheffler/.local/bin/teardown_session
+
+echo "Restarting LightDM..."
+sudo systemctl restart lightdm

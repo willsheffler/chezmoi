@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "Terminating graphical applications..."
+pkill -TERM brave
+pkill -TERM sublime_text
+pkill -f -TERM mattermost-desktop
+pkill -TERM warp-terminal
+pkill -TERM atuin
+
+while pgrep -f 'brave|sublime_text|mattermost-desktop|warp-terminal' > /dev/null; do
+  sleep 0.1
+  ps aux | grep -E 'brave|sublime_text|mattermost-desktop|warp-terminal'
+done

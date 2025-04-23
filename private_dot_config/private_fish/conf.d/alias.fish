@@ -26,6 +26,8 @@ alias top htop
 alias bat 'bat --color=always --paging=always'
 alias unalias 'functions --erase'
 alias rg 'rg --no-ignore'
+alias eg 'gprp  -E'
+
 alias doit 'doit --seek-file'
 
 alias ghc 'gh copilot'
