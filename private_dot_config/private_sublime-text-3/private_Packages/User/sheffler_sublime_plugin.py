@@ -7,7 +7,9 @@ from typing import TYPE_CHECKING
 
 def log(msg):
     with open('/home/sheffler/.local/log/sublime_plugin.log', 'a') as f:
-        f.write(msg + '\n')
+        f.write(str(msg) + '\n')
+
+log('sheffler_sublime_plugin.py loading')
 
 def get_project_root(path: str):
     # Search upward for pyproject.toml to detect project root
@@ -241,6 +243,116 @@ class AutoFoldOnLoad(sublime_plugin.EventListener):
             view.run_command("fold_python_docstrings")
             view.run_command("whs_fold_type_checking")
             # fold_type_checking_blocks(view)
+
+class WhsKillLineCopyCommand(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        log('WhsKillLineCopyCommand')
+        new_sel = []
+        for sel in list(self.view.sel()):
+            line_end = self.view.line(sel).end()
+            region = sublime.Region(sel.begin(), line_end)
+            text = self.view.substr(region)
+            sublime.set_clipboard(text)
+            self.view.erase(edit, region)
+            new_sel.append(sublime.Region(sel.begin()))
+        # reset selections
+        self.view.sel().clear()
+        for r in new_sel:
+            self.view.sel().add(r)
+
+def move_selection(s, view, edit, dirn):
+    log('move_selection')
+    end = s.end()
+    if end >= view.size(): return
+    if dirn > 0:
+        reg = sublime.Region(s.begin(), end + dirn)
+        text_sel = view.substr(reg)
+        view.replace(edit, reg, text_sel[-dirn:] + text_sel[:-dirn])
+        return sublime.Region(s.begin() + dirn, s.end() + dirn)
+    elif dirn < 0:
+        reg = sublime.Region(s.begin() + dirn, end)
+        text_sel = view.substr(reg)
+        view.replace(edit, reg, text_sel[-dirn:] + text_sel[:-dirn])
+        return sublime.Region(s.begin() + dirn, s.end() + dirn)
+
+refwd = re.compile(r'[,})\]]|$')
+rebck = re.compile(r'[\[{(,]|$')
+
+def swap_with_neighbor(view, edit, dirn):
+    """
+    Swap the word under each caret with its neighbor determined by get_neighbor_pt.
+
+    get_neighbor_pt: callable taking a Region and returning an int offset to find neighbor word.
+    """
+    sels = list(view.sel())
+    new_regions = []
+    for s in sels:
+        if not s.empty():
+            new_regions.append(move_selection(s, view, edit, dirn))
+            continue
+
+        pt = s.begin()
+        regline = view.line(pt)
+        linept = pt - regline.begin()
+        line = view.substr(regline)
+        # log(f'line:" { line[:linept] }|{ line[linept:] }"')
+        prv = linept - rebck.search(line[:linept][::-1]).span()[0] - 1
+        nxt = linept + refwd.search(line[linept:]).span()[0]
+        # reg = sublime.Region(prv + 1, nxt)
+        log(f'prv: {prv}, nxt: {nxt} "{line[prv]}" "{line[nxt]}" "{line[prv+1:nxt]}"')
+        if dirn < 0:
+            if line[prv] != ',':
+                log(f'No comma before word, cannot swap {prv} "{line[prv]}"')
+                return
+            prv2 = prv - rebck.search(line[prv - 1::-1]).span()[0] - 1
+            swaptext = line[prv2 + 1:prv]
+            if swaptext.startswith(' '): prv2, swaptext = prv2 + 1, swaptext[1:]
+            swap = prv2 + 1, prv
+        elif dirn > 0:
+            if line[nxt] != ',':
+                log(f'No comma after word, cannot swap {nxt} "{line[nxt]}"')
+                return
+            prv2 = nxt + 1
+            nxt2 = nxt + refwd.search(line[prv2:]).span()[0] + 1
+            swaptext = line[prv2:nxt2]
+            if swaptext.startswith(' '): prv2, swaptext = prv2 + 1, swaptext[1:]
+            swap = prv2, nxt2
+        else:
+            raise ValueError(f'Invalid dirn: {dirn}')
+        log(f'"{line[prv]}" "{line[nxt]}" {(prv+1,nxt)} here: "{line[prv+1:nxt]}" swap: {swap} "{swaptext}"')
+        text = line[prv + 1:nxt]
+        if text.startswith(' '): prv, text = prv + 1, text[1:]
+        lbeg = regline.begin()
+        if dirn < 0: view.replace(edit, sublime.Region(lbeg + prv + 1, lbeg + nxt), swaptext)
+        view.replace(edit, sublime.Region(lbeg + swap[0], lbeg + swap[1]), text)
+        if dirn > 0: view.replace(edit, sublime.Region(lbeg + prv + 1, lbeg + nxt), swaptext)
+        newpt = pt + dirn * (len(swaptext) + 2)
+        new_regions.append(sublime.Region(newpt, newpt))
+        
+    # Update selections
+    if new_regions:
+        view.sel().clear()
+        for r in new_regions:
+            view.sel().add(r)
+
+class WhsSwapWordLeftCommand(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        swap_with_neighbor(self.view, edit, -1)
+
+class WhsSwapWordRightCommand(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        swap_with_neighbor(self.view, edit, 1)
+
+# Usage:
+# Save as 'swap_word_plugin.py' in Packages/User.
+# Key bindings in Preferences → Key Bindings – User:
+# [
+#   { "keys": ["ctrl+alt+left"],  "command": "swap_left_word"  },
+#   { "keys": ["ctrl+alt+right"], "command": "swap_right_word" }
+# ]
 
 # class WhsFoldTypeCheckingCommand(sublime_plugin.TextCommand):
 

@@ -15,18 +15,18 @@
         {
             "scope": "source - comment | storage | entity | variable | variable.function | entity.name.function | variable.parameter | meta.generic-name",
             // "scope": "source - comment | string | keyword | punctuation | storage | entity",
-            "foreground": ["hsl(200, 70%, 70%)", "hsl(330, 70%, 70%)"]
+            "foreground": ["hsl(180, 70%, 70%)", "hsl(350, 70%, 70%)"]
         },
         {
           "scope": "entity.name.function|support.function.magic|variable.function",
           // "foreground": "#fff",  //  or whatever color you want
-          "foreground": ["hsl(200, 80%, 70%)", "hsl(330, 80%, 70%)"],
+          "foreground": ["hsl(180, 80%, 70%)", "hsl(350, 80%, 70%)"],
           "font_style": "italic"
         },
         {
           "scope": "entity.name.function|support.function.magic|entity.name.class",
           // "foreground": "#fff",  //  or whatever color you want
-          "foreground": ["hsl(200, 80%, 70%)", "hsl(330, 80%, 70%)"],
+          "foreground": ["hsl(180, 80%, 70%)", "hsl(350, 80%, 70%)"],
           "font_style": "underline"
         },
         {

@@ -1,4 +1,8 @@
 [
+    { "keys": ["ctrl+k"],"command": "whs_kill_line_copy"},
+    { "keys": ["ctrl+y"],"command": "paste" },
+    { "keys": ["alt+shift+left"  ], "command": "whs_swap_word_left" },
+    { "keys": ["alt+shift+right" ], "command": "whs_swap_word_right" },
     { "keys": ["ctrl+super+up"      ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount":  -1.0 } },
     { "keys": ["ctrl+super+down"    ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount":   1.0 } },
     { "keys": ["ctrl+super+pageup"  ], "command": "whs_scroll_adjacent_pane", "args": { "direction": "right", "amount": -30.0 } },
