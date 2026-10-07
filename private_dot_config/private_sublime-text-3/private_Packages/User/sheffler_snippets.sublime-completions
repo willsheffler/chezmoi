@@ -6,6 +6,6 @@
         "python",
 
         { "trigger": "noty", "contents": " # type: ignore" },
-        { "trigger": "docarg", "please write a docstring in google format for all parameters with types and return value" }
+        { "trigger": "docarg", "contents": "please write a docstring in google format for all parameters with types and return value" }
     ]
 }

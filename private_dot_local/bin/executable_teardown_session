@@ -7,7 +7,7 @@ pkill -f -TERM mattermost-desktop
 pkill -TERM warp-terminal
 pkill -TERM atuin
 
-while pgrep -f 'brave|sublime_text|mattermost-desktop|warp-terminal' > /dev/null; do
-  sleep 0.1
-  ps aux | grep -E 'brave|sublime_text|mattermost-desktop|warp-terminal'
+while pgrep -f 'brave-browser|sublime_text|mattermost-desktop|warp-terminal' > /dev/null; do
+  sleep 0.5
+  ps aux | grep -E 'brave-browser|sublime_text|mattermost-desktop|warp-terminal'
 done

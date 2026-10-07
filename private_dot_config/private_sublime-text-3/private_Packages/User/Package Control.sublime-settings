@@ -32,6 +32,7 @@
 		"LSP-file-watcher-chokidar",
 		"LSP-json",
 		"LSP-marksman",
+		"LSP-pyright",
 		"Mako",
 		"Multicommand",
 		"NeoVintageous",

@@ -203,6 +203,19 @@ template = '''
 
 
 
-col = json.load(open('/home/sheffler/.cache/wal/colors.json'))
-col = {**col['special'], **col['colors']}
-print(col)
+# Guarded 2026-09-11 (Bella). This ran at import time and threw FileNotFoundError
+# on every Sublime start, because pywal's cache isn't always present — it hadn't
+# been run, or ~/.cache was cleared. An exception here aborts the whole plugin
+# module, so the traceback was the visible symptom of the plugin silently not
+# loading at all. Now it degrades to one quiet line.
+import os as _os
+
+_WAL_COLORS = _os.path.expanduser('~/.cache/wal/colors.json')
+
+if _os.path.exists(_WAL_COLORS):
+    col = json.load(open(_WAL_COLORS))
+    col = {**col['special'], **col['colors']}
+    print(col)
+else:
+    col = None
+    print('generate_color_scheme: no pywal cache at %s - skipping' % _WAL_COLORS)

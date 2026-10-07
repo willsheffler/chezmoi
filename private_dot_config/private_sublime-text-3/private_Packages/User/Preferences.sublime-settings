@@ -99,7 +99,7 @@
     // "ClangFormat": {
         // "format_on_save": true,
     // },
-    "color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+    "color_scheme": "Monokai Classic.sublime-color-scheme",
     "dlig": true,
     "ensure_newline_at_eof_on_save": true,
     "fade_fold_buttons": false,
@@ -147,21 +147,40 @@
     //         "characters": "."
     //     }
     // ],
-    // "font_face": "source code pro",
-    "font_face": "JetBrainsMono Nerd Font Light",
+    // "font_face": "JetBrainsMono Nerd Font Light",
+    "font_face": "source code pro",
     "font_options": [
         // "dlig",
         "subpixel_antialias"
     ],
-    "font_size": 10,
+    "font_size": 11,
     // "hardware_acceleration": "opengl",
     "highlight_line": true,
     "ignored_packages": [
-        "LSP-basedpyright",
+        // Bella 2026-09-07: removed "Package Control" (it had disabled itself
+        // mid self-update, which is why NO PC commands showed in the palette) plus
+        // the packages PC left stuck mid-install (LSP, Colored Comments,
+        // ProjectEnvironment, TOML, TreeSitter, LSP-bash/copilot/pyright).
+        // Left the six below because I couldn't tell if you disabled them on
+        // purpose. NeoVintageous especially = your vim mode; re-enable if you
+        // expected it on (Package Control: Enable Package).
         "NeoVintageous",
         "RestructuredText",
-        "SublimeLinter",
+        // Added 2026-09-11 (Bella): the *Installed Package* is named
+        // "RestructuredText Improved", so the "RestructuredText" entry above never
+        // matched it and its plugin_loaded kept running. It calls strict json.loads
+        // on this very file, which legitimately contains // comments and trailing
+        // commas — so it threw "No JSON object could be decoded" on every start.
+        // Its bug, not your settings'. Ignoring it by its real name fixes it.
+        "RestructuredText Improved",
+        "Solarized Color Scheme",
         "Vintage",
+        // Added 2026-09-11 (Bella), at Will's request: YamlPipelines ships
+        // PowerShell embeddings whose base syntax lives in a PowerShell package
+        // that isn't installed, so it printed three parse errors every start.
+        // Cosmetic only — nothing was broken. Install PowerShell to undo this.
+/*"YamlPipelines",*/
+/*"LSP-pyright",*/
     ],
     "ignored_words": [
         "ipd"
@@ -171,10 +190,10 @@
         "draw_active"
     ],
     "index_exclude_gitignore": false,
-    "index_files": true,
+    "index_files": false,
     "line_numbers": true,
-    "line_padding_bottom": 1,
-    "line_padding_top": 1,
+    "line_padding_bottom": 0,
+    "line_padding_top": 0,
     "material_them_tabs_separator": true,
     "material_theme_accent_lime": true,
     "material_theme_tree_headings": true,

@@ -409,5 +409,6 @@
 	directory = /home/sheffler/src/ppp/ipd
 	directory = /home/sheffler/src/ppp/lib/ipd/ipd
 	directory = /home/sheffler/src/ppp/lib/ipd/ipd
+	directory = /digs/home/sheffler/rfd_helen_train
 [submodules]
 	recurse = true
